@@ -150,3 +150,30 @@ C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompil
 C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
 C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.dll
 C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.pdb
