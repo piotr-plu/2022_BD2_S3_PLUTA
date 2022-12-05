@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="narciarze.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="narciarze.admin_SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -39,20 +39,25 @@
             </Scripts>
         </asp:ScriptManager>
         <header class="header">
-                <a href="narciarz.png"></a><img id="logo" src="narciarz.png" alt="Narciasz Logo" />
                 <h1>STOK NARCIARSKI GLIWICE</h1>
             </header>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 
         <nav class="navbar">
-            <p class="tab"><a runat="server" href="~/">Strona Główna</a></p>
-            <p class="tab"><a runat="server" href="~/cennik">Cennik</a></p>
-            <p class="tab"><a runat="server" href="~/trasy">Trasy</a></p>
-            <p class="tab"><a runat="server" href="~/raporty">Raporty</a></p>
-            <p class="tab"><a runat="server" href="~/kontakt">Kontakt</a></p>
-            <p class="tab"><a runat="server" href="~/logowanie">Strefa Klienta</a></p>
-        </nav>
+        <p class="aktive"><a href="Default.aspx">Logowanie</a></p>
+        <p class="tab"><a href="edycja_stokow">Edycja Stoków</a></p>
+        <p class="tab"><a href="zmiana_cennika">Zmiana Cennika</a></p>
+        <p class="tab"><a href="raporty">Raporty</a></p>
+        <p class="tab"><a href="sprzedaz">Sprzedaż</a></p>
+        <p class="tab"><a href="status_stokow">Status Stoków</a></p>
+        <p class="tab"><a href="blokowanie_karnetu">Blokowanie Karnetu</a></p>
+        <p class="tab"><a href="harmonogram">Harmonogram</a></p>
+        <p class="tab"><a href="wyciagi">Wyciągi</a></p>
+        <p class="tab"><a href="baza_danych">Baza Danych</a></p>
+        <p class="tab"><a href="../" target="_blank">Strona dla Klienta</a></p>
+
+    </nav>
             </div>
         </div>
         <div class="container body-content">

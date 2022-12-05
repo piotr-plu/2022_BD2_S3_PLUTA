@@ -105,6 +105,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\style_admin.css" />
+    <Content Include="raporty.aspx" />
+    <Content Include="Strefa_Administracji\baza_danych.aspx" />
+    <Content Include="Strefa_Administracji\wyciagi.aspx" />
+    <Content Include="Strefa_Administracji\raporty.aspx" />
+    <Content Include="Strefa_Administracji\sprzedaz.aspx" />
+    <Content Include="Strefa_Administracji\status_stokow.aspx" />
+    <Content Include="Strefa_Administracji\blokowanie_karnetu.aspx" />
+    <Content Include="Strefa_Administracji\harmonogram.aspx" />
+    <Content Include="Strefa_Administracji\zmiana_cennika.aspx" />
+    <Content Include="Strefa_Administracji\edycja_stokow.aspx" />
+    <Content Include="Strefa_Administracji\Default.aspx" />
     <Content Include="trasy.aspx" />
     <Content Include="logowanie.aspx" />
     <Content Include="kontakt.aspx" />
@@ -157,6 +169,90 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="raporty.aspx.cs">
+      <DependentUpon>raporty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="raporty.aspx.designer.cs">
+      <DependentUpon>raporty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\baza_danych.aspx.cs">
+      <DependentUpon>baza_danych.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\baza_danych.aspx.designer.cs">
+      <DependentUpon>baza_danych.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\wyciagi.aspx.cs">
+      <DependentUpon>wyciagi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\wyciagi.aspx.designer.cs">
+      <DependentUpon>wyciagi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\raporty.aspx.cs">
+      <DependentUpon>raporty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\raporty.aspx.designer.cs">
+      <DependentUpon>raporty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\sprzedaz.aspx.cs">
+      <DependentUpon>sprzedaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\sprzedaz.aspx.designer.cs">
+      <DependentUpon>sprzedaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\status_stokow.aspx.cs">
+      <DependentUpon>status_stokow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\status_stokow.aspx.designer.cs">
+      <DependentUpon>status_stokow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\blokowanie_karnetu.aspx.cs">
+      <DependentUpon>blokowanie_karnetu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\blokowanie_karnetu.aspx.designer.cs">
+      <DependentUpon>blokowanie_karnetu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\harmonogram.aspx.cs">
+      <DependentUpon>harmonogram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\harmonogram.aspx.designer.cs">
+      <DependentUpon>harmonogram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\zmiana_cennika.aspx.cs">
+      <DependentUpon>zmiana_cennika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\zmiana_cennika.aspx.designer.cs">
+      <DependentUpon>zmiana_cennika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\edycja_stokow.aspx.cs">
+      <DependentUpon>edycja_stokow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\edycja_stokow.aspx.designer.cs">
+      <DependentUpon>edycja_stokow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strefa_Administracji\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strefa_Administracji\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
     <Compile Include="trasy.aspx.cs">
       <DependentUpon>trasy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,6 +321,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Strefa_Administracji\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
