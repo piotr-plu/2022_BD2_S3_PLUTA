@@ -1,0 +1,380 @@
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csc.exe
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csc.exe.config
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csc.rsp
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csi.exe
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csi.exe.config
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\csi.rsp
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.AppContext.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Console.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.IO.Compression.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Net.Http.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.ValueTuple.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\vbc.exe
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\vbc.exe.config
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\vbc.rsp
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Pawlo\Desktop\bd\asp\narciarze\narciarze\obj\Debug\narciarze.pdb
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csc.exe
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csc.exe.config
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csc.rsp
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csi.exe
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csi.exe.config
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\csi.rsp
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.AppContext.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Console.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.IO.Compression.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Net.Http.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.ValueTuple.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\vbc.exe
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\vbc.exe.config
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\vbc.rsp
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Piotr\Desktop\narciarze\narciarze\obj\Debug\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\obj\Debug\narciarze.pdb
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csc.exe
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csc.exe.config
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csc.rsp
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csi.exe
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csi.exe.config
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\csi.rsp
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.AppContext.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Console.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.IO.Compression.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Net.Http.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.ValueTuple.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\vbc.exe
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\vbc.exe.config
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\vbc.rsp
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Pawlo\Desktop\bd\git\2022_BD2_S3_PLUTA\asp\narciarze\narciarze\obj\Debug\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csc.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csc.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csc.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csi.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csi.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\csi.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.AppContext.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Console.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.IO.Compression.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Net.Http.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.ValueTuple.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\vbc.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\vbc.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\vbc.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA\ASP\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\narciarze.dll.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\narciarze.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csc.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csc.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csc.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csi.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csi.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\csi.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.AppContext.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Console.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.IO.Compression.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Net.Http.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.ValueTuple.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\vbc.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\vbc.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\vbc.rsp
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Antlr3.Runtime.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Newtonsoft.Json.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\System.Web.Optimization.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\WebGrease.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\System.Web.Optimization.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Newtonsoft.Json.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Antlr3.Runtime.pdb
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\pl\System.Web.Optimization.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\bin\pl\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.AssemblyReference.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\obj\Debug\narciarze.csproj.CopyComplete
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\obj\Debug\narciarze.dll
+C:\Users\Piotr\OneDrive - Politechnika Śląska\BD II\2022_BD2_S3_PLUTA-main\ASP\narciarze\narciarze\obj\Debug\narciarze.pdb
