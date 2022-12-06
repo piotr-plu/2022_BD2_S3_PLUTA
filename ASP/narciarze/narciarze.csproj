@@ -112,10 +112,10 @@
     <Content Include="Strefa_Klienta\Klient\klient.aspx" />
     <Content Include="Strefa_Klienta\Klient\raporty.aspx" />
     <Content Include="Strefa_Administracji\Administrator\baza_danych.aspx" />
-    <Content Include="Strefa_Administracji\Administrator\wyciagi.aspx" />
+    <Content Include="Strefa_Administracji\Administrator\grupowanie_stoki.aspx" />
     <Content Include="Strefa_Administracji\Zarząd\raporty.aspx" />
     <Content Include="Strefa_Administracji\Kasa\sprzedaz.aspx" />
-    <Content Include="Strefa_Administracji\Administrator\status_stokow.aspx" />
+    <Content Include="Strefa_Administracji\Administrator\status_wyciagow.aspx" />
     <Content Include="Strefa_Administracji\Kasa\blokowanie_karnetu.aspx" />
     <Content Include="Strefa_Administracji\Administrator\harmonogram.aspx" />
     <Content Include="Strefa_Administracji\Zarząd\zmiana_cennika.aspx" />
@@ -236,12 +236,12 @@
     <Compile Include="Strefa_Administracji\Administrator\baza_danych.aspx.designer.cs">
       <DependentUpon>baza_danych.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Strefa_Administracji\Administrator\wyciagi.aspx.cs">
-      <DependentUpon>wyciagi.aspx</DependentUpon>
+    <Compile Include="Strefa_Administracji\Administrator\grupowanie_stoki.aspx.cs">
+      <DependentUpon>grupowanie_stoki.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Strefa_Administracji\Administrator\wyciagi.aspx.designer.cs">
-      <DependentUpon>wyciagi.aspx</DependentUpon>
+    <Compile Include="Strefa_Administracji\Administrator\grupowanie_stoki.aspx.designer.cs">
+      <DependentUpon>grupowanie_stoki.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strefa_Administracji\Zarząd\raporty.aspx.cs">
       <DependentUpon>raporty.aspx</DependentUpon>
@@ -257,12 +257,12 @@
     <Compile Include="Strefa_Administracji\Kasa\sprzedaz.aspx.designer.cs">
       <DependentUpon>sprzedaz.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Strefa_Administracji\Administrator\status_stokow.aspx.cs">
-      <DependentUpon>status_stokow.aspx</DependentUpon>
+    <Compile Include="Strefa_Administracji\Administrator\status_wyciagow.aspx.cs">
+      <DependentUpon>status_wyciagow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Strefa_Administracji\Administrator\status_stokow.aspx.designer.cs">
-      <DependentUpon>status_stokow.aspx</DependentUpon>
+    <Compile Include="Strefa_Administracji\Administrator\status_wyciagow.aspx.designer.cs">
+      <DependentUpon>status_wyciagow.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strefa_Administracji\Kasa\blokowanie_karnetu.aspx.cs">
       <DependentUpon>blokowanie_karnetu.aspx</DependentUpon>

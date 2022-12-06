@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\narciarze",
-    "\\narciarze\\Strefa_Klienta"
+    "\\narciarze\\Strefa_Administracji",
+    "\\narciarze\\Strefa_Administracji\\Administrator",
+    "\\narciarze\\Strefa_Administracji\\Zarząd"
   ],
-  "SelectedNode": "\\narciarze\\Strefa_Klienta\\cennik.aspx",
+  "SelectedNode": "\\narciarze.sln",
   "PreviewInSolutionExplorer": false
 }
