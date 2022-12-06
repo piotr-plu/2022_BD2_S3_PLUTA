@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
+        <form>
     <p> Grupa Wyciągów - Stok:</p>
     <p>
         <select name="group">
@@ -27,7 +28,7 @@
 </p>
         
 	    <p><input type="submit" value="Zatwierdź"></p>
-
+        </form>
         </div>
 
 </asp:Content>

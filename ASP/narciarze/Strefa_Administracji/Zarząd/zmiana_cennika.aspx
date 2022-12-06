@@ -4,6 +4,7 @@
 
 	<h1>Zmiana Cenny</h1>
    <div>
+	   <form>
 <p> Karnet / Bilet: <br />
     <select name="type">
 		<option selected>Karnet</option>
@@ -22,6 +23,6 @@
 	   <input name="price" type="number" min="0.00" step="0.01">zł</p>
 
 	    <p><input type="submit" value="Zatwierdź"></p>
-
+	</form>
     </div>
 </asp:Content>
