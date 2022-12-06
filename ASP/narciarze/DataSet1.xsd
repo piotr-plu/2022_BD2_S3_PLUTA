@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Klient" msprop:Generator_RowEvHandlerName="KlientRowChangeEventHandler" msprop:Generator_RowDeletedName="KlientRowDeleted" msprop:Generator_RowDeletingName="KlientRowDeleting" msprop:Generator_RowEvArgName="KlientRowChangeEvent" msprop:Generator_TablePropName="Klient" msprop:Generator_RowChangedName="KlientRowChanged" msprop:Generator_RowChangingName="KlientRowChanging" msprop:Generator_TableClassName="KlientDataTable" msprop:Generator_RowClassName="KlientRow" msprop:Generator_TableVarName="tableKlient" msprop:Generator_UserTableName="Klient">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Imie" msprop:Generator_ColumnPropNameInRow="Imie" msprop:Generator_ColumnPropNameInTable="ImieColumn" msprop:Generator_ColumnVarNameInTable="columnImie" msprop:Generator_UserColumnName="Imie" type="xs:string" minOccurs="0" />
+              <xs:element name="Nazwisko" msprop:Generator_ColumnPropNameInRow="Nazwisko" msprop:Generator_ColumnPropNameInTable="NazwiskoColumn" msprop:Generator_ColumnVarNameInTable="columnNazwisko" msprop:Generator_UserColumnName="Nazwisko" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Karnety" msprop:Generator_RowEvHandlerName="KarnetyRowChangeEventHandler" msprop:Generator_RowDeletedName="KarnetyRowDeleted" msprop:Generator_RowDeletingName="KarnetyRowDeleting" msprop:Generator_RowEvArgName="KarnetyRowChangeEvent" msprop:Generator_TablePropName="Karnety" msprop:Generator_RowChangedName="KarnetyRowChanged" msprop:Generator_RowChangingName="KarnetyRowChanging" msprop:Generator_TableClassName="KarnetyDataTable" msprop:Generator_RowClassName="KarnetyRow" msprop:Generator_TableVarName="tableKarnety" msprop:Generator_UserTableName="Karnety">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ID_Klienta" msprop:Generator_ColumnPropNameInRow="ID_Klienta" msprop:Generator_ColumnPropNameInTable="ID_KlientaColumn" msprop:Generator_ColumnVarNameInTable="columnID_Klienta" msprop:Generator_UserColumnName="ID_Klienta" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Stoki" msprop:Generator_ColumnPropNameInRow="ID_Stoki" msprop:Generator_ColumnPropNameInTable="ID_StokiColumn" msprop:Generator_ColumnVarNameInTable="columnID_Stoki" msprop:Generator_UserColumnName="ID_Stoki" type="xs:int" minOccurs="0" />
+              <xs:element name="Nazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="Czas_trwania" msprop:Generator_ColumnPropNameInRow="Czas_trwania" msprop:Generator_ColumnPropNameInTable="Czas_trwaniaColumn" msprop:Generator_ColumnVarNameInTable="columnCzas_trwania" msprop:Generator_UserColumnName="Czas_trwania" type="xs:duration" minOccurs="0" />
+              <xs:element name="Data_Aktywacji" msprop:Generator_ColumnPropNameInRow="Data_Aktywacji" msprop:Generator_ColumnPropNameInTable="Data_AktywacjiColumn" msprop:Generator_ColumnVarNameInTable="columnData_Aktywacji" msprop:Generator_UserColumnName="Data_Aktywacji" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ID_Cennika" msprop:Generator_ColumnPropNameInRow="ID_Cennika" msprop:Generator_ColumnPropNameInTable="ID_CennikaColumn" msprop:Generator_ColumnVarNameInTable="columnID_Cennika" msprop:Generator_UserColumnName="ID_Cennika" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Stoki" msprop:Generator_RowEvHandlerName="StokiRowChangeEventHandler" msprop:Generator_RowDeletedName="StokiRowDeleted" msprop:Generator_RowDeletingName="StokiRowDeleting" msprop:Generator_RowEvArgName="StokiRowChangeEvent" msprop:Generator_TablePropName="Stoki" msprop:Generator_RowChangedName="StokiRowChanged" msprop:Generator_RowChangingName="StokiRowChanging" msprop:Generator_TableClassName="StokiDataTable" msprop:Generator_RowClassName="StokiRow" msprop:Generator_TableVarName="tableStoki" msprop:Generator_UserTableName="Stoki">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Nazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cena_Karnety" msprop:Generator_RowEvHandlerName="Cena_KarnetyRowChangeEventHandler" msprop:Generator_RowDeletedName="Cena_KarnetyRowDeleted" msprop:Generator_RowDeletingName="Cena_KarnetyRowDeleting" msprop:Generator_RowEvArgName="Cena_KarnetyRowChangeEvent" msprop:Generator_TablePropName="Cena_Karnety" msprop:Generator_RowChangedName="Cena_KarnetyRowChanged" msprop:Generator_RowChangingName="Cena_KarnetyRowChanging" msprop:Generator_TableClassName="Cena_KarnetyDataTable" msprop:Generator_RowClassName="Cena_KarnetyRow" msprop:Generator_TableVarName="tableCena_Karnety" msprop:Generator_UserTableName="Cena_Karnety">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Cena_Godz" msprop:Generator_ColumnPropNameInRow="Cena_Godz" msprop:Generator_ColumnPropNameInTable="Cena_GodzColumn" msprop:Generator_ColumnVarNameInTable="columnCena_Godz" msprop:Generator_UserColumnName="Cena_Godz" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cena_Bilety" msprop:Generator_RowEvHandlerName="Cena_BiletyRowChangeEventHandler" msprop:Generator_RowDeletedName="Cena_BiletyRowDeleted" msprop:Generator_RowDeletingName="Cena_BiletyRowDeleting" msprop:Generator_RowEvArgName="Cena_BiletyRowChangeEvent" msprop:Generator_TablePropName="Cena_Bilety" msprop:Generator_RowChangedName="Cena_BiletyRowChanged" msprop:Generator_RowChangingName="Cena_BiletyRowChanging" msprop:Generator_TableClassName="Cena_BiletyDataTable" msprop:Generator_RowClassName="Cena_BiletyRow" msprop:Generator_TableVarName="tableCena_Bilety" msprop:Generator_UserTableName="Cena_Bilety">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Cena_Przejazd" msprop:Generator_ColumnPropNameInRow="Cena_Przejazd" msprop:Generator_ColumnPropNameInTable="Cena_PrzejazdColumn" msprop:Generator_ColumnVarNameInTable="columnCena_Przejazd" msprop:Generator_UserColumnName="Cena_Przejazd" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cennik" msprop:Generator_RowEvHandlerName="CennikRowChangeEventHandler" msprop:Generator_RowDeletedName="CennikRowDeleted" msprop:Generator_RowDeletingName="CennikRowDeleting" msprop:Generator_RowEvArgName="CennikRowChangeEvent" msprop:Generator_TablePropName="Cennik" msprop:Generator_RowChangedName="CennikRowChanged" msprop:Generator_RowChangingName="CennikRowChanging" msprop:Generator_TableClassName="CennikDataTable" msprop:Generator_RowClassName="CennikRow" msprop:Generator_TableVarName="tableCennik" msprop:Generator_UserTableName="Cennik">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ID_Cena_Karnety" msprop:Generator_ColumnPropNameInRow="ID_Cena_Karnety" msprop:Generator_ColumnPropNameInTable="ID_Cena_KarnetyColumn" msprop:Generator_ColumnVarNameInTable="columnID_Cena_Karnety" msprop:Generator_UserColumnName="ID_Cena_Karnety" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Cena_Bilety" msprop:Generator_ColumnPropNameInRow="ID_Cena_Bilety" msprop:Generator_ColumnPropNameInTable="ID_Cena_BiletyColumn" msprop:Generator_ColumnVarNameInTable="columnID_Cena_Bilety" msprop:Generator_UserColumnName="ID_Cena_Bilety" type="xs:int" minOccurs="0" />
+              <xs:element name="Data_Rozp" msprop:Generator_ColumnPropNameInRow="Data_Rozp" msprop:Generator_ColumnPropNameInTable="Data_RozpColumn" msprop:Generator_ColumnVarNameInTable="columnData_Rozp" msprop:Generator_UserColumnName="Data_Rozp" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Data_Zak" msprop:Generator_ColumnPropNameInRow="Data_Zak" msprop:Generator_ColumnPropNameInTable="Data_ZakColumn" msprop:Generator_ColumnVarNameInTable="columnData_Zak" msprop:Generator_UserColumnName="Data_Zak" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Harmonogram" msprop:Generator_RowEvHandlerName="HarmonogramRowChangeEventHandler" msprop:Generator_RowDeletedName="HarmonogramRowDeleted" msprop:Generator_RowDeletingName="HarmonogramRowDeleting" msprop:Generator_RowEvArgName="HarmonogramRowChangeEvent" msprop:Generator_TablePropName="Harmonogram" msprop:Generator_RowChangedName="HarmonogramRowChanged" msprop:Generator_RowChangingName="HarmonogramRowChanging" msprop:Generator_TableClassName="HarmonogramDataTable" msprop:Generator_RowClassName="HarmonogramRow" msprop:Generator_TableVarName="tableHarmonogram" msprop:Generator_UserTableName="Harmonogram">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ID_Wyciagi" msprop:Generator_ColumnPropNameInRow="ID_Wyciagi" msprop:Generator_ColumnPropNameInTable="ID_WyciagiColumn" msprop:Generator_ColumnVarNameInTable="columnID_Wyciagi" msprop:Generator_UserColumnName="ID_Wyciagi" type="xs:int" minOccurs="0" />
+              <xs:element name="Stan" msprop:Generator_ColumnPropNameInRow="Stan" msprop:Generator_ColumnPropNameInTable="StanColumn" msprop:Generator_ColumnVarNameInTable="columnStan" msprop:Generator_UserColumnName="Stan" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Data_rozp" msprop:Generator_ColumnPropNameInRow="Data_rozp" msprop:Generator_ColumnPropNameInTable="Data_rozpColumn" msprop:Generator_ColumnVarNameInTable="columnData_rozp" msprop:Generator_UserColumnName="Data_rozp" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Data_zak" msprop:Generator_ColumnPropNameInRow="Data_zak" msprop:Generator_ColumnPropNameInTable="Data_zakColumn" msprop:Generator_ColumnVarNameInTable="columnData_zak" msprop:Generator_UserColumnName="Data_zak" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Wyciagi" msprop:Generator_RowEvHandlerName="WyciagiRowChangeEventHandler" msprop:Generator_RowDeletedName="WyciagiRowDeleted" msprop:Generator_RowDeletingName="WyciagiRowDeleting" msprop:Generator_RowEvArgName="WyciagiRowChangeEvent" msprop:Generator_TablePropName="Wyciagi" msprop:Generator_RowChangedName="WyciagiRowChanged" msprop:Generator_RowChangingName="WyciagiRowChanging" msprop:Generator_TableClassName="WyciagiDataTable" msprop:Generator_RowClassName="WyciagiRow" msprop:Generator_TableVarName="tableWyciagi" msprop:Generator_UserTableName="Wyciagi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ID_Harmonogram" msprop:Generator_ColumnPropNameInRow="ID_Harmonogram" msprop:Generator_ColumnPropNameInTable="ID_HarmonogramColumn" msprop:Generator_ColumnVarNameInTable="columnID_Harmonogram" msprop:Generator_UserColumnName="ID_Harmonogram" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Stoki" msprop:Generator_ColumnPropNameInRow="ID_Stoki" msprop:Generator_ColumnPropNameInTable="ID_StokiColumn" msprop:Generator_ColumnVarNameInTable="columnID_Stoki" msprop:Generator_UserColumnName="ID_Stoki" type="xs:int" minOccurs="0" />
+              <xs:element name="Nazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="Dlugosc" msprop:Generator_ColumnPropNameInRow="Dlugosc" msprop:Generator_ColumnPropNameInTable="DlugoscColumn" msprop:Generator_ColumnVarNameInTable="columnDlugosc" msprop:Generator_UserColumnName="Dlugosc" type="xs:long" minOccurs="0" />
+              <xs:element name="Wys_bezwzgl" msprop:Generator_ColumnPropNameInRow="Wys_bezwzgl" msprop:Generator_ColumnPropNameInTable="Wys_bezwzglColumn" msprop:Generator_ColumnVarNameInTable="columnWys_bezwzgl" msprop:Generator_UserColumnName="Wys_bezwzgl" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bilety" msprop:Generator_RowEvHandlerName="BiletyRowChangeEventHandler" msprop:Generator_RowDeletedName="BiletyRowDeleted" msprop:Generator_RowDeletingName="BiletyRowDeleting" msprop:Generator_RowEvArgName="BiletyRowChangeEvent" msprop:Generator_TablePropName="Bilety" msprop:Generator_RowChangedName="BiletyRowChanged" msprop:Generator_RowChangingName="BiletyRowChanging" msprop:Generator_TableClassName="BiletyDataTable" msprop:Generator_RowClassName="BiletyRow" msprop:Generator_TableVarName="tableBilety" msprop:Generator_UserTableName="Bilety">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ID_Klient" msprop:Generator_ColumnPropNameInRow="ID_Klient" msprop:Generator_ColumnPropNameInTable="ID_KlientColumn" msprop:Generator_ColumnVarNameInTable="columnID_Klient" msprop:Generator_UserColumnName="ID_Klient" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Wyciagi" msprop:Generator_ColumnPropNameInRow="ID_Wyciagi" msprop:Generator_ColumnPropNameInTable="ID_WyciagiColumn" msprop:Generator_ColumnVarNameInTable="columnID_Wyciagi" msprop:Generator_UserColumnName="ID_Wyciagi" type="xs:int" minOccurs="0" />
+              <xs:element name="Nazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="Ilosc_Zjazdow" msprop:Generator_ColumnPropNameInRow="Ilosc_Zjazdow" msprop:Generator_ColumnPropNameInTable="Ilosc_ZjazdowColumn" msprop:Generator_ColumnVarNameInTable="columnIlosc_Zjazdow" msprop:Generator_UserColumnName="Ilosc_Zjazdow" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Cennika" msprop:Generator_ColumnPropNameInRow="ID_Cennika" msprop:Generator_ColumnPropNameInTable="ID_CennikaColumn" msprop:Generator_ColumnVarNameInTable="columnID_Cennika" msprop:Generator_UserColumnName="ID_Cennika" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Klient" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Karnety_PK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Karnety" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="StokiPK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Stoki" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Cena_Karnety_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cena_Karnety" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Cena_Bilety_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cena_Bilety" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Cennik_PK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cennik" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Harmonogram_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Harmonogram" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Wyciagi_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Wyciagi" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Bilety_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Bilety" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Harmonogram_Wyciagi" msdata:parent="Harmonogram" msdata:child="Wyciagi" msdata:parentkey="ID_Wyciagi" msdata:childkey="ID" msprop:Generator_UserParentTable="Harmonogram" msprop:Generator_UserChildTable="Wyciagi" msprop:Generator_RelationVarName="relationHarmonogram_Wyciagi" msprop:Generator_ChildPropName="GetWyciagiRows" msprop:Generator_ParentPropName="HarmonogramRow" msprop:Generator_UserRelationName="Harmonogram_Wyciagi" />
+      <msdata:Relationship name="Wyciagi_Harmonogram" msdata:parent="Wyciagi" msdata:child="Harmonogram" msdata:parentkey="ID_Harmonogram" msdata:childkey="ID" msprop:Generator_UserParentTable="Wyciagi" msprop:Generator_UserChildTable="Harmonogram" msprop:Generator_RelationVarName="relationWyciagi_Harmonogram" msprop:Generator_UserRelationName="Wyciagi_Harmonogram" msprop:Generator_ChildPropName="GetHarmonogramRows" msprop:Generator_ParentPropName="WyciagiRow" />
+      <msdata:Relationship name="Wyciagi_Stoki" msdata:parent="Wyciagi" msdata:child="Stoki" msdata:parentkey="ID_Stoki" msdata:childkey="ID" msprop:Generator_UserParentTable="Wyciagi" msprop:Generator_UserChildTable="Stoki" msprop:Generator_RelationVarName="relationWyciagi_Stoki" msprop:Generator_UserRelationName="Wyciagi_Stoki" msprop:Generator_ChildPropName="GetStokiRows" msprop:Generator_ParentPropName="WyciagiRow" />
+      <msdata:Relationship name="Bilety_Klient" msdata:parent="Bilety" msdata:child="Klient" msdata:parentkey="ID_Klient" msdata:childkey="ID" msprop:Generator_UserParentTable="Bilety" msprop:Generator_UserChildTable="Klient" msprop:Generator_RelationVarName="relationBilety_Klient" msprop:Generator_UserRelationName="Bilety_Klient" msprop:Generator_ChildPropName="GetKlientRows" msprop:Generator_ParentPropName="BiletyRow" />
+      <msdata:Relationship name="Bilety_Wyciagi" msdata:parent="Bilety" msdata:child="Wyciagi" msdata:parentkey="ID_Wyciagi" msdata:childkey="ID" msprop:Generator_UserParentTable="Bilety" msprop:Generator_UserChildTable="Wyciagi" msprop:Generator_RelationVarName="relationBilety_Wyciagi" msprop:Generator_UserRelationName="Bilety_Wyciagi" msprop:Generator_ChildPropName="GetWyciagiRows" msprop:Generator_ParentPropName="BiletyRow" />
+      <msdata:Relationship name="Bilety_Cennik" msdata:parent="Bilety" msdata:child="Cennik" msdata:parentkey="ID_Cennika" msdata:childkey="ID" msprop:Generator_UserParentTable="Bilety" msprop:Generator_UserChildTable="Cennik" msprop:Generator_RelationVarName="relationBilety_Cennik" msprop:Generator_UserRelationName="Bilety_Cennik" msprop:Generator_ChildPropName="GetCennikRows" msprop:Generator_ParentPropName="BiletyRow" />
+      <msdata:Relationship name="Karnety_Klient" msdata:parent="Karnety" msdata:child="Klient" msdata:parentkey="ID_Klienta" msdata:childkey="ID" msprop:Generator_UserParentTable="Karnety" msprop:Generator_UserChildTable="Klient" msprop:Generator_RelationVarName="relationKarnety_Klient" msprop:Generator_UserRelationName="Karnety_Klient" msprop:Generator_ChildPropName="GetKlientRows" msprop:Generator_ParentPropName="KarnetyRow" />
+      <msdata:Relationship name="Karnety_Stoki" msdata:parent="Karnety" msdata:child="Stoki" msdata:parentkey="ID_Stoki" msdata:childkey="ID" msprop:Generator_UserParentTable="Karnety" msprop:Generator_UserChildTable="Stoki" msprop:Generator_RelationVarName="relationKarnety_Stoki" msprop:Generator_ChildPropName="GetStokiRows" msprop:Generator_ParentPropName="KarnetyRow" msprop:Generator_UserRelationName="Karnety_Stoki" />
+      <msdata:Relationship name="Karnety_Cennik" msdata:parent="Karnety" msdata:child="Cennik" msdata:parentkey="ID_Cennika" msdata:childkey="ID" msprop:Generator_UserParentTable="Karnety" msprop:Generator_UserChildTable="Cennik" msprop:Generator_RelationVarName="relationKarnety_Cennik" msprop:Generator_ChildPropName="GetCennikRows" msprop:Generator_ParentPropName="KarnetyRow" msprop:Generator_UserRelationName="Karnety_Cennik" />
+      <msdata:Relationship name="Cennik_Cena_Karnety" msdata:parent="Cennik" msdata:child="Cena_Karnety" msdata:parentkey="ID_Cena_Karnety" msdata:childkey="ID" msprop:Generator_UserParentTable="Cennik" msprop:Generator_UserChildTable="Cena_Karnety" msprop:Generator_RelationVarName="relationCennik_Cena_Karnety" msprop:Generator_UserRelationName="Cennik_Cena_Karnety" msprop:Generator_ChildPropName="GetCena_KarnetyRows" msprop:Generator_ParentPropName="CennikRow" />
+      <msdata:Relationship name="Cennik_Cena_Bilety" msdata:parent="Cennik" msdata:child="Cena_Bilety" msdata:parentkey="ID_Cena_Bilety" msdata:childkey="ID" msprop:Generator_UserParentTable="Cennik" msprop:Generator_UserChildTable="Cena_Bilety" msprop:Generator_RelationVarName="relationCennik_Cena_Bilety" msprop:Generator_UserRelationName="Cennik_Cena_Bilety" msprop:Generator_ChildPropName="GetCena_BiletyRows" msprop:Generator_ParentPropName="CennikRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
