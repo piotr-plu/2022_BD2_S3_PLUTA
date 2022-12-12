@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kasa.Master.cs" Inherits="narciarze.KasaMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Help.Master.cs" Inherits="narciarze.SiteMasterKlient" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/style_admin.css" />
+    <webopt:bundlereference runat="server" path="~/Content/style_pomoc.css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -39,19 +39,15 @@
             </Scripts>
         </asp:ScriptManager>
         <header class="header">
-                <h1>STOK NARCIARSKI GLIWICE</h1>
-                <h2>KASA</h2>
+                <h2>Pomoc</h2>
             </header>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 
         <nav class="navbar">
-        <p class="tab"><a href="kasa">Strona Główna</a></p>
-        <p class="tab"><a href="sprzedaz">Sprzedaż</a></p>
-        <p class="tab"><a href="blokowanie_karnetu">Blokowanie Karnetu</a></p>
-        <p class="tab"><a href="../login">Wyloguj</a></p>
-
-    </nav>
+            <p class="tab"><a runat="server" href="pomoc_klient">Pomoc Klient</a></p>
+            <p class="tab"><a runat="server" href="pomoc_administracja">Pomoc Administracja</a></p>
+        </nav>
             </div>
         </div>
         <div class="container body-content">
@@ -59,7 +55,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone | <a href="../../Pomoc/pomoc_administracja">Pomoc</a></p>
+                <p>&copy; <%: DateTime.Now.Year %> - Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone</p>
             </footer>
         </div>
 

@@ -62,7 +62,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone | <a href="../../Pomoc/pomoc_administracja">Pomoc</a></p>
             </footer>
         </div>
 

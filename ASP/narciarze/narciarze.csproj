@@ -105,11 +105,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\style_pomoc.css" />
     <Content Include="Content\style_admin.css" />
+    <Content Include="Pomoc\pomoc_administracja.aspx" />
     <Content Include="Strefa_Administracji\Administrator\admin.aspx" />
     <Content Include="Strefa_Administracji\Kasa\kasa.aspx" />
     <Content Include="Strefa_Administracji\Zarząd\zarzad.aspx" />
     <Content Include="Strefa_Klienta\Klient\klient.aspx" />
+    <Content Include="Pomoc\pomoc_klient.aspx" />
     <Content Include="Strefa_Klienta\Klient\raporty.aspx" />
     <Content Include="Strefa_Administracji\Administrator\baza_danych.aspx" />
     <Content Include="Strefa_Administracji\Administrator\grupowanie_stoki.aspx" />
@@ -146,6 +149,7 @@
     <Content Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="Pomoc\Help.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -188,6 +192,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pomoc\Help.Master.cs">
+      <DependentUpon>Help.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pomoc\Help.Master.designer.cs">
+      <DependentUpon>Help.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pomoc\pomoc_administracja.aspx.cs">
+      <DependentUpon>pomoc_administracja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pomoc\pomoc_administracja.aspx.designer.cs">
+      <DependentUpon>pomoc_administracja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strefa_Administracji\Kasa\kasa.aspx.cs">
       <DependentUpon>kasa.aspx</DependentUpon>
@@ -237,6 +255,13 @@
     </Compile>
     <Compile Include="Strefa_Klienta\Klient\klient.aspx.designer.cs">
       <DependentUpon>klient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pomoc\pomoc_klient.aspx.cs">
+      <DependentUpon>pomoc_klient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pomoc\pomoc_klient.aspx.designer.cs">
+      <DependentUpon>pomoc_klient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strefa_Klienta\Klient\raporty.aspx.cs">
       <DependentUpon>raporty.aspx</DependentUpon>
