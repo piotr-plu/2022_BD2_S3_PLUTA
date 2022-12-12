@@ -5,8 +5,11 @@
 
             <section>
                 <h2>Raporty</h2>
-                    Generowanie Raportów
-
+                   Wprowadź unikalny identyfikator klienta:<input type="text" name="id_klienta" value ="ID"/><br />
+                   Wprowadź interesujący cię okres raportu: <br />
+                   Od: <input type="date" name="data_start"/><br />
+                   Do: <input type="date" name="data_zak"/><br />
+                   <input type="Submit" name="generuj_rap" value="Generuj"/><br />
             </section>
         </article>
 
