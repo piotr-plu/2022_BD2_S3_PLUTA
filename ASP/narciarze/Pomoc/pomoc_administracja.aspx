@@ -4,18 +4,16 @@
      <article>
 
             <section>
-                <h1>&compfn; Administrator</h1>
-                <h2>Grupowanie Stoków</h2>
-                <h2>Edycja Stoków</h2>
-                <h2>Ustawianie Statusu Wyciągów</h2>
-                <h2>Ustawianie Harmonogramu</h2>
-                <h2>Dostęp do bazy danych</h2>
-                <h1>&compfn; Kasa</h1>
-                <h2>Sprzedaż</h2>
-                <h2>Blokowanie</h2>
-                <h1>&compfn; Zarząd</h1>
-                <h2>Zmiana cennika</h2>
-                <h2>Generowanie Raportów</h2>
+                <h1>&compfn; Instrukcja dla Administratora</h1>
+                <p><a href="Instrukcje/Instrukcja_użytkownika_-_Administrator.pdf" target="_blank">Instrukcja użytkownika - Administrator</a></p>
+
+                <h1>&compfn; Instrukcja dla Kasjera</h1>
+                <p><a href="Instrukcje/Instrukcja_użytkownika_-_Kasjer.pdf" target="_blank">Instrukcja użytkownika - Kasjer</a></p>
+
+                <h1>&compfn; Instrukcja dla Zarządu</h1>
+                <p><a href="Instrukcje/Instrukcja_użytkownika_-_Zarząd.pdf" target="_blank">Instrukcja użytkownika - Zarząd</a></p>
+    
+               
             </section>
         </article>
 

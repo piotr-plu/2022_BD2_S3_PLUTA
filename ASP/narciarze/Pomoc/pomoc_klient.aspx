@@ -3,9 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
      <article>
 
-            <section>
-                <h2>Pomoc</h2>
-            </section>
-        </article>
+         <section>
+                <h1>&compfn; Instrukcja dla Klienta</h1>
+                <p><a href="Instrukcje/Instrukcja_użytkownika_-_Klient.pdf" target="_blank">Instrukcja użytkownika - Klient</a></p>
+        </section>
+    </article>
 
 </asp:Content>

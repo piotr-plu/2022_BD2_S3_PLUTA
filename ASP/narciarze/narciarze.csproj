@@ -150,6 +150,7 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
     <Content Include="Pomoc\Help.Master" />
+    <Content Include="Pomoc\Instrukcje\Instrukcja_użytkownika_-_Administrator.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

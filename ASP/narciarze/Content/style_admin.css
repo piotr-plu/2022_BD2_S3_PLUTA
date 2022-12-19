@@ -196,8 +196,8 @@ label {
 input[type="submit"] {
     width: 70px;
     padding: 5px 13px;
-    border: 1px solid #005f85;
-    color: white;
+    border: 1px solid black ;
+    color: black;
     text-shadow: 0 0 1px black;
     background: #98c9dc;
     position: relative;
