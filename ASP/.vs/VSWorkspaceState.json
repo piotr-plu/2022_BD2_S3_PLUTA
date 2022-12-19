@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\narciarze",
-    "\\narciarze\\Strefa_Administracji",
-    "\\narciarze\\Strefa_Administracji\\Administrator",
-    "\\narciarze\\Strefa_Administracji\\Zarząd"
+    "\\narciarze\\Strefa_Klienta",
+    "\\narciarze\\Strefa_Klienta\\Klient"
   ],
-  "SelectedNode": "\\narciarze\\Strefa_Administracji\\Administrator\\grupowanie_stoki.aspx",
+  "SelectedNode": "\\narciarze.sln",
   "PreviewInSolutionExplorer": false
 }
