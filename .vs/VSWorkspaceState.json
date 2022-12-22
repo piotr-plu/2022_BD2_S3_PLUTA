@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ASP",
+    "\\ASP\\narciarze\\Strefa_Administracji",
+    "\\ASP\\narciarze\\Strefa_Administracji\\Administrator",
+    "\\ASP_RAZORY"
   ],
-  "SelectedNode": "\\narciarze.sln",
+  "SelectedNode": "\\ASP_RAZORY",
   "PreviewInSolutionExplorer": false
 }
