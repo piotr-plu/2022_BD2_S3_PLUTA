@@ -24,12 +24,80 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Logowanie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3dhbmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/Administrator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxBZG1pbmlzdHJhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/BazaDanych.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxCYXphRGFueWNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/EdycjaStokow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxFZHljamFTdG9rb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/GrupowanieStoki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxHcnVwb3dhbmllU3Rva2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/GrupowanieStokow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxHcnVwb3dhbmllU3Rva293LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/Harmonogram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxIYXJtb25vZ3JhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/StatusWyciagow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxTdGF0dXNXeWNpYWdvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Blokowanie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcS2FzYVxCbG9rb3dhbmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Kasa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcS2FzYVxLYXNhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Sprzedarz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcS2FzYVxTcHJ6ZWRhcnouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Zarzad/Raporty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcWmFyemFkXFJhcG9ydHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Zarzad/Zarzad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcWmFyemFkXFphcnphZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Zarzad/ZmianaCennika.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcWmFyemFkXFptaWFuYUNlbm5pa2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Cennik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0tsaWVudGFcQ2VubmlrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Kontakt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0tsaWVudGFcS29udGFrdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Trasy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0tsaWVudGFcVHJhc3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/_ViewImports.cshtml]

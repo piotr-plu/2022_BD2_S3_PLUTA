@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Narciarze_v_2.props" />
+</Project>
