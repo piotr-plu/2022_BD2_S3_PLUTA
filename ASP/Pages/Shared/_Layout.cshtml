@@ -11,42 +11,49 @@
 <body>
     <header>
         
-        <p class="h1 text-center"><img class="mainImage" src="~/images/narciarz.png" width="200px" height="200px" />STOK NARCIARSKI GLIWICE</p>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <p class="h1 text-center algi"><img class="mainImage" src="~/images/narciarz.png" width="100px" height="100px" />STOK NARCIARSKI GLIWICE</p>
+       
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #79C0D7;">
+            <div class="container-fluid">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarCentered"
+                        aria-controls="navbarCentered"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse justify-content-center"
+                     id="navbarCentered">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Strona Główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Strefa_Klienta/Cennik">Cennik</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Cennik">Cennik</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Strefa_Klienta/Trasy">Trasy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Trasy">Trasy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Strefa_Klienta/Kontakt">Kontakt</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Kontakt">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Logowanie">Logowanie</a>
+                            <a class="nav-link text-dark " asp-area="" asp-page="/Logowanie">Logowanie</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" style="background-color: #F8F8F8;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="background-color: #50A3C6;">
         <div class="container">
             &copy;Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone
         </div>

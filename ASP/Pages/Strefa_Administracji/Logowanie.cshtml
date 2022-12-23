@@ -1,0 +1,16 @@
+﻿@page
+@model Narciarze_v_2.Pages.Logowanie_Administracja_Model
+@{
+    ViewData["Title"] = "Logowanie Administracja";
+}
+<div class="text-center">
+    <section>
+        <h2>&compfn; Logowanie</h2>
+        <label for="username">Nazwa użytkownika:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password">
+
+        <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Logowanie_Administracja">Logowanie</a>
+    </section>
+</div>
