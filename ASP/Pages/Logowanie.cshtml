@@ -3,17 +3,30 @@
 @{
     ViewData["Title"] = "Logowanie";
 }
-<div class="text-center">
-    <section>
-        <h2>&compfn; Logowanie</h2>
-        <label for="username">Nazwa użytkownika:</label>
-        <input type="text" id="username" name="username"><br />
-        <label for="password">Hasło:</label>
-        <input type="password" id="password" name="password"><br />
+
+<form>
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="email_input" class="form-control" />
+        <label class="form-label" for="email_input">Email address</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="email_input" class="form-control" />
+        <label class="form-label" for="email_input">Password</label>
+    </div>
+
+    <!-- Submit button -->
+    <button type="button" id="sign_in_button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+</form>
+
+<div>
 
         <a class="text-dark" asp-area="" asp-page="/Strefa_Klienta/Klient">Klient</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Administrator/Administrator">Admin</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Kasa/Kasa">Kasa</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Zarzad/Zarzad">Zarzad</a>
-    </section>
+
 </div>
