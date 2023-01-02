@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Narciarze_v_2
 build_property.RootNamespace = Narciarze_v_2
-build_property.ProjectDir = C:\Users\aang083\source\Repos\piotr-plu\2022_BD2_S3_PLUTA\ASP_RAZORY\Narciarze_v_2\
+build_property.ProjectDir = C:\Users\aang083\Source\Repos\piotr-plu\2022_BD2_S3_PLUTA\ASP_RAZORY\Narciarze_v_2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\aang083\source\Repos\piotr-plu\2022_BD2_S3_PLUTA\ASP_RAZORY\Narciarze_v_2
+build_property.MSBuildProjectDirectory = C:\Users\aang083\Source\Repos\piotr-plu\2022_BD2_S3_PLUTA\ASP_RAZORY\Narciarze_v_2
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Error.cshtml]
@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Logowanie.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3dhbmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_Layout_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRfQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_Layout_Kasa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRfS2FzYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_Layout_Klient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRfS2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_Layout_Zarzad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRfWmFyemFkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Shared/_ValidationScriptsPartial.cshtml]
@@ -48,10 +64,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxHcnVwb3dhbmllU3Rva2kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/GrupowanieStokow.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxHcnVwb3dhbmllU3Rva293LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Administrator/Harmonogram.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcQWRtaW5pc3RyYXRvclxIYXJtb25vZ3JhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Blokowanie.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcS2FzYVxCbG9rb3dhbmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Cennik_Kasa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0FkbWluaXN0cmFjamlcS2FzYVxDZW5uaWtfS2FzYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Administracji/Kasa/Kasa.cshtml]
@@ -94,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Kontakt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0tsaWVudGFcS29udGFrdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Raport_klient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyZWZhX0tsaWVudGFcUmFwb3J0X2tsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aang083/source/Repos/piotr-plu/2022_BD2_S3_PLUTA/ASP_RAZORY/Narciarze_v_2/Pages/Strefa_Klienta/Trasy.cshtml]
