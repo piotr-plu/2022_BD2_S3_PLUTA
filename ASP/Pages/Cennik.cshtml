@@ -7,6 +7,42 @@
 <div class="text-center">
     <section>
         <h2>&compfn; Cennik</h2>
-        <p>W tym miejscu będzie widoczny aktualny cennik.</p>
+        <p>CENNIK</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nazwa</th>
+                    <th>Cena</th>
+                    <th>Wymiar Godzinowy</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cena in Model.ceny_k)
+                {
+                    <tr>
+                        <td>@cena.Nazwa</td>
+                        <td>@cena.Cena</td>
+                        <td>@cena.Wymiar_godz</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nazwa</th>
+                    <th>Cena za przejazd</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cena in Model.ceny_b)
+                {
+                        <tr>
+                            <td>@cena.Nazwa</td>
+                            <td>@cena.Cena_p</td>
+                        </tr>
+                }
+            </tbody>
+        </table>
     </section>
 </div>

@@ -6,25 +6,5 @@
 <div class="text-center">
     <section>
         <h2>&compfn; Trasy</h2>
-        <p>TABELE TRAS</p>
-        <table class="table table-bordered">
-           <thead>
-                <tr>
-                    <th>ID stoku</th>
-                    <th>Nazwa stoku</th>
-                    <th>Wymiar Godzinowy</th>
-                </tr>
-           </thead>
-            <tbody>
-                @foreach (var trasa in Model.trasy)
-                {
-                    <tr>
-                        <td>@trasa.Nazwa</td>
-                        <td>@trasa.Cena</td>
-                        <td>@trasa.Wymiar_godz</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
     </section>
 </div>
