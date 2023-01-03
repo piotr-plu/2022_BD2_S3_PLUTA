@@ -7,5 +7,22 @@
     <section>
         <h2>&compfn; Trasy</h2>
         <p>TABELE TRAS</p>
+        <table class="table table-bordered">
+           <thead>
+                <tr>
+                    <th>ID stoku</th>
+                    <th>Nazwa stoku</th>
+                </tr>
+           </thead>
+           <tbody>
+                @foreach(var row in Model.Stokis)
+                {
+                    <tr>
+                        <td>@row.Id</td>
+                        <td>@row.Nazwa</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </section>
 </div>
