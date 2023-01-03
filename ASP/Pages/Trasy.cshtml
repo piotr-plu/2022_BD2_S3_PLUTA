@@ -12,14 +12,16 @@
                 <tr>
                     <th>ID stoku</th>
                     <th>Nazwa stoku</th>
+                    <th>Wymiar Godzinowy</th>
                 </tr>
            </thead>
-           <tbody>
-                @foreach(var row in Model.Stokis)
+            <tbody>
+                @foreach (var trasa in Model.trasy)
                 {
                     <tr>
-                        <td>@row.Id</td>
-                        <td>@row.Nazwa</td>
+                        <td>@trasa.Nazwa</td>
+                        <td>@trasa.Cena</td>
+                        <td>@trasa.Wymiar_godz</td>
                     </tr>
                 }
             </tbody>

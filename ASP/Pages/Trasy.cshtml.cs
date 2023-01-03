@@ -1,26 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Narciarze_v_2.Data;
-using Narciarze_v_2.Models;
+using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Narciarze_v_2.Pages.Strefa_Klienta
 {
     public class TrasyModel : PageModel
     {
-        public List<Stoki> Stokis;
-        
-        private ITrasy Narty_V2 { get; }
-        public TrasyModel(ITrasy narty_V2) 
+        public List<Trasa> trasy = new List<Trasa>();
+        public void OnGet()
         {
-            Narty_V2 = narty_V2;
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            conn.Open();
+            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID";
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Trasa t1 = new Trasa();
+                        t1.Nazwa = reader["Nazwa"].ToString();
+                        t1.Cena = reader["Cena"].ToString();
+                        t1.Wymiar_godz = reader["Wymiar godzinowy"].ToString();
+                        trasy.Add(t1);
+                    }
+                }
+            }
         }
+    }
 
-
-        public async Task<IActionResult> OnGetAsync()
-        {
-            var stokis = await Narty_V2.GetStoki();
-            Stokis = stokis.ToList();
-            return Page();
-        }
+    public class Trasa
+    {
+        public string Nazwa, Cena, Wymiar_godz;
     }
 }
