@@ -4,16 +4,15 @@
     ViewData["Title"] = "Cennik";
 }
 
-<div class="text-center">
-    <section>
-        <h2>&compfn; Cennik</h2>
-        <p>CENNIK</p>
-        <table class="table table-bordered">
-            <thead>
+    <h2 class="text-center m-4" >Cennik Bilety</h2>
+
+    <div class="table-responsive text-center m-4">
+    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+            <thead class="table-dark">
                 <tr>
-                    <th>Nazwa</th>
-                    <th>Cena</th>
-                    <th>Wymiar Godzinowy</th>
+                    <th>Stok</th>
+                    <th>Ilośc Godzin</th>
+                    <th>Cena karnetu</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,17 +20,22 @@
                 {
                     <tr>
                         <td>@cena.Nazwa</td>
-                        <td>@cena.Cena</td>
                         <td>@cena.Wymiar_godz</td>
+                        <td>@cena.Cena</td>
                     </tr>
                 }
             </tbody>
         </table>
-        <table class="table table-bordered">
-            <thead>
+     </div>
+
+<h2 class="text-center m-4">Cennik Karnety</h2>
+
+<div class="table-responsive text-center  m-4">
+    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+        <thead class="table-dark">
                 <tr>
-                    <th>Nazwa</th>
-                    <th>Cena za przejazd</th>
+                    <th>Wyciąg</th>
+                    <th>Cena za wjazd</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +47,5 @@
                         </tr>
                 }
             </tbody>
-        </table>
-    </section>
+     </table>
 </div>

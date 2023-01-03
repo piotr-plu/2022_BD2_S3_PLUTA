@@ -12,7 +12,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         {
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V2.0;Integrated Security=True");
             conn.Open();
-            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID";
+            string query = "SELECT s.Nazwa as \"Stok\", w.Nazwa as \"Wyciag\", h.Stan as \"Stan\", w.Dlugosc as \"Dlugosc\" FROM Stoki as s, Wyciagi as w, Harmonogram as h WHERE s.ID = w.ID_Stok AND w.ID_Harmonogram = h.ID";
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -20,9 +20,11 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                     while (reader.Read())
                     {
                         Trasa t1 = new Trasa();
-                        t1.Nazwa = reader["Nazwa"].ToString();
-                        t1.Cena = reader["Cena"].ToString();
-                        t1.Wymiar_godz = reader["Wymiar godzinowy"].ToString();
+                        t1.Stok = reader["Stok"].ToString();
+                        t1.Wyciag = reader["Wyciag"].ToString();
+                        t1.Stan = reader["Stan"].ToString();
+                        t1.Dlugosc = reader["Dlugosc"].ToString();
+
                         trasy.Add(t1);
                     }
                 }
@@ -32,6 +34,6 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
 
     public class Trasa
     {
-        public string Nazwa, Cena, Wymiar_godz;
+        public string Stok, Wyciag, Stan, Dlugosc;
     }
 }

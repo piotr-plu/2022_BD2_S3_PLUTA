@@ -3,8 +3,28 @@
 @{
     ViewData["Title"] = "Trasy";
 }
-<div class="text-center">
-    <section>
-        <h2>&compfn; Trasy</h2>
-    </section>
+
+<h2 class="text-center m-4">Trasy</h2>
+<div class="table-responsive text-center m-4">
+    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+        <thead class="table-dark">
+                <tr>
+                    <th>Stok</th>
+                    <th>Wyciag</th>
+                    <th>Stan</th>
+                    <th>Długość</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var wyciag in Model.trasy)
+                {
+                    <tr>
+                        <td>@wyciag.Stok</td>
+                        <td>@wyciag.Wyciag</td>
+                        <td>@wyciag.Stan</td>
+                        <td>@wyciag.Dlugosc</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 </div>
