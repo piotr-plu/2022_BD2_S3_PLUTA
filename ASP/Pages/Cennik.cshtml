@@ -4,48 +4,58 @@
     ViewData["Title"] = "Cennik";
 }
 
-    <h2 class="text-center m-4" >Cennik Bilety</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center m-4" >Cennik Bilety</h2>
 
-    <div class="table-responsive text-center m-4">
-    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
-            <thead class="table-dark">
-                <tr>
-                    <th>Stok</th>
-                    <th>Ilośc Godzin</th>
-                    <th>Cena karnetu</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var cena in Model.ceny_k)
-                {
-                    <tr>
-                        <td>@cena.Nazwa</td>
-                        <td>@cena.Wymiar_godz</td>
-                        <td>@cena.Cena</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-     </div>
-
-<h2 class="text-center m-4">Cennik Karnety</h2>
-
-<div class="table-responsive text-center  m-4">
-    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
-        <thead class="table-dark">
-                <tr>
-                    <th>Wyciąg</th>
-                    <th>Cena za wjazd</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var cena in Model.ceny_b)
-                {
+            <div class="table-responsive text-center m-4">
+            <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                    <thead class="table-dark">
                         <tr>
-                            <td>@cena.Nazwa</td>
-                            <td>@cena.Cena_p</td>
+                            <th>Stok</th>
+                            <th>Ilośc Godzin</th>
+                            <th>Cena karnetu</th>
                         </tr>
-                }
-            </tbody>
-     </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var cena in Model.ceny_k)
+                        {
+                            <tr>
+                                <td>@cena.Nazwa</td>
+                                <td>@cena.Wymiar_godz</td>
+                                <td>@cena.Cena</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+             </div>
+        </div>
+   
+
+  
+        <div class="col-md-6">
+            <h2 class="text-center m-4">Cennik Karnety</h2>
+
+            <div class="table-responsive text-center  m-4">
+                <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                    <thead class="table-dark">
+                            <tr>
+                                <th>Wyciąg</th>
+                                <th>Cena za wjazd</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cena in Model.ceny_b)
+                            {
+                                    <tr>
+                                        <td>@cena.Nazwa</td>
+                                        <td>@cena.Cena_p</td>
+                                    </tr>
+                            }
+                        </tbody>
+                 </table>
+            </div>
+        </div>
+    </div>
 </div>
