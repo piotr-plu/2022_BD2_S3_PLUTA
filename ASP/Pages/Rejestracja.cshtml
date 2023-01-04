@@ -1,0 +1,53 @@
+﻿@page
+@using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
+@model Narciarze_v_2.Pages.Strefa_Klienta.RejestracjaModel
+@{
+    ViewData["Title"] = "Rejestracja";
+    Layout = "_Layout";
+    //Validation.RequireField("imie_input", "Imię jest wymagane.");
+    //Validation.RequireField("nazw_input", "Nazwisko jest wymagane.");
+    //Validation.RequireField("email_input", "E-Mail jest wymagany.");
+    //Validation.RequireField("haslo_input", "Hasło jest wymagane");
+    //Validation.Add("Klient", Validator.Integer());
+    //if (IsPost) {
+    //    string imie = Request.Form["imie_input"];
+    //    string nazwisko = Request.Form["nazw_input"];
+    //    string email = Request.Form["email_input"];
+    //    string haslo = Request.Form["haslo_input"];
+        
+
+    //    <text>
+    //      You entered: <br />
+    //      Company Name: @imie <br />
+    //      Contact Name: @nazwisko <br />
+    //      Contact Name: @email <br />
+    //    </text>
+    //}
+}
+<body>
+      <form method="post" >
+        <fieldset>
+          <legend>Dodaj Klienta</legend>
+          <div>
+            <label for="imie">Imię</label>
+            <input type="text" name="imie" value="" />
+          </div>
+          <div>
+            <label for="nazw">Nazwisko:</label>
+            <input type="text" name="nazw" value="" />
+          </div>
+          <div>
+            <label for="email">E-Mail:</label>
+            <input type="text" name="email" value="" />
+          </div>
+          <div>
+            <label for="haslo">Hasło:</label>
+            <input type="password" name="haslo" value="" />
+          </div>
+          <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Zarejestruj" class="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </body>
