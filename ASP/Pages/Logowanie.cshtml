@@ -4,31 +4,29 @@
     ViewData["Title"] = "Logowanie";
 }
 
-<form>
-    <!-- Email input -->
-    <div class="form-outline mb-4">
-        <input type="email" id="email_input" class="form-control" />
-        <label class="form-label" for="email_input">Email address</label>
-    </div>
+<div class="m-5">
+    <form class="justify-content-center">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="email_input" class="form-control" />
+            <label class="form-label" for="email_input">Adress Email</label>
+        </div>
 
-    <!-- Password input -->
-    <div class="form-outline mb-4">
-        <input type="password" id="email_input" class="form-control" />
-        <label class="form-label" for="email_input">Password</label>
-    </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" id="email_input" class="form-control" />
+            <label class="form-label" for="email_input">Hasło</label>
+        </div>
 
-    <!-- Submit button -->
-    <button type="button" id="sign_in_button" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <!-- Submit button -->
+        <button type="button" id="sign_in_button" class="btn btn-primary btn-block mb-4">Zaloguj</button>
 
-</form>
+    </form>
+</div>
 
-<div>
-
-        <button type="submit">Zaloguj</button>
-        <br/><br/>
+<div class="text-center m-3">
         <a class="text-dark" asp-area="" asp-page="/Strefa_Klienta/Klient">Klient</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Administrator/Administrator">Admin</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Kasa/Kasa">Kasa</a>
         <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Zarzad/Zarzad">Zarzad</a>
-
 </div>

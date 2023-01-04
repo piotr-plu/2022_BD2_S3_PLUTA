@@ -8,17 +8,25 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Narciarze_v_2.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body style="background-color: #F8F8F8;">
     <header>
-        <p class="h1 text-center"><img class="mainImage" src="~/images/narciarz.png" width="200px" height="200px" />STOK NARCIARSKI GLIWICE</p>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+        <p class="h1 text-center m-4"><img class="mainImage" src="~/images/narciarz.png" width="100px" height="100px" />STOK NARCIARSKI GLIWICE</p>
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow rounded-pill mx-3" style="background-color: #62B6B7;">
+            <div class="container-fluid">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarCentered"
+                        aria-controls="navbarCentered"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse justify-content-center"
+                     id="navbarCentered">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="Kasa">Strona Główna</a>
                         </li>
@@ -45,8 +53,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="footer border text-center text-muted shadow rounded-pill mx-3" style="background-color: #439A97 ;">
+        <div class="m5">
             &copy;Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone
         </div>
     </footer>
