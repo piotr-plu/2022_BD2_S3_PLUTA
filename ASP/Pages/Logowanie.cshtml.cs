@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using Narciarze_v_2.Pages.Strefa_Klienta;
-using static Narciarze_v_2.Pages.Strefa_Klienta.RejestracjaModel;
 
 namespace Narciarze_v_2.Pages
 {
