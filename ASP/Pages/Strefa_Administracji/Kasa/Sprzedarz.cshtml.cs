@@ -74,7 +74,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
 
             public void OnPostRejestracja()
             {
-                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2.0;Integrated Security=True");
+                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
                 conn.Open();
                 Rejestracja r1 = new Rejestracja();
                 r1.imie = Request.Form["imie"];
