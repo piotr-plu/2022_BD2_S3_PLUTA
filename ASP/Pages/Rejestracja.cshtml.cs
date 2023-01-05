@@ -14,7 +14,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         }
         public void OnPost()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
             conn.Open();
             Rejestracja r1 = new Rejestracja();
             r1.imie = Request.Form["imie"];
