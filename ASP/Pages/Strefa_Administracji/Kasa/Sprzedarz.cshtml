@@ -4,9 +4,47 @@
     ViewData["Title"] = "Sprzedaż";
     Layout = "_Layout_Kasa";
 }
+<body>
 <div class="text-center">
     <section>
         <h2>&compfn;Sprzedarz Biletów/Karnetów</h2>
+        <form metod = "post" >
+        <fieldset>
+            <h3>Podaj dane klienta:</h3>
+            <div>
+                <label for="imie">Imię</label>
+                <input type="text" name="imie" value="" />
+            </div>
+            <div>
+            <label for="nazw">Nazwisko</label>
+            <input type="text" name="nazw" value="" />
+          </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" value="" />
+            </div>
+            <br />
+            <h3>Podaj dane biletu</h3>
+            <div>
+                <label for="wyciag">Nazwa Wyciągu</label>
+                <input type="text" name="wyciag" value="" />
+            </div>
+            <div>
+                <label for="zjazdy">Ilość Zjazdów</label>
+                <input type="number" name="znazdy" value="" />
+            </div>
+            <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Kub Bilet" class="submit" />
+          </div>
+
+
+
+
+
+            </fieldset>
+        </form>
 
     </section>
 </div>
+</body>
