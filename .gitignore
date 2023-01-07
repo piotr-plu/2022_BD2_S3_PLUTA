@@ -475,3 +475,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/ASP/Pages/Strefa_Administracji/Kasa/Sprzedarz.cshtml.cs
