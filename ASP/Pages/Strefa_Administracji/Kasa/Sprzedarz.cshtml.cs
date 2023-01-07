@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
@@ -13,66 +14,74 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public List<Cennik> c = new List<Cennik>();
 
         public List<Rejestracja> reg = new List<Rejestracja>();
-        public void OnGet()
+        public void OnGet() //Wyœwietlanie list rozwijanych
         {
-        }
-            public void OnPostBilet()
+            /*=========================DO POPRAWY TA CZÊŒÆ=======================================*/
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            conn.Open();
+            string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient";
+            using (SqlCommand command = new SqlCommand(query1, conn))
             {
-
-                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2.0;Integrated Security=True");
-                conn.Open();
-                Klient k1 = new Klient();
-                k1.imie = Request.Form["imie"];
-                k1.nazw = Request.Form["nazwisko"];
-                k1.email = Request.Form["email"];
-                string query1 = "SELECT ID as id from Klient where Imie =  '" + k1.imie + "' AND Nazwisko = '" + k1.nazw + "' AND EMail ='" + k1.email + "'";
-                using (SqlCommand command = new SqlCommand(query1, conn))
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            k1.id = reader["id"].ToString();
-                            k.Add(k1);
-                        }
+                        Klient k1 = new Klient();
+                        k1.imie = reader["imie"].ToString();
+                        k1.nazw = reader["nazw"].ToString();
+                        k1.id = reader["id"].ToString();
+                        k.Add(k1);
                     }
-                }
-                Wyciag w1 = new Wyciag();
-                w1.nazwa = Request.Form["wyciag"];
-                w1.ilosc_zjazdow = Request.Form["zjazdy"];
-                string query2 = "SELECT ID as id from Wyciagi WHERE Nazwa = '" + w1.nazwa + "'";
-                using (SqlCommand command = new SqlCommand(query2, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            w1.id = reader["id"].ToString();
-                            w.Add(w1);
-                        }
-                    }
-                }
-                Cennik c1 = new Cennik();
-                string query3 = "SELECT c.ID as id from Cennik as c, Cena_bilety as cb WHERE cb.ID_Wyciag = 2 AND c.ID_Cena_bilet = cb.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
-                using (SqlCommand command = new SqlCommand(query3, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            c1.id = reader["id"].ToString();
-                            c.Add(c1);
-                        }
-                    }
-                }
-                string query4 = "INSERT INTO Bilety (ID_Klient, ID_Wyciagi, Ilosc_zjazdow, ID_cennika) VALUES ('" + k1.id + "', '" + w1.id + "','" + w1.ilosc_zjazdow + "','" + c1.id + "')";
-                using (SqlCommand command = new SqlCommand(query3, conn))
-                {
-                   command.ExecuteNonQuery();
                 }
             }
+            /*=========================DO POPRAWY TA CZÊŒÆ=======================================*/
+            string query2 = "SELECT ID as id, Nazwa as nazwa FROM Wyciagi";
+            using (SqlCommand command = new SqlCommand(query2, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazwa"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+        }
 
-            public void OnPostRejestracja()
+        public void OnPostBilet() //Zakup nowego biletu
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            conn.Open();
+            Klient k2 = new Klient();
+            k2.id = Request.Form["klient"].ToString();
+            Wyciag w2 = new Wyciag();
+            Cennik c1 = new Cennik();
+            w2.id = Request.Form["wyciag"].ToString();
+            w2.ilosc_zjazdow = Request.Form["ilosc"].ToString();
+            string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_bilety as ck WHERE c.ID_Cena_bilet = ck.ID AND ck.ID_Wyciag = '" + w2.id + "' AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
+            using (SqlCommand command = new SqlCommand(query3, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        c1.id = reader["id"].ToString();
+                        c.Add(c1);
+                    }
+                }
+            }
+            string query4 = "INSERT INTO Bilety (ID_Klient, ID_Wyciag, Ilosc_zjazdow, ID_cennik) VALUES ('" + k2.id + "', '" + w2.id + "', '" + w2.ilosc_zjazdow + "','" + c1.id + "')";
+            using (SqlCommand command = new SqlCommand(query4, conn))
+            {
+                command.ExecuteNonQuery();
+            }
+            Response.Redirect("/Strefa_Administracji/Kasa/Sprzedarz");
+        }
+
+            public void OnPostRejestracja() //Rejestracja nowego urzytkownika
             {
                 SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
                 conn.Open();
@@ -90,7 +99,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
 
 
         public class Klient {
-            public string id, imie, nazw, email;
+            public string id, imie, nazw;
         }
         public class Wyciag
         {
