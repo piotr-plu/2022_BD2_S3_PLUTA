@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Configuration;
 
 
 namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
@@ -19,7 +19,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             public void OnPostBilet()
             {
 
-                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2.0;Integrated Security=True");
+                SqlConnection conn = new SqlConnection("DefaultConnection");
                 conn.Open();
                 Klient k1 = new Klient();
                 k1.imie = Request.Form["imie"];
@@ -74,7 +74,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
 
             public void OnPostRejestracja()
             {
-                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
+                SqlConnection conn = new SqlConnection("DefaultConnection");
                 conn.Open();
                 Rejestracja r1 = new Rejestracja();
                 r1.imie = Request.Form["imie"];
