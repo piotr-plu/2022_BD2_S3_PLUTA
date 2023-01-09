@@ -11,7 +11,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public List<Wartownik> w = new List<Wartownik>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
             conn.Open();
             string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient ORDER BY Nazwisko ASC";
             using (SqlCommand command = new SqlCommand(query1, conn))
@@ -33,7 +33,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public void OnPostBlok()
         {
             Klient k2 = new Klient();
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
             conn.Open();
             k2.id = Request.Form["klient"];
             string query2 = "SELECT k.ID as id, kl.Imie as imie, kl.ID as id_k , kl.Nazwisko as nazwisko, s.Nazwa as nazw, k.Czas_trwania as czas, k.Status as status  FROM Karnety as k, Stoki as s, Klient as kl WHERE kl.ID = k.ID_Klient AND s.ID = k.ID_Stok AND k.ID_Klient = '" + k2.id+"' ";

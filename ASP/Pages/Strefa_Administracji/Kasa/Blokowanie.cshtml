@@ -4,51 +4,69 @@
     ViewData["Title"] = "Blokowanie";
     Layout = "_Layout_Kasa";
 }
-<div class="text-center">
-    <section>
-        <h2>&compfn;Edytuj statusu Biletów/Karnetów</h2>
-        <form method="post" class="mx-1 mx-md-4">
 
-            <h3>Podaj dane klienta:</h3>
-            <select name="klient">
-                @foreach (var a in Model.k)
-                {
-                    <option value="@a.id">@a.imie @a.nazw</option>
-                }
-            </select>
-            <br />
-            <label>&nbsp;</label>
-            <input type="submit" value="Wyszukaj" class="btn btn-primary btn-block mb-4" asp-page-handler="Blok" />
-        </form>
-        <form method="post">
-            <table align="center" border="1" name = "tab">
-                <tr>
-                    <th>ID Bileru</th>
-                    <th>Imię</th>
-                    <th>Nazwisko</th>
-                    <th>Stok</th>
-                    <th>Czas [h]</th>
-                    <th>Status</th>
-                </tr>
-                @foreach(var a in Model.w){
-                <tr>
-                    <td>@a.id</td>
-                    <td>@a.imie</td>
-                    <td>@a.nazwisko</td>
-                    <td>@a.nazw</td>
-                    <td>@a.ilosc</td>
-                    <td>@a.status</td>
-                    <td><a class="btn byn-primary btn" href="/Strefa_Administracji/Kasa/Blok_bilet?ID=@a.id_k" value = "Zablokuj"></a></td>
-                    <td><a class="btn byn-primary btn" href="/Strefa_Administracji/Kasa/Odblokuj_karnet?ID=@a.id_k" value="Odblokuj"></a></td>
-                </tr>
-                }
-            </table>
+<body>
+    <div class="container m-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="card text-black shadow" style="border-radius: 25px;">
+                    <div class="m-3">
+
+                        <p class="text-center h3 fw-bold ">Blokowanie Karnetu</p>
+
+                        <form method="post" class="mx-1 mx-md-4">
+
+                        <div class="d-flex flex-row align-items-center mx-md-5 mt-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <select name="klient" class="form-control">
+                                    @foreach (var a in Model.k)
+                                    {
+                                        <option value="@a.id">@a.imie @a.nazw</option>
+                                    }
+                                </select>
+                                <label class="form-label" for="klient">Imię i Nazwisko Klienta</label>
+                            </div>
+                        </div>
 
 
+                            <div class="d-flex justify-content-center m-2">
+                                <input type="submit" value="Wyszukaj" class="btn btn-primary btn-block mb-4" asp-page-handler="Blok" />
+                            </div>
+                        </form>
+
+                        <form method="post">
+                        <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                                <tr>
+                                    <th>ID Biletu</th>
+                                    <th>Imię</th>
+                                    <th>Nazwisko</th>
+                                    <th>Stok</th>
+                                    <th>Czas [h]</th>
+                                    <th>Status</th>
+                                    <th>Zablokuj</th>
+                                    <th>Odblokuj</th>
+
+                                </tr>
+                                @foreach (var a in Model.w)
+                                {
+                                    <tr>
+                                        <td>@a.id</td>
+                                        <td>@a.imie</td>
+                                        <td>@a.nazwisko</td>
+                                        <td>@a.nazw</td>
+                                        <td>@a.ilosc</td>
+                                        <td>@a.status</td>
+                                        <td><button type="button" class="btn btn-primary"href="/Strefa_Administracji/Kasa/Blok_bilet?ID=@a.id_k" value="Zablokuj"><i class="fa fa-lock"></i></button></td>
+                                        <td><button type="button" class="btn btn-success" href="/Strefa_Administracji/Kasa/Blok_bilet?ID=@a.id_k" value=">Odblokuj"><i class="fa fa-unlock"></i></button></td>
+                                    </tr>
+                                }
+                            </table>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
 
 
-        </form>
-
-
-    </section>
-</div>

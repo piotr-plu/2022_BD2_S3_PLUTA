@@ -4,7 +4,7 @@
 
     Console.WriteLine("Odblok");
     string id = Request.Query["ID"];
-    SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+    SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
     conn.Open();
     string query1 = "UPDATE Karnety SET Status = 1 WHERE ID_Klient = '" + id + "'";
     using (SqlCommand command = new SqlCommand(query1, conn))

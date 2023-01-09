@@ -6,11 +6,11 @@
 
 <div class="container m-5">
     <div class="row gt-5">
-        <div class="col-md-6 rounded-3 shadow" style="background-color: #EAFDFC">
+        <div class="col-md-6  card text-black shadow" style="border-radius: 25px;">
             <h2 class="text-center m-4">Cennik Bilety</h2>
 
             <div class="table-responsive text-center m-4">
-            <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                     <thead class="table-dark">
                         <tr>
                             <th>Stok</th>
@@ -29,32 +29,32 @@
                         }
                     </tbody>
                 </table>
-             </div>
+            </div>
         </div>
-   
 
-  
-        <div class="col-md-6 rounded-3 shadow" style="background-color: #EAFDFC">
+
+
+        <div class="col-md-6  card text-black shadow" style="border-radius: 25px;">
             <h2 class="text-center m-4">Cennik Karnety</h2>
 
             <div class="table-responsive text-center  m-4">
                 <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                     <thead class="table-dark">
+                        <tr>
+                            <th>Wyciąg</th>
+                            <th>Cena za wjazd</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cena in Model.ceny_b)
+                        {
                             <tr>
-                                <th>Wyciąg</th>
-                                <th>Cena za wjazd</th>
+                                <td>@cena.Nazwa</td>
+                                <td>@cena.Cena_p zł</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var cena in Model.ceny_b)
-                            {
-                                    <tr>
-                                        <td>@cena.Nazwa</td>
-                                        <td>@cena.Cena_p zł</td>
-                                    </tr>
-                            }
-                        </tbody>
-                 </table>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -5,31 +5,31 @@
 }
 <div class="container m-5">
     <div class="row m-5">
-        <div class="col rounded-3 shadow" style="background-color: #EAFDFC">
+        <div class="card text-black shadow" style="border-radius: 25px;">
             <h2 class="text-center mt-4">Trasy</h2>
             <div class="table-responsive text-center m-4">
                 <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                     <thead class="table-dark">
+                        <tr>
+                            <th>Stok</th>
+                            <th>Wyciag</th>
+                            <th>Stan</th>
+                            <th>Długość</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var wyciag in Model.trasy)
+                        {
                             <tr>
-                                <th>Stok</th>
-                                <th>Wyciag</th>
-                                <th>Stan</th>
-                                <th>Długość</th>
+                                <td>@wyciag.Stok</td>
+                                <td>@wyciag.Wyciag</td>
+                                <td>@wyciag.Stan</td>
+                                <td>@wyciag.Dlugosc</td>
                             </tr>
-                     </thead>
-                        <tbody>
-                            @foreach (var wyciag in Model.trasy)
-                            {
-                                <tr>
-                                    <td>@wyciag.Stok</td>
-                                    <td>@wyciag.Wyciag</td>
-                                    <td>@wyciag.Stan</td>
-                                    <td>@wyciag.Dlugosc</td>
-                                </tr>
-                            }
-                        </tbody>
-                 </table>
-             </div>
-         </div>
-     </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
