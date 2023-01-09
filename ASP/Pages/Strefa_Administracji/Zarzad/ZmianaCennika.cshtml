@@ -6,7 +6,26 @@
 }
 <div class="text-center">
     <section>
-        <h2>&compfn;Edytuj ceny Biletów/KArnetów</h2>
-
+        <h2>&compfn;Edytuj ceny Biletów/Karnetów</h2>
+        <form method="post">
+            <h3>Wybierz Wyciag</h3>
+            <select name="wyciag">
+                @foreach (var a in Model.w)
+                {
+                    <option value="@a.id">@a.nazwa</option>
+                }
+            </select>
+            <label>&nbsp;</label>
+            <br />
+            <input type="submit" value="Wyszukaj" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag" /><br />
+            @foreach (var aa in Model.ww)
+            {
+                <input type="text" value="@aa.nazwa" readonly name="z_nazwa"/><br />
+                <input type="text" value="@aa.cena" name="z_cena"/><br />
+                <input type="text" value="@aa.rozp"  name="z_rozp"/><br />
+                <input type="text" value="@aa.zak" name="z_zak"/><br />
+                <input type="submit" value="Zaktualizuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Akt" /><br />
+            }
+        </form>
     </section>
 </div>
