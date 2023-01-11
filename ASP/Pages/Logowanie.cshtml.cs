@@ -19,7 +19,7 @@ namespace Narciarze_v_2.Pages
         }
         public void OnPost()
         {
-            SqlConnection conn = new SqlConnection("Data Source=.\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
             conn.Open();
             Login login = new Login();
             Klient cur_klient = new Klient();
