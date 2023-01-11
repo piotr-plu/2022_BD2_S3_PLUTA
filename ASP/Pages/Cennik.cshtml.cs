@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System.Text;
 using static Narciarze_v_2.Pages.Strefa_Klienta.TrasyModel;
-
+//TO DO LIST -> do zapytaæ zamiast przekazywaæ datê na sta³e napisaæ funkcjê/metodê etc. do odczytywania daty i u¿yæ jej w zapytaniach generuj¹cych tabele
 namespace Narciarze_v_2.Pages.Strefa_Klienta
 {
     public class CennikModel : PageModel

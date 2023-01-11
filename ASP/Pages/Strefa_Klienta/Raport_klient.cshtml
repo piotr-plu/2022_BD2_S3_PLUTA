@@ -27,6 +27,64 @@
                 </tr>
             }
         </table>
+        <h2>&compfn;Twoje wykorzystane karnety: </h2>
+        <table>
+            <tr>
+                <th>ID Karnetu</th>
+                <th>Nazwa Stoku</th>
+                <th>Pozostały czas</th>
+                <th>Status</th>
+                <th>Cena Zakupu katnetu</th>
+                <th>Data Atykwacji</th>
+            </tr>
+            @foreach (var a in Model.kn)
+            {
+                <tr>
+                    <td>@a.id</td>
+                    <td>@a.nazwa_s</td>
+                    <td>@a.czas h</td>
+                    <td>@a.status</td>
+                    <td>@a.cena</td>
+                    <td>@a.data_akt</td>
+                </tr>
+            }
+        </table>
+        <h2>&compfn;Twoje niewykorzystane bilety: </h2>
+        <table>
+            <tr>
+                <th>ID Biletu</th>
+                <th>Nazwa Wyciągu</th>
+                <th>Ilość zjazdów</th>
+                <th>Cena Zakupu biletu</th>
+            </tr>
+            @foreach (var a in Model.ba)
+            {
+                    <tr>
+                        <td>@a.id</td>
+                        <td>@a.nazwa_w</td>
+                        <td>@a.ilosc</td>
+                        <td>@a.cena</td>
+                    </tr>
+            }
+        </table>
+        <h2>&compfn;Twoje niewykorzystane bilety: </h2>
+        <table>
+            <tr>
+                <th>ID Biletu</th>
+                <th>Nazwa Wyciągu</th>
+                <th>Ilość zjazdów</th>
+                <th>Cena Zakupu biletu</th>
+            </tr>
+            @foreach (var a in Model.bn)
+            {
+                        <tr>
+                            <td>@a.id</td>
+                            <td>@a.nazwa_w</td>
+                            <td>@a.ilosc</td>
+                            <td>@a.cena</td>
+                        </tr>
+            }
+        </table>
 
     </section>
 </div>

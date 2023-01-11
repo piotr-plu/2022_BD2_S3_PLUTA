@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-
+//STAN PRAC -> Pracê nad tym elementem s¹ na etapie sprawdzenia czy podana przez u¿ytkownika cena znajduje siê w tabeli Cennik_x i w przypadku jej braku jest dodawana
+//TO DO-> Napisaæ walidacjê dat (w przypadku tworzenia nowej pozycji cennika data rozpoczencia nie mo¿e byæ wczeœniej od daty zakoñczenia poprzedniego
+//W przypadku wartoœci null data zakoñczenia ma ustawiæ siê na dzieñ wczeœniej
 namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 {
     public class ZmianaCennikaModel : PageModel
