@@ -1,6 +1,11 @@
+using iText.Html2pdf;
+using iText.IO.Source;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
+using System.Text;
 using static Narciarze_v_2.Pages.Strefa_Klienta.TrasyModel;
 
 namespace Narciarze_v_2.Pages.Strefa_Klienta
@@ -11,7 +16,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         public List<Cennik_b> ceny_b = new List<Cennik_b>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V2;Integrated Security=True");
             conn.Open();
             string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
             string query_2 = "SELECT w.nazwa as 'Nazwa', cb.Cena_przejazd as 'Cena' FROM Wyciagi as w, Cena_bilety as cb, Cennik as c WHERE c.ID_Cena_bilet = cb.ID AND cb.ID_Wyciag = w.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
@@ -40,6 +45,19 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                         ceny_b.Add(t2);
                     }
                 }
+            }
+        }
+        public FileResult OnPostExport(string GridHtml)
+        {
+            using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(GridHtml)))
+            {
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+                PdfDocument pdfDocument = new PdfDocument(writer);
+                pdfDocument.SetDefaultPageSize(PageSize.A4);
+                HtmlConverter.ConvertToPdf(stream, pdfDocument);
+                pdfDocument.Close();
+                return File(byteArrayOutputStream.ToArray(), "application/pdf", "Grid.pdf");
             }
         }
         public class Cennik_k

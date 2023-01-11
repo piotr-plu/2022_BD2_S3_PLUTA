@@ -37,7 +37,7 @@
         <div class="col-md-6  card text-black shadow" style="border-radius: 25px;">
             <h2 class="text-center m-4">Cennik Karnety</h2>
 
-            <div class="table-responsive text-center  m-4">
+            <div class="table-responsive text-center  m-4" id="Grid">
                 <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                     <thead class="table-dark">
                         <tr>
@@ -56,6 +56,18 @@
                     </tbody>
                 </table>
             </div>
+            <form method="post">
+                <input type="hidden" name="GridHtml" />
+                <input type="submit" id="btnSubmit" value="Export" asp-page-handler="Export" />
+            </form>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script type="text/javascript">
+                        $(function () {
+                            $("#btnSubmit").click(function () {
+                                $("input[name='GridHtml']").val($("#Grid").html());
+                            });
+                        });
+             </script>
         </div>
     </div>
 </div>
