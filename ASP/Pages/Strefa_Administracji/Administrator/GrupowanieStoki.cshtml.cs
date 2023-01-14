@@ -99,7 +99,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                 query = query + "OR ID = " + wyciagi[i] +" ";
             }
 
-
+            
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 command.ExecuteNonQuery();

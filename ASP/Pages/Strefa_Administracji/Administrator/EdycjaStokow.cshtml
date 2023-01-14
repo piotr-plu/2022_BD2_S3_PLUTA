@@ -4,18 +4,100 @@
     ViewData["Title"] = "Edycja stoków";
     Layout = "_Layout_Admin";
 }
-<div class="text-center">
-    <section>
-        <h2>&compfn; Edytuj stoki</h2>
-        <form method="post">
-        <select name="stok">
-            @foreach(var a in Model.s)
-            {
-                <option value="@a.id">@a.nazwa</option>
-            }
-        </select>
-        <br>
-            <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Stok" />
-        </form>
-    </section>
-</div>
+<body>
+    <div class="container m-5">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class="card text-black" style="border-radius: 25px;">
+                                        <div class="m-3">
+                                            <p class="text-center h3 fw-bold ">Dodaj Wyciąg</p>
+                                            <form method="post" class="m-3">
+
+                                                <div class="d-flex flex-row align-items-center mb-4">
+                                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                                    <div class="form-outline flex-fill mb-0">
+                                                        <input type="text" name="nazwaWyciaguDodaj" class="form-control" />
+                                                        <label class="form-label" for="nazwaWyciagDodaj">Nazwa nowego Wyciagu</label>
+
+                                                        <input type="text" name="harmonogramWyciagDodaj" class="form-control" />
+                                                        <label class="form-label" for="harmonogramWyciagDodaj">Wybierz Harmonogram</label>
+
+                                                        <select name="stokWyciagDodaj" class="form-control">
+                                                            @foreach (var stok in Model.stoki)
+                                                            {
+                                                                <option value="@stok.id">@stok.nazwa</option>
+                                                            }
+                                                        </select>
+                                                        <label class="form-label" for="stokWyciagDodak">Przypisz do Stoku</label>
+
+                                                        <input type="number" name="dlugoscWyciagDodaj" class="form-control" />
+                                                        <label class="form-label" for="dlugoscWyciagDodaj">Podaj długość stoku</label>
+
+                                                        <input type="number" name="wysokoscWyciagDodaj" class="form-control" />
+                                                        <label class="form-label" for="wysokoscWyciaguDodaj">Podaj wysokość bezwzglęną stoku</label>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-center m-2">
+
+                                                    <input type="submit" value="Dodaj" class="btn btn-primary btn-block mb-4" asp-page-handler="DodajWyciag" />
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class="card text-black" style="border-radius: 25px;">
+                                        <div class="m-3">
+                                            <p class="text-center h3 fw-bold ">Usuń Wyciąg</p>
+                                            <form method="post" class="m-3">
+
+                                                <div class="d-flex flex-row align-items-center mb-4">
+                                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                                    <div class="form-outline flex-fill mb-0">
+                                                        <select name="nazwaWyciagUsun" class="form-control">
+                                                            @foreach (var wyciag in Model.wyciagi)
+                                                            {
+                                                                <option value="@wyciag.id">@wyciag.nazwa</option>
+                                                            }
+                                                        </select>
+                                                        <label class="form-label" for="nazwaWyciagUsun">Nazwa Wyciągu</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-center m-2">
+
+                                                    <input type="submit" value="Usuń" class="btn btn-primary btn-block mb-4" asp-page-handler="UsunWyciąg" />
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
