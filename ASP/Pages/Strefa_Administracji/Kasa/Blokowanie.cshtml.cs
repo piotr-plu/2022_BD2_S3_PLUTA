@@ -4,14 +4,18 @@ using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
+
 {
     public class BlokowanieModel : PageModel
     {
         public List<Klient> k = new List<Klient>();
         public List<Wartownik> w = new List<Wartownik>();
+
+        string connectionString = "Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True";
+
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("connectionString");
             conn.Open();
             string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient ORDER BY Nazwisko ASC";
             using (SqlCommand command = new SqlCommand(query1, conn))
@@ -33,7 +37,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public void OnPostBlok()
         {
             Klient k2 = new Klient();
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("connectionString");
             conn.Open();
             string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient ORDER BY Nazwisko ASC";
             using (SqlCommand command = new SqlCommand(query1, conn))
