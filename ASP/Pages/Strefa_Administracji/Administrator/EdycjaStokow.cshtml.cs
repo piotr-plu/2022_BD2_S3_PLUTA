@@ -9,7 +9,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         public List<Stok> s = new List<Stok>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
             conn.Open();
             string query1 = "SELECT ID as id, Nazwa as nazwa FROM Stoki";
             using (SqlCommand command = new SqlCommand(query1, conn))
