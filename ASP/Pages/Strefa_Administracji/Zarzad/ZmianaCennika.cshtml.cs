@@ -14,7 +14,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         public List<Licznik> l = new List<Licznik>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
             conn.Open();
             string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
             using (SqlCommand command = new SqlCommand(query, conn))
@@ -34,7 +34,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 
         public void OnPostWyciag()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
             conn.Open();
             Wyciag w2 = new Wyciag();
             w2.id = Request.Form["wyciag"].ToString();
@@ -64,7 +64,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         {
             Licznik l1 = new Licznik();
             Cennik c1 = new Cennik();
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
             conn.Open();
             Wyciag w3 = new Wyciag();
             w3.nazwa = Request.Form["z_nazwa"].ToString();
