@@ -37,13 +37,19 @@
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                 <div class="form-outline flex-fill mb-0">
                                     <input type="text" value="@aa.nazwa" readonly name="z_nazwa" class="form-control" />
+                                    <label class="form-label" for="z_nazwa">Wyciąg</label>
                                     <input type="text" value="@aa.cena" name="z_cena" class="form-control" />
+                                    <label class="form-label" for="z_cena">Cena za pojedynczy przejazd</label>
                                     <input type="text" value="@aa.rozp" name="z_rozp" class="form-control" />
+                                    <label class="form-label" for="z_rozp">Data początku obowiązywania</label>
                                     <input type="text" value="@aa.zak" name="z_zak" class="form-control" />
+                                    <label class="form-label" for="z_zak">Data końca obowiązywania</label>
                                 </div>
                         </div>
 
-                        <input type="submit" value="Zaktualizuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Akt" />
+                        <div class="d-flex justify-content-center m-2">
+                            <input type="submit" value="Zaktualizuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Akt" />
+                        </div>
 
                     }
                 </form>
