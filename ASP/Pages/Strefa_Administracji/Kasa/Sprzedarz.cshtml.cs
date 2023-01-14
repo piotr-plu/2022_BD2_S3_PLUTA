@@ -12,6 +12,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public List<Klient> k = new List<Klient>();
         public List<Wyciag> w = new List<Wyciag>();
         public List<Cennik> c = new List<Cennik>();
+        public List<Stok> s = new List<Stok>();
 
         public List<Rejestracja> reg = new List<Rejestracja>();
         public void OnGet()
@@ -20,6 +21,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             conn.Open();
             string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient ORDER BY Nazwisko ASC";
             string query2 = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string query3 = "SELECT ID as id, Nazwa as nazw FROM Stoki";
             using (SqlCommand command = new SqlCommand(query1, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -44,6 +46,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                         w1.id = reader["id"].ToString();
                         w1.nazwa = reader["nazw"].ToString();
                         w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(query3, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
                     }
                 }
             }
@@ -92,6 +107,37 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                     command.ExecuteNonQuery();
                 }
             }
+        public void OnPostKarnet()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            conn.Open();
+            Klient k3 = new Klient();
+            Stok s2 = new Stok();
+            Cennik c2 = new Cennik();
+            k3.id = Request.Form["klient"];
+            s2.id = Request.Form["stok"];
+            s2.czas = Request.Form["czas"];
+            s2.status = Request.Form["status"];
+
+            string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = '" + s2.id + "' AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
+            using (SqlCommand command = new SqlCommand(query3, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        c2.id = reader["id"].ToString();
+                    }
+                }
+            }
+            string query = "INSERT INTO Karnety (ID_Stok, Czas_trwania, Data_pierw_akt, Status, ID_Cennika, ID_Klient) VALUES" +
+                "('"+s2.id+"','"+s2.czas+"','2023-01-14 12:08:00', '"+s2.status+"', '"+c2.id+"', '"+k3.id+"')";
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                //command.ExecuteNonQuery();
+            }
+            Response.Redirect("Sprzedarz");
+        }
 
 
         public class Klient {
@@ -109,6 +155,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         {
             public string imie, nazwisko, email, haslo;
         }
-
+        public class Stok
+        {
+            public string id, nazwa, czas, data_akt, status;
+        }
     }
 }

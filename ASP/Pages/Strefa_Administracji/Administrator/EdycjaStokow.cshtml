@@ -7,6 +7,15 @@
 <div class="text-center">
     <section>
         <h2>&compfn; Edytuj stoki</h2>
-
+        <form method="post">
+        <select name="stok">
+            @foreach(var a in Model.s)
+            {
+                <option value="@a.id">@a.nazwa</option>
+            }
+        </select>
+        <br>
+            <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Stok" />
+        </form>
     </section>
 </div>
