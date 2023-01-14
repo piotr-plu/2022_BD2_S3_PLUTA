@@ -34,9 +34,9 @@
                                         <div class="form-outline flex-fill mb-0">
 
                                             <select name="wyciag" class="form-control">
-                                                @foreach (var a in Model.w)
+                                                @foreach (var stok in Model.w)
                                                 {
-                                                    <option value="@a.id">@a.nazwa</option>
+                                                    <option value="@stok.id">@stok.nazwa</option>
                                                 }
                                             </select>
 
