@@ -31,29 +31,56 @@
                         <input type="submit" value="Wyszukaj" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag" />
                     </div>
 
-                    @foreach (var aa in Model.ww)
-                    {
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="text" value="@aa.id" readonly name="id" class="form-control" />
-                                    <label class="form-label" for="id">Wyciąg</label>
-                                    <input type="text" value="@aa.nazwa" readonly name="z_nazwa" class="form-control" />
-                                    <label class="form-label" for="z_nazwa">Wyciąg</label>
-                                    <input type="text" value="@aa.cena" name="z_cena" class="form-control" />
-                                    <label class="form-label" for="z_cena">Cena za pojedynczy przejazd</label>
-                                    <input type="text" value="@aa.rozp" name="z_rozp" class="form-control" />
-                                    <label class="form-label" for="z_rozp">Data początku obowiązywania</label>
-                                    <input type="text" value="@aa.zak" name="z_zak" class="form-control" />
-                                    <label class="form-label" for="z_zak">Data końca obowiązywania</label>
-                                </div>
-                        </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
 
-                        <div class="d-flex justify-content-center m-2">
-                            <input type="submit" value="Zaktualizuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Akt" />
+                            <select name="cennik" class="form-control">
+                                @foreach (var a in Model.c)
+                                {
+                                    <option value="@a.id">@a.rozp - @a.zak</option>
+                                }
+                            </select>
+                            <label class="form-label" for="klient">Wybierz cennik</label>
                         </div>
-                        
+                    </div>
+                        <div class="d-flex justify-content-center m-2">
+                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Cennik" />
+                    </div>
+                    <div class="d-flex justify-content-center m-2">
+                        <input type="submit" value="Nowy" class="btn btn-primary btn-block mb-4" asp-page-handler="Cennik_n" />
+                    </div>           
+                    
+                    @foreach(var a in Model.e)
+                    {
+                        <p>Nazwa:</p><input type="text" name="nazwa" value="@a.nazwa" readonly>
+                        <p>Data rozpoczęcia</p><input type="text" name="rozp" value="@a.rozp" readonly>
+                        <p>Data zakończenia:</p><input type="text" name="zak" value="@a.zak" readonly>
+                        <p>Cena:</p><input type="text" name="cena" value="@a.cena">
+                        <br />
+                        <input type="submit" value="Edytuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Edytuj" />
                     }
+
+                    @foreach (var a in Model.ee)
+                    {
+                        <p>Nazwa:</p>
+
+                        <input type="text" name="nazwa" value="@a.nazwa" readonly>
+                        <p>Data rozpoczęcia</p>
+
+                        <input type="text" name="rozp" value="@a.rozp" readonly>
+                        <p>Data zakończenia:</p>
+
+                        <input type="text" name="zak" value="@a.zak" readonly>
+                        <p>Cena:</p>
+
+                        <input type="text" name="cena" value="@a.cena">
+                        <br />
+                        <input type="submit" value="Dodaj" class="btn btn-primary btn-block mb-4" asp-page-handler="Dodaj" />
+                    }
+
+                           
+                        
                 </form>
 
             </div>
