@@ -63,7 +63,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostDodajWyciag()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             NoweWyciagi stok = new NoweWyciagi();
             stok.nazwa = Request.Form["nazwaWyciagDodaj"];
@@ -82,7 +82,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostUsunWyciag()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             NoweStoki stok = new NoweStoki();
 
