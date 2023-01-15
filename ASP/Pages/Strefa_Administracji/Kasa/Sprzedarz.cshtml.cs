@@ -87,7 +87,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             string query4 = "INSERT INTO Bilety (ID_Klient, ID_Wyciag, Ilosc_zjazdow, ID_cennik) VALUES ('"+k2.id+"', '"+w2.id+"', '"+w2.ilosc_zjazdow+"', '"+c1.id+"')";
             using (SqlCommand command = new SqlCommand(query4, conn))
             {
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             Response.Redirect("Sprzedarz");
         }
@@ -134,7 +134,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                 "('"+s2.id+"','"+s2.czas+"','2023-01-14 12:08:00', '"+s2.status+"', '"+c2.id+"', '"+k3.id+"')";
             using (SqlCommand command = new SqlCommand(query, conn))
             {
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             Response.Redirect("Sprzedarz");
         }
