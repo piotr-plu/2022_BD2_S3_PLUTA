@@ -132,9 +132,10 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             }
             string query = "INSERT INTO Karnety (ID_Stok, Czas_trwania, Data_pierw_akt, Status, ID_Cennika, ID_Klient) VALUES" +
                 "('"+s2.id+"','"+s2.czas+"','2023-01-14 12:08:00', '"+s2.status+"', '"+c2.id+"', '"+k3.id+"')";
+
             using (SqlCommand command = new SqlCommand(query, conn))
             {
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             Response.Redirect("Sprzedarz");
         }
