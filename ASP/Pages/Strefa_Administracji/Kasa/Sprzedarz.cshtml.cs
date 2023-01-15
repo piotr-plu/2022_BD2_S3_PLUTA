@@ -87,7 +87,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             string query4 = "INSERT INTO Bilety (ID_Klient, ID_Wyciag, Ilosc_zjazdow, ID_cennik) VALUES ('"+k2.id+"', '"+w2.id+"', '"+w2.ilosc_zjazdow+"', '"+c1.id+"')";
             using (SqlCommand command = new SqlCommand(query4, conn))
             {
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             Response.Redirect("Sprzedarz");
         }
