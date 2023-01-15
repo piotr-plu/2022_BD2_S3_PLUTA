@@ -55,7 +55,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostDodajStok()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             NoweStoki stok = new NoweStoki();
             stok.nazwa = Request.Form["nazwaStokuDodaj"];
@@ -69,7 +69,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostUsunStok()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             NoweStoki stok = new NoweStoki();
 
@@ -84,7 +84,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostGrupujStoki()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             GrupWyciagi var = new GrupWyciagi();
 
