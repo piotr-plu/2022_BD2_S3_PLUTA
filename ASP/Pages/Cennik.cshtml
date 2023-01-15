@@ -4,73 +4,80 @@
     ViewData["Title"] = "Cennik";
 }
 
-<div class="fluid-container m-5">
-    <div class="row">
+<body>
+    <div class="fluid-container m-5">
+        <div class="row">
 
-        <div class="col-md-6  card text-black shadow" style="border-radius: 25px;">
-            <h2 class="text-center m-4 bold">Cennik Bilety</h2>
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Cennik Bilety</p>
 
-            <div class="table-responsive text-center m-4">
-                <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Stok</th>
-                            <th>Ilośc Godzin</th>
-                            <th>Cena karnetu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var cena in Model.ceny_k)
-                        {
-                            <tr>
-                                <td>@cena.Nazwa</td>
-                                <td>@cena.Wymiar_godz</td>
-                                <td>@cena.Cena zł</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                                <div class="table-responsive text-center m-4">
+                                    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Stok</th>
+                                                <th>Ilośc Godzin</th>
+                                                <th>Cena karnetu</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var cena in Model.ceny_k)
+                                            {
+                                                <tr>
+                                                    <td>@cena.Nazwa</td>
+                                                    <td>@cena.Wymiar_godz</td>
+                                                    <td>@cena.Cena zł</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
 
-
-
-        <div class="col-md-6  card text-black shadow" style="border-radius: 25px;">
-            <h2 class="text-center m-4">Cennik Karnety</h2>
-
-            <div class="table-responsive text-center  m-4" id="Grid">
-                <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Wyciąg</th>
-                            <th>Cena za wjazd</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var cena in Model.ceny_b)
-                        {
-                            <tr>
-                                <td>@cena.Nazwa</td>
-                                <td>@cena.Cena_p zł</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <form method="post">
-                <input type="hidden" name="GridHtml" />
-                <input type="submit" id="btnSubmit" value="Export" asp-page-handler="Export" />
-            </form>
 
-            <script type="text/javascript">
-                        $(function () {
-                            $("#btnSubmit").click(function () {
-                                $("input[name='GridHtml']").val($("#Grid").html());
-                            });
-                        });
-             </script>
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Cennik Karnety</p>
+
+                                <div class="table-responsive text-center  m-4">
+                                    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Wyciąg</th>
+                                                <th>Cena za wjazd</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var cena in Model.ceny_b)
+                                            {
+                                                <tr>
+                                                    <td>@cena.Nazwa</td>
+                                                    <td>@cena.Cena_p zł</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
-</div>
+</body>
+
