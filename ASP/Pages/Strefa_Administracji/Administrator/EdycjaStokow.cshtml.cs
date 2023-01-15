@@ -11,7 +11,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         public List<NoweWyciagi> noweWyciagi = new List<NoweWyciagi>();
         public void OnGet() 
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
 
             string query1 = "SELECT w.ID as id, w.Nazwa as nazwa FROM Wyciagi as w";
@@ -31,6 +31,21 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
             string query2 = "SELECT s.ID as id, s.Nazwa as nazwa FROM Stoki as s";
             using (SqlCommand command = new SqlCommand(query2, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stoki_wyc stok = new Stoki_wyc();
+                        stok.id = reader["id"].ToString();
+                        stok.nazwa = reader["nazwa"].ToString();
+                        stoki.Add(stok);
+                    }
+                }
+            }
+
+            string query3 = "SELECT s.ID as id, s.Nazwa as nazwa FROM Stoki as s";
+            using (SqlCommand command = new SqlCommand(query3, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {

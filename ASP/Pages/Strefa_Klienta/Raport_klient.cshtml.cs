@@ -10,7 +10,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
 {
     public class Raport_klientModel : PageModel
     {
-        string connectionString = "Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True";
+        string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True";
 
         public List<Karnety> karnety = new List<Karnety>();
         public List<Bilety> bilety = new List<Bilety>();
@@ -22,13 +22,13 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
             //-> TO DO do ka¿dego z zasad zapytania query1-query4 zamiast na sztywno przypisywaæ id klienta pobraæ z sesji, w przypadku chêci odczytania dat zakupu (mniej wiêcej)
             //Mo¿na urzyæ zakresu dat z cennika do z³apania odopowiednich dat
 
-            string query1 = @"SELECT k.ID as id_kar, k.Status as s_kar, k.Czas_trwania as poz_czas, s.Nazwa as n_stoku, k.Data_pierw_akt as d_aktywacji, ck.Czas as czas_bilet, ck.Cena as Cena
+            string query1 = @"SELECT k.ID as id_kar, k.Status as s_kar, k.Czas_trwania as poz_czas, s.Nazwa as n_stoku, k.Data_aktywacji as d_aktywacji, ck.Czas as czas_bilet, ck.Cena as Cena
                             FROM Karnety as k 
                             LEFT JOIN Cennik as c ON k.ID_Cennika = c.ID
                             LEFT JOIN Cena_karnety as ck ON ck.ID = c.ID_Cena_karnet 
                             LEFT JOIN Stoki as s ON s.ID = ck.ID_Stok
                             WHERE k.ID_Klient = 1
-                            ORDER BY poz_czas, Data_pierw_akt";
+                            ORDER BY poz_czas, Data_aktywacji";
 
             string query2 = @"SELECT b.ID as id_bilet, b.Ilosc_zjazdow as il_zjazdow, w.Nazwa as n_wyciagu, cb.Cena_przejazd as cena_przejazd
                             FROM Bilety as b

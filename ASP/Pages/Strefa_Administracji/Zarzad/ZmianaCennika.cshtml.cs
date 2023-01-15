@@ -21,7 +21,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         public List<Licznik> l = new List<Licznik>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
             using (SqlCommand command = new SqlCommand(query, conn))
@@ -41,7 +41,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 
         public void OnPostWyciag()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
             using (SqlCommand command = new SqlCommand(query, conn))
@@ -82,7 +82,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 
         public void OnPostCennik()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
             using (SqlCommand command = new SqlCommand(query, conn))
@@ -131,7 +131,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             e2.cena = Request.Form["cena"].ToString();
             e2.rozp = Request.Form["rozp"].ToString();
             e2.zak = Request.Form["zak"].ToString();
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             var date1 = DateTime.Parse(e2.rozp);
             e2.rozp = date1.Year.ToString() + "-" + date1.Month.ToString() + "-" + date1.Day.ToString();
@@ -190,7 +190,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 
         public void OnPostCennik_n()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             Edycja e3= new Edycja();
             e3.id = Request.Form["wyciag"].ToString();
@@ -211,7 +211,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 
         public void OnPostDodaj()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             Licznik l1 = new Licznik();
             Edycja e4 = new Edycja();
@@ -293,7 +293,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         //    Licznik l1 = new Licznik();
         //    Cennik c1 = new Cennik();
         //    Cennik c2 = new Cennik();
-        //    SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+        //    SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
         //    conn.Open();
         //    Wyciag w3 = new Wyciag();
         //    w3.id = Request.Form["id"].ToString();

@@ -10,12 +10,14 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         public List<Trasa> trasy = new List<Trasa>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QIV9GDD\\SQLEXPRESS;Initial Catalog=Narty_V3;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            string query = @"SELECT s.Nazwa as Stok, w.Nazwa as Wyciag, h.Stan as Stan, w.Dlugosc as Dlugosc 
-                            FROM Stoki as s, Wyciagi as w, Harmonogram as h
-                            WHERE s.ID = w.ID_Stok AND w.ID_Harmonogram = h.ID";
-
+            string query = @"SELECT s.Nazwa as Stok, w.Nazwa as Wyciag, h.Stan as Stan, w.Dlugosc as Dlugosc
+                            FROM Wyciagi as w
+                            LEFT JOIN Stoki as s ON w.ID_Stok = s.ID
+                            LEFT JOIN Harmonogram as h ON w.ID = h.ID_Wyciagi
+                            WHERE (Data_rozp <= (SELECT CAST(GETDATE() as Date))) AND ((Data_zak >= (SELECT CAST(GETDATE() as Date))) OR Data_zak IS NULL)";
+            
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())

@@ -17,7 +17,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         public List<Rejestracja> reg = new List<Rejestracja>();
         public void OnGet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             string query1 = "SELECT Imie as imie, Nazwisko as nazw, ID as id FROM Klient ORDER BY Nazwisko ASC";
             string query2 = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
@@ -65,7 +65,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         }
         public void OnPostBilet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             Klient k2 = new Klient();
             Wyciag w2 = new Wyciag();
@@ -94,7 +94,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
 
             public void OnPostRejestracja()
             {
-                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+                SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
                 conn.Open();
                 Rejestracja r1 = new Rejestracja();
                 r1.imie = Request.Form["imie"];
@@ -109,7 +109,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             }
         public void OnPostKarnet()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L54I9S2\\NARCIARZE;Initial Catalog=narty;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             Klient k3 = new Klient();
             Stok s2 = new Stok();

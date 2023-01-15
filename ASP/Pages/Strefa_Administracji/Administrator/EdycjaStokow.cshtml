@@ -4,7 +4,92 @@
     ViewData["Title"] = "Edycja stoków";
     Layout = "_Layout_Admin";
 }
+
+<!--
+TO DO:
+    ZROBIĆ EDYCJĘ HARMONOGRAMU PRZED KONTYNUACJĄ TYCH PUNKTÓW
+- W dodawaniu wyciągów: Zrobić rozwijaną listę harmonogramu, aby przy dodwaniu od razdu zdefiniować którego harmonogramu ma używać
+- W dodawaniu wyciągów: Dodanie Pola Cenny, aby od razu przy tworzeniu zdefiniować cennik i cenę za przejazd na danym wyciągu
+- W usuwaniu wyiągu: Przetestować usuwanie po dodaniu wszystkich powyższych funkcji, czy baza danych nie zwraca błędów powiązań
+
+- Backend: Dodać i sprawdzić wszystkie powyższe funkcje, obecnie nie ma zapytań SQL do obydwu
+
+-->
+
 <body>
+    <div class="fluid-container m-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Edytuj Wyciąg</p>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <select name="nazwaWyciagDodaj" class="form-control">
+                                            @foreach (var wyciag in Model.wyciagi)
+                                            {
+                                                <option value="@wyciag.id">@wyciag.nazwa</option>
+                                            }
+                                        </select>
+                                        <label class="form-label" for="nazwaWyciagDodaj">Nazwa Wyciągu</label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center m-2">
+                                    <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="WybierzSWyciag" />
+                                </div>
+
+                                <form method="post" class="m-3">
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+
+                                            <input type="text" name="stanWyciaguEdytuj" class="form-control"/>
+                                            <label class="form-label" for="stanWyciagEdytuj">Stan Wyciągu</label>
+
+                                            <input type="text" name="nazwaWyciaguEdytuj" class="form-control" value=""/>
+                                            <label class="form-label" for="nazwaWyciagEdytuj">Nazwa Wyciągu</label>
+
+                                            <input type="text" name="harmonogramWyciąguEdytuj" class="form-control " />
+                                            <label class="form-label" for="harmonogramWyciagEdytuj">Harmonogram</label>
+
+                                            <select name="stokWyciagEdytuj" class="form-control">
+                                                @foreach (var stok in Model.stoki)
+                                                {
+                                                    <option value="@stok.id">@stok.nazwa</option>
+                                                }
+                                            </select>
+                                            <label class="form-label" for="stokWyciagEdytuj">Stok</label>
+
+                                            <input type="number" name="dlugoscWyciagEdytuj" class="form-control" />
+                                            <label class="form-label" for="dlugoscWyciagEdytuj">Długość stoku</label>
+
+                                            <input type="number" name="wysokoscWyciagEdytuj" class="form-control" />
+                                            <label class="form-label" for="wysokoscWyciaguEdytuj">Wysokość bezwzglęną stoku</label>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center m-2">
+                                        <input type="submit" value="Zapisz zmiany" class="btn btn-primary btn-block mb-4" asp-page-handler="EdytujWyciag" />
+                                    </div>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="fluid-container m-5">
         <div class="row">
 
@@ -48,7 +133,6 @@
                                                 </div>
 
                                                 <div class="d-flex justify-content-center m-2">
-
                                                     <input type="submit" value="Dodaj" class="btn btn-primary btn-block mb-4" asp-page-handler="DodajWyciag" />
                                                 </div>
 
