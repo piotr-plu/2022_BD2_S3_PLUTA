@@ -3,7 +3,12 @@
 @{
     ViewData["Title"] = "zalogowany";
     Layout = "_Layout_Klient";
+    if (HttpContext.Session.GetString("_klient_id") == null)
+    {
+        Response.Redirect("../Index");
+    }
 }
+
 <div class="text-center">
     <section>
         <h2>&compfn;Witaj XYZ </h2>

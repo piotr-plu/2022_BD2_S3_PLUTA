@@ -12,7 +12,7 @@
     @{
         if (klient_id != null)
         {
-            <p>Jesteś już zalogowany</p>
+            Response.Redirect("/Strefa_Klienta/Klient");
         }
         else
         {
@@ -39,8 +39,5 @@
 </div>
 
 <div class="text-center m-3">
-        <a class="text-dark" asp-area="" asp-page="/Strefa_Klienta/Klient">Klient</a>
-        <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Administrator/Administrator">Admin</a>
-        <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Kasa/Kasa">Kasa</a>
-        <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Zarzad/Zarzad">Zarzad</a>
+        <a class="text-dark" asp-area="" asp-page="Logowanie_prac">Logowanie pracownika</a>
 </div>

@@ -1,7 +1,10 @@
 ﻿@page
 @using Microsoft.Data.SqlClient;
 @{
-
+    if (HttpContext.Session.GetInt32("_prac_uid") != 1)
+    {
+        Response.Redirect("Kasa");
+    }
     string id = Request.Query["ID"];
     SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
     conn.Open();

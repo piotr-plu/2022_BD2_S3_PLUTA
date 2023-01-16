@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Sprzedaż";
     Layout = "_Layout_Kasa";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 1)
+    {
+        Response.Redirect("Kasa");
+    }
 }
 <body>
     <div class="fluid-container m-5">

@@ -1,0 +1,55 @@
+﻿@page
+@using Microsoft.AspNetCore.Http
+@model Narciarze_v_2.Pages.LogowaniePracModel
+@{
+    ViewData["Title"] = "Logowanie pracownika";
+    var prac_id = HttpContext.Session.GetInt32("_prac_id");
+    var prac_uid = HttpContext.Session.GetInt32("_prac_uid");
+    var prac_imie = HttpContext.Session.GetString("_prac_imie");
+    var prac_nazwisko = HttpContext.Session.GetString("_prac_nazwisko");
+}
+
+<div class="m-5">
+    @{
+        if (prac_uid == 1 || prac_uid == 2 || prac_uid == 3)
+        {
+            if (prac_uid == 3)
+            {
+                Response.Redirect("Strefa_Administracji/Administrator/Administrator");
+            }
+            else if (prac_uid == 2)
+            {
+                Response.Redirect("Strefa_Administracji/Zarzad/Zarzad");
+            }
+            else if (prac_uid == 1)
+            {
+                Response.Redirect("Strefa_Administracji/Kasa/Kasa");
+            }
+        }
+        else
+        {
+        <div class="text-center m-3">
+        <b>Logowanie pracownika</b>
+        </div>
+            <form class="justify-content-center" method="post">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" name="email" class="form-control" />
+                <label class="form-label" for="email_input">Adress Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" name="haslo" class="form-control" />
+                <label class="form-label" for="email_input">Hasło</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="log_in_button" class="btn btn-primary btn-block mb-4">Zaloguj</button>
+
+            </form>
+        }
+    }
+    
+</div>
+

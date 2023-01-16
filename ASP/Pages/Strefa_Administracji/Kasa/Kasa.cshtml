@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Kasa";
     Layout = "_Layout_Kasa";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 1)
+    {
+        Response.Redirect("../../Index");
+    }
 }
 <div class="text-center">
     <section>
