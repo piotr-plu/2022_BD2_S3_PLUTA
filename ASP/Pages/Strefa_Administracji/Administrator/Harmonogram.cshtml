@@ -6,8 +6,7 @@
 }
 <!--
 To DO:
-    - Błąd: Nie działa powiadomienie o błędnym wprowadzeniu dat do nowego Harmonogramu
-
+    - Błąd: Nie działa powiadomienie o błędnym wprowadzeniu dat do nowego Harmonogramu, poniżej opisany if gdzie występuje błąd
 -->
 
 <body>
@@ -79,36 +78,52 @@ To DO:
                         <div class="card text-black" style="border-radius: 25px;">
                             <div class="m-3">
                                 <p class="text-center h3 fw-bold ">Edytuj Harmonogram</p>
-
-                                <div class="d-flex flex-row align-items-center mb-4">
-                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                    <div class="form-outline flex-fill mb-0">
-                                        <select name="nazwaWyciagHarm" class="form-control">
-                                            @foreach (var wyciag in Model.wyciagi)
-                                            {
-                                                <option value="@wyciag.id">@wyciag.nazwa</option>
-                                            }
-                                        </select>
-                                        <label class="form-label" for="nazwaWyciagHarm">Nazwa Wyciągu</label>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex justify-content-center m-2">
-                                    <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="WybierzSWyciag" />
-                                </div>
-
+                                
                                 <form method="post" class="m-3">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <select name="nazwaWyciagHarm" class="form-control">
+                                                @foreach (var wyciag in Model.wyciagi)
+                                                {
+                                                    <option value="@wyciag.id">@wyciag.nazwa</option>
+                                                }
+                                            </select>
+                                            <label class="form-label" for="nazwaWyciagHarm">Nazwa Wyciągu</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center m-2">
+                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag"/>
+                                    </div>
+
+                                    <select name="wybierzHarm" class="form-control">
+                                        @foreach (var info in Model.infoHarmonogram)
+                                        {
+                                            @if (info.stan == "True")
+                                            {
+                                                <option value="@info.id">Czynny w@info.dataRozp - @info.dataZak</option>
+                                            }
+                                            else if (info.stan == "False")
+                                            {
+                                                <option value="@info.id">Nieczynny w dniach @info.dataRozp - @info.dataZak</option>
+                                            }
+
+
+                                        }
+                                    </select>
+                                    <label class="form-label" for="wybierzHarm">Harmonogram</label>
+
+                                    <div class="d-flex justify-content-center m-2">
+                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Harmonogram" />
+                                    </div>
+
+
+                                
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-
-                                            <input type="text" name="stanWyciaguEdytuj" class="form-control" />
-                                            <label class="form-label" for="stanWyciagEdytuj">Harmonogram</label>
-
-                                            <div class="d-flex justify-content-center m-2">
-                                                <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="WybierzSWyciag" />
-                                            </div>
 
                                             <input type="text" name="stanWyciaguEdytuj" class="form-control" />
                                             <label class="form-label" for="stanWyciagEdytuj">Stan Wyciągu</label>

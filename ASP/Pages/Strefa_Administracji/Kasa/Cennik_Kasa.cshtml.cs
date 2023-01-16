@@ -18,7 +18,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL) ORDER BY s.Nazwa DESC, ck.Cena ASC";
+            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL) ORDER BY s.Nazwa DESC, ck.Cena DESC";
             string query_2 = "SELECT w.nazwa as 'Nazwa', cb.Cena_przejazd as 'Cena' FROM Wyciagi as w, Cena_bilety as cb, Cennik as c WHERE c.ID_Cena_bilet = cb.ID AND cb.ID_Wyciag = w.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)  ORDER BY w.nazwa ASC";
             using (SqlCommand command = new SqlCommand(query, conn))
             {

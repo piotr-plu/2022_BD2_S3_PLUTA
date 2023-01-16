@@ -16,7 +16,8 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                             FROM Wyciagi as w
                             LEFT JOIN Stoki as s ON w.ID_Stok = s.ID
                             LEFT JOIN Harmonogram as h ON w.ID = h.ID_Wyciagi
-                            WHERE (Data_rozp <= (SELECT CAST(GETDATE() as Date))) AND ((Data_zak >= (SELECT CAST(GETDATE() as Date))) OR Data_zak IS NULL)";
+                            WHERE (Data_rozp <= (SELECT CAST(GETDATE() as Date))) AND ((Data_zak >= (SELECT CAST(GETDATE() as Date))) OR Data_zak IS NULL)
+                            ORDEr BY s.Nazwa DESC, w.Nazwa ASC";
             
             using (SqlCommand command = new SqlCommand(query, conn))
             {
