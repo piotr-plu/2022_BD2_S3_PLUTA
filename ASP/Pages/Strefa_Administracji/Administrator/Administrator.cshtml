@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "ADMIN";
     Layout = "_Layout_Admin";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 3)
+    {
+        Response.Redirect("../../Index");
+    }
 }
 <div class="text-center">
     <section>

@@ -3,10 +3,14 @@
 @{
     ViewData["Title"] = "Raporty";
     Layout = "_Layout_Zarzad";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 2)
+    {
+        Response.Redirect("Zarzad");
+    }
 }
 <div class="text-center">
     <section>
         <h2>&compfn;Wsyniki sprzedarzy Biletów/Karnetów</h2>
-
+        <a class="text-dark" asp-area="" asp-page="/Strefa_Administracji/Zarzad/gen_raport">Raport sprzedaży biletów/karnetów</a>
     </section>
 </div>

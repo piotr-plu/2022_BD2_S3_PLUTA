@@ -1,0 +1,10 @@
+﻿@page
+@model Narciarze_v_2.Pages.Strefa_Administracji.Zarzad.RaportyModel
+@{
+    if (HttpContext.Session.GetInt32("_prac_uid") != 2)
+    {
+        Response.Redirect("Zarzad");
+    }
+    ViewData["Title"] = "Raport";
+    Layout = "_Layout_Zarzad";
+}

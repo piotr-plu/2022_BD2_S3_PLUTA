@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Raport zakupów";
     Layout = "_Layout_Klient";
+    if (HttpContext.Session.GetString("_klient_id") == null)
+    {
+        Response.Redirect("../Index");
+    }
 }
 <div>
 
