@@ -16,6 +16,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         public List<HarmDaty> harmDaty = new List<HarmDaty>();
         public List<NowyHarmonogram> infoHarmonogram = new List<NowyHarmonogram>();
         public List<NowyHarmonogram> NowyHarmonogram = new List<NowyHarmonogram>();
+        public List<Harmonogram> harmonogram = new List<Harmonogram>();
 
         public List<HarmDaty> errorDate = new List<HarmDaty>();
         public bool error = false;
@@ -41,6 +42,38 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                 }
             }
         }
+
+        public void OnPostZobaczHarm()
+        {
+            WyciagiHarm idHarm = new WyciagiHarm();
+
+
+            idHarm.id = Request.Form["podgladHarmonogram"];
+
+            string query = @"SELECT Stan as stan, Data_rozp as dataRozp, Data_zak as dataZak " +
+                            "FROM Harmonogram WHERE ID_Wyciagi = " + idHarm.id + " ORDER BY Data_rozp, Data_zak";
+
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Harmonogram harm = new Harmonogram();
+                        harm.stan = reader["stan"].ToString();
+                        harm.dataRozp = reader["dataRozp"].ToString();
+                        harm.dataZak = reader["dataZak"].ToString();
+                        harmonogram.Add(harm);
+                    }
+                }
+            }
+
+            Response.Redirect("Harmonogram");
+        }
+
         public void OnPostDodajHarm()
         {
             NowyHarmonogram harmonogram = new NowyHarmonogram();
@@ -53,7 +86,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
 
-            string query1 = "SELECT h.Data_rozp as dataRozp, h.Data_zak as dataZak FROM Harmonogram as h WHERE h.ID_Wyciagi = 1";
+            string query1 = "SELECT h.Data_rozp as dataRozp, h.Data_zak as dataZak FROM Harmonogram as h WHERE h.ID_Wyciagi = "+harmonogram.id+"";
 
             conn.Open();
             using (SqlCommand command = new SqlCommand(query1, conn))
@@ -179,6 +212,99 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
             }
         }
 
+        public void OnPostEdytujWyciagHarm()
+        {
+            EdytujHarmonogram harm = new EdytujHarmonogram();
+
+            harm.idHarm = Request.Form["wybierzHarm"];
+            harm.idWyciag = Request.Form["nazwaWyciagHarm"];
+            harm.stan = Request.Form["stanEdytujHarm"];
+            harm.dataRozp = Request.Form["dataRozpEdytujHarm"];
+            harm.dataZak = Request.Form["dataZakEdytujHarm"];
+
+            string query1 = @"UPDATE Harmonogram SET Stan = " + harm.stan + ", Data_rozp = '"+harm.dataRozp+"', Data_zak = '"+harm.dataZak+"'" +
+                            "WHERE ID = "+harm.idHarm+" AND ID_Wyciagi = "+harm.idWyciag+"";
+
+            string query2 = "SELECT h.Data_rozp as dataRozp, h.Data_zak as dataZak FROM Harmonogram as h WHERE h.ID_Wyciagi = " + harm.idWyciag + "";
+
+
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            using (SqlCommand command = new SqlCommand(query1, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        HarmDaty daty = new HarmDaty();
+                        daty.dataRozp = reader["dataRozp"].ToString();
+                        daty.dataZak = reader["dataZak"].ToString();
+                        harmDaty.Add(daty);
+                    }
+                }
+            }
+
+            string dateFormat = "dd.MM.yyyy HH:mm:ss";
+
+            // Walidacja dat 
+
+            foreach (var data in harmDaty)
+            {
+                if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture))
+                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) >= (DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)))
+                {
+                    HarmDaty errors = new HarmDaty();
+
+                    errors.dataRozp = harm.dataRozp;
+                    errors.dataZak = harm.dataZak;
+                    errorDate.Add(errors);
+
+                    error = true;
+                }
+
+                else if (((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataZak, dateFormat, null)))
+                        && !error)
+                {
+                    HarmDaty errors = new HarmDaty();
+
+                    errors.dataRozp = data.dataRozp;
+                    errors.dataZak = harm.dataZak;
+                    errorDate.Add(errors);
+
+                    error = true;
+
+                }
+
+                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) <= (DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
+                        && !error)
+                {
+                    HarmDaty errors = new HarmDaty();
+
+                    errors.dataRozp = harm.dataRozp;
+                    errors.dataZak = data.dataZak;
+                    errorDate.Add(errors);
+
+                    error = true;
+
+                }
+            }
+
+
+            if (!error) 
+            { 
+                    using (SqlCommand command = new SqlCommand(query2, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+
+
+
+            Response.Redirect("Harmonogram");
+        }   
+
     }
 }
 
@@ -197,5 +323,13 @@ public class HarmDaty
 public class NowyHarmonogram
 {
     public string id, stan, dataRozp, dataZak;
+}
+public class EdytujHarmonogram
+{
+    public string idHarm, idWyciag, stan, dataRozp, dataZak;
+}
+public class Harmonogram
+{
+    public string stan, dataRozp, dataZak;
 }
 

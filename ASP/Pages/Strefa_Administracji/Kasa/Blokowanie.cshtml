@@ -59,9 +59,21 @@
                                         <td>@a.nazwisko</td>
                                         <td>@a.nazw</td>
                                         <td>@a.ilosc</td>
-                                        <td>@a.status</td>
-                                        <td><a class="btn btn-primary"href="/Strefa_Administracji/Kasa/Blok_bilet?ID=@a.id" value="Zablokuj"><i class="fa fa-lock"></i></a></td>
-                                        <td><a class="btn btn-success" href="/Strefa_Administracji/Kasa/Odblokuj_karnet?ID=@a.id" value=">Odblokuj"><i class="fa fa-unlock"></i></a></td>
+                                        
+                                            
+                                        @if(a.status == "True")
+                                        {
+                                            <td style="color: green">Aktywny</td>
+                                        }
+                                        else if (a.status == "False")
+                                        {
+                                            <td style="color: red">Nieaktywny</td>
+                                        }
+
+
+
+                                    <td><a class="btn btn-primary" href="/Strefa_Administracji/Kasa/Blok_bilet?ID=@a.id" value="Zablokuj"></a></td>
+                                        <td><a class="btn btn-success" href="/Strefa_Administracji/Kasa/Odblokuj_karnet?ID=@a.id" value=">Odblokuj"></a></td>
                                     </tr>
                                 }
                             </table>

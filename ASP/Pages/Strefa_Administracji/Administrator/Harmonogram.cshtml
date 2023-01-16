@@ -21,6 +21,73 @@ To DO:
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="card text-black" style="border-radius: 25px;">
                             <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Podgląd Harmonogram</p>
+
+                                <form method="post" class="m-3">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <select name="podgladHarmonogram" class="form-control">
+                                                @foreach (var wyciag in Model.wyciagi)
+                                                {
+                                                    <option value="@wyciag.id">@wyciag.nazwa</option>
+                                                }
+                                            </select>
+                                            <label class="form-label" for="nazwaWyciagHarm">Nazwa Wyciągu</label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center m-2">
+                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="ZobaczHarm" />
+                                    </div>
+                                </form>
+
+                                <div class="table-responsive text-center m-4">
+                                    <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Stan</th>
+                                                <th>Data Rozpoczęcia</th>
+                                                <th>Data Zakończenia</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var harm in Model.harmonogram)
+                                            {
+                                                <tr>
+                                                    @if (harm.stan == "True")
+                                                    {
+                                                        <td style="color: green">Czynny</td>
+                                                    }
+                                                    else if (harm.stan == "False")
+                                                    {
+                                                        <td style="color: red">Nieczynny</td>
+                                                    }
+
+
+                                                    <td>@harm.dataRozp</td>
+                                                    <td>@harm.dataZak</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fluid-container m-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black" style="border-radius: 25px;">
+                            <div class="m-3">
                                 <p class="text-center h3 fw-bold ">Dodaj Harmonogram</p>
 
                                 <form method="post" class="m-3">
@@ -82,7 +149,7 @@ To DO:
                         <div class="card text-black" style="border-radius: 25px;">
                             <div class="m-3">
                                 <p class="text-center h3 fw-bold ">Edytuj Harmonogram</p>
-                                
+
                                 <form method="post" class="m-3">
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -98,7 +165,7 @@ To DO:
                                     </div>
 
                                     <div class="d-flex justify-content-center m-2">
-                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag"/>
+                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag" />
                                     </div>
 
                                     <select name="wybierzHarm" class="form-control">
@@ -118,31 +185,29 @@ To DO:
                                     </select>
                                     <label class="form-label" for="wybierzHarm">Harmonogram</label>
 
-                                    <div class="d-flex justify-content-center m-2">
-                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Harmonogram" />
-                                    </div>
-
-
-                                
-
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
 
-                                            <input type="text" name="stanWyciaguEdytuj" class="form-control" />
-                                            <label class="form-label" for="stanWyciagEdytuj">Stan Wyciągu</label>
+                                            <select name="stanEdytujHarm" class="form-control">
 
-                                            <input type="text" name="nazwaWyciaguEdytuj" class="form-control" value="" />
-                                            <label class="form-label" for="nazwaWyciagEdytuj">Data rozpoczęcia</label>
+                                                <option value="1">Czynny</option>
+                                                <option value="0">Nieczynny</option>
 
-                                            <input type="text" name="harmonogramWyciąguEdytuj" class="form-control " />
-                                            <label class="form-label" for="harmonogramWyciagEdytuj">Data zakończenia</label>
+                                            </select>
+                                            <label class="form-label" for="stanEdytujHarm">Stan Wyciągu</label>
+
+                                            <input type="date" name="dataRozpEdytujHarm" class="form-control" />
+                                            <label class="form-label" for="dataRozpEdytujHarm">Data rozpoczęcia</label>
+
+                                            <input type="date" name="dataZakEdytujHarm" class="form-control " />
+                                            <label class="form-label" for="dataZakEdytujHarm">Data zakończenia</label>
 
                                         </div>
                                     </div>
 
                                     <div class="d-flex justify-content-center m-2">
-                                        <input type="submit" value="Zapisz zmiany" class="btn btn-primary btn-block mb-4" asp-page-handler="EdytujWyciag" />
+                                        <input type="submit" value="Zapisz zmiany" class="btn btn-primary btn-block mb-4" asp-page-handler="EdytujWyciagHarm" />
                                     </div>
 
                                 </form>
