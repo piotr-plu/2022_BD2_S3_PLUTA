@@ -209,7 +209,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     }
                 }
             }
-            string query_time = "SELECT CAST(GETDATE() as Date)";
+            string query_time = "SELECT CAST(GETDATE() as Date) as Date";
             using (SqlCommand command = new SqlCommand(query_time, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
