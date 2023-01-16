@@ -24,7 +24,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
 
             string query1 = @"SELECT k.ID as id_kar, k.Status as s_kar, k.Czas_trwania as poz_czas, s.Nazwa as n_stoku, k.Data_aktywacji as d_aktywacji, ck.Czas as czas_bilet, ck.Cena as Cena
                             FROM Karnety as k 
-                            LEFT JOIN Cennik as c ON k.ID_Cennika = c.ID
+                            LEFT JOIN Cennik as c ON k.ID_Cennik = c.ID
                             LEFT JOIN Cena_karnety as ck ON ck.ID = c.ID_Cena_karnet 
                             LEFT JOIN Stoki as s ON s.ID = ck.ID_Stok
                             WHERE k.ID_Klient = 1

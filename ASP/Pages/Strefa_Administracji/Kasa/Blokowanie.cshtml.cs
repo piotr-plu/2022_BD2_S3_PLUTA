@@ -55,7 +55,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                 }
             }
             k2.id = Request.Form["klient"];
-            string query2 = "SELECT k.ID as id, kl.Imie as imie, kl.ID as id_k , kl.Nazwisko as nazwisko, s.Nazwa as nazw, k.Czas_trwania as czas, k.Status as status  FROM Karnety as k, Stoki as s, Klient as kl WHERE kl.ID = k.ID_Klient AND s.ID = k.ID_Stok AND k.ID_Klient = '" + k2.id+"' ";
+            string query2 = "SELECT k.ID as id, kl.Imie as imie, kl.ID as id_k , kl.Nazwisko as nazwisko, s.Nazwa as nazw, k.Czas_trwania as czas, k.Status as status  FROM Karnety as k, Stoki as s, Klient as kl WHERE kl.ID = k.ID_Klient AND s.ID = k.ID_Stoki AND k.ID_Klient = '" + k2.id+"' ";
             using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
