@@ -7,11 +7,13 @@
     {
         Response.Redirect("../Index");
     }
+    var imie = HttpContext.Session.GetString("_klient_imie");
+    var nazwisko = HttpContext.Session.GetString("_klient_nazwisko");
 }
 
 <div class="text-center">
     <section>
-        <h2>&compfn;Witaj XYZ </h2>
+        <h2>Witaj @imie @nazwisko ! </h2>
 
     </section>
 </div>

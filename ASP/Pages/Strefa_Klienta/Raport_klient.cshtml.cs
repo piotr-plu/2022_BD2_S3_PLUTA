@@ -27,16 +27,14 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                             LEFT JOIN Cennik as c ON k.ID_Cennik = c.ID
                             LEFT JOIN Cena_karnety as ck ON ck.ID = c.ID_Cena_karnet 
                             LEFT JOIN Stoki as s ON s.ID = ck.ID_Stok
-                            WHERE k.ID_Klient = 1
-                            ORDER BY poz_czas, Data_aktywacji";
+                            WHERE k.ID_Klient = "+ HttpContext.Session.GetInt32("_klient_id").ToString() + " ORDER BY poz_czas, Data_aktywacji";
 
             string query2 = @"SELECT b.ID as id_bilet, b.Ilosc_zjazdow as il_zjazdow, w.Nazwa as n_wyciagu, cb.Cena_przejazd as cena_przejazd
                             FROM Bilety as b
                             LEFT JOIN Cennik as c ON b.ID_Cennik = c.ID
                             LEFT JOIN Cena_bilety as cb ON c.ID_Cena_bilet = cb.ID
                             LEFT JOIN Wyciagi as w ON cb.ID_Wyciag = w.ID
-                            WHERE b.ID_Klient = 1
-                            ORDER BY il_zjazdow DESC";
+                            WHERE b.ID_Klient= "+ HttpContext.Session.GetInt32("_klient_id").ToString() + " ORDER BY il_zjazdow DESC";
 
 
             // Wykonanie Zapytania SQL o Karnety 

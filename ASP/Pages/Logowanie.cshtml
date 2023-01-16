@@ -3,14 +3,14 @@
 @model Narciarze_v_2.Pages.LogowanieModel
 @{
     ViewData["Title"] = "Logowanie";
-    var klient_id = HttpContext.Session.GetString("_klient_id");
+    var klient_id = HttpContext.Session.GetInt32("_klient_id");
     var klient_imie = HttpContext.Session.GetString("_klient_imie");
     var klient_nazwisko = HttpContext.Session.GetString("_klient_nazwisko");
 }
 
 <div class="m-5">
     @{
-        if (klient_id != null)
+        if (klient_id > 0)
         {
             Response.Redirect("/Strefa_Klienta/Klient");
         }

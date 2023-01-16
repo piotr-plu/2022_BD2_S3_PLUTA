@@ -98,7 +98,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                 conn.Open();
                 Rejestracja r1 = new Rejestracja();
                 r1.imie = Request.Form["imie"];
-                r1.nazwisko = Request.Form["nazw"];
+                r1.nazwisko = Request.Form["nazwisko"];
                 r1.email = Request.Form["email"];
                 r1.haslo = Request.Form["haslo"];
                 string query = "INSERT INTO Klient (Imie, Nazwisko, EMail, Haslo) VALUES ('" + r1.imie + "','" + r1.nazwisko + "','" + r1.email + "','" + r1.haslo + "')";
