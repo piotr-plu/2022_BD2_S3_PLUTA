@@ -196,7 +196,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             conn.Open();
             Edycja e3= new Edycja();
             e3.id = Request.Form["wyciag"].ToString();
-            string query8 = "SELECT Nazwa as nazwa FROM Wyciagi WHERE ID = '"+e3.id+"'";
+            string query8 = "SELECT Nazwa as nazwa, CAST(GETDATE() as Date) as Date FROM Wyciagi WHERE ID = '" + e3.id+"'";
             using (SqlCommand command = new SqlCommand(query8, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -205,20 +205,10 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     {
                         Edycja ee1 = new Edycja();
                         ee1.nazwa = reader["nazwa"].ToString();
+                        ee1.rozp = reader["Date"].ToString();
+                        var date = DateTime.Parse(ee1.rozp);
+                        ee1.rozp = date.Year.ToString() + "-" + date.Month.ToString() + "-" + date.Day.ToString();
                         ee.Add(ee1);
-                    }
-                }
-            }
-            string query_time = "SELECT CAST(GETDATE() as Date) as Date";
-            using (SqlCommand command = new SqlCommand(query_time, conn))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Edycja ee2 = new Edycja();
-                        ee2.rozp = reader["Date"].ToString();
-                        ee.Add(ee2);
                     }
                 }
             }
@@ -246,7 +236,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     }
                 }
             }
-            string query_time = "SELECT CAST(GETDATE() as Date)";
+            string query_time = "SELECT CAST(GETDATE() as Date) as Date";
             using (SqlCommand command = new SqlCommand(query_time, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
