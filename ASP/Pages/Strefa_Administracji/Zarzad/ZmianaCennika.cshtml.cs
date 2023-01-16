@@ -59,7 +59,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             }
             Wyciag w2 = new Wyciag();
             w2.id = Request.Form["wyciag"].ToString();
-            string query2 = "SELECT c.ID as id, c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Cena_bilety as cb, Wyciagi as w WHERE c.ID_Cena_bilet = cb.ID AND w.ID = cb.ID_Wyciag AND ((c.Data_rozp < '2023-01-14' AND c.Data_zak > '2023-01-14') OR c.Data_zak IS NULL) AND w.ID = '"+w2.id+"'";
+            string query2 = "SELECT c.ID as id, c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Cena_bilety as cb, Wyciagi as w WHERE c.ID_Cena_bilet = cb.ID AND w.ID = cb.ID_Wyciag AND ((c.Data_rozp < '2023-01-10' AND c.Data_zak > '2023-01-10') OR c.Data_zak IS NULL) AND w.ID = '"+w2.id+"'";
             using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())

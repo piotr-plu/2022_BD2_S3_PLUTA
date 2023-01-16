@@ -118,7 +118,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             s2.id = Request.Form["stok"];
             s2.czas = Request.Form["czas"];
             s2.status = Request.Form["status"];
-
+            int istatus = int.Parse(s2.status);
             string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = '" + s2.id + "' AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
             using (SqlCommand command = new SqlCommand(query3, conn))
             {
@@ -130,14 +130,26 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
                     }
                 }
             }
-            string query = "INSERT INTO Karnety (ID_Stok, Czas_trwania, Data_pierw_akt, Status, ID_Cennika, ID_Klient) VALUES" +
-                "('"+s2.id+"','"+s2.czas+"','2023-01-14 12:08:00', '"+s2.status+"', '"+c2.id+"', '"+k3.id+"')";
-
-            using (SqlCommand command = new SqlCommand(query, conn))
-            {
-                command.ExecuteNonQuery();
+            if (istatus == 1) {
+                string query = "INSERT INTO Karnety (ID_Stoki, Czas_trwania, Data_aktywacji, Status, ID_Cennik, ID_Klient) VALUES" +
+                    "('" + s2.id + "','" + s2.czas + "',(SELECT GETDATE()), '" + s2.status + "', '" + c2.id + "', '" + k3.id + "')";
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                Response.Redirect("Sprzedarz");
             }
-            Response.Redirect("Sprzedarz");
+            else
+            {
+                string query = "INSERT INTO Karnety (ID_Stoki, Czas_trwania, Status, ID_Cennik, ID_Klient) VALUES" +
+                    "('" + s2.id + "','" + s2.czas + "', '" + s2.status + "', '" + c2.id + "', '" + k3.id + "')";
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                Response.Redirect("Sprzedarz");
+            }
+            
         }
 
 
