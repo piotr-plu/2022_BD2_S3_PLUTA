@@ -22,12 +22,15 @@
                         <div class="d-flex flex-row align-items-center mx-md-5 mt-4">
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <select name="klient" class="form-control">
-                                    @foreach (var a in Model.k)
-                                    {
-                                        <option value="@a.id">@a.imie @a.nazw</option>
-                                    }
-                                </select>
+
+                                <input type="search" class="form-control" placeholder="ID: Imię i nazwizko" list="klient-list" id="klient" name="klient">
+                                    <datalist name="klient" id="klient-list">
+                                        @foreach (var a in Model.k)
+                                            {
+                                                    <option value="@a.id: @a.imie @a.nazw"></option>
+                                            }
+                                    </datalist>
+
                                 <label class="form-label" for="klient">Imię i Nazwisko Klienta</label>
                             </div>
                         </div>
@@ -41,7 +44,7 @@
                         <form method="post">
                         <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                                 <tr>
-                                    <th>ID Biletu</th>
+                                    <th>ID Karnetu</th>
                                     <th>Imię</th>
                                     <th>Nazwisko</th>
                                     <th>Stok</th>

@@ -71,6 +71,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             Wyciag w2 = new Wyciag();
             Cennik c1 = new Cennik();
             k2.id = Request.Form["klient"];
+            k2.id = k2.id.Split(':')[0];
             w2.id = Request.Form["wyciag"];
             w2.ilosc_zjazdow = Request.Form["ilosc"];
             string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_bilety as ck WHERE c.ID_Cena_bilet = ck.ID AND ck.ID_Wyciag = '" + w2.id + "' AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > '2023-01-03' OR c.Data_zak IS NULL)";
@@ -115,6 +116,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Kasa
             Stok s2 = new Stok();
             Cennik c2 = new Cennik();
             k3.id = Request.Form["klient"];
+            k3.id = k3.id.Split(':')[0];
             s2.id = Request.Form["stok"];
             s2.czas = Request.Form["czas"];
             s2.status = Request.Form["status"];
