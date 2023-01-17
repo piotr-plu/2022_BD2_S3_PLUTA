@@ -53,14 +53,11 @@ TO DO:
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
 
-                                            <input type="text" name="stanWyciaguEdytuj" class="form-control"/>
+                                            <input type="text" name="stanWyciaguEdytuj" class="form-control" required />
                                             <label class="form-label" for="stanWyciagEdytuj">Stan Wyciągu</label>
 
-                                            <input type="text" name="nazwaWyciaguEdytuj" class="form-control" value=""/>
+                                            <input type="text" name="nazwaWyciaguEdytuj" class="form-control" required />
                                             <label class="form-label" for="nazwaWyciagEdytuj">Nazwa Wyciągu</label>
-
-                                            <input type="text" name="harmonogramWyciąguEdytuj" class="form-control " />
-                                            <label class="form-label" for="harmonogramWyciagEdytuj">Harmonogram</label>
 
                                             <select name="stokWyciagEdytuj" class="form-control">
                                                 @foreach (var stok in Model.stoki)
@@ -70,11 +67,11 @@ TO DO:
                                             </select>
                                             <label class="form-label" for="stokWyciagEdytuj">Stok</label>
 
-                                            <input type="number" name="dlugoscWyciagEdytuj" class="form-control" />
-                                            <label class="form-label" for="dlugoscWyciagEdytuj">Długość stoku</label>
+                                            <input type="number" name="dlugoscWyciagEdytuj" class="form-control" min="0" required />
+                                            <label class="form-label" for="dlugoscWyciagEdytuj">Długość wyciągu</label>
 
-                                            <input type="number" name="wysokoscWyciagEdytuj" class="form-control" />
-                                            <label class="form-label" for="wysokoscWyciaguEdytuj">Wysokość bezwzglęną stoku</label>
+                                            <input type="number" name="wysokoscWyciagEdytuj" class="form-control" min="0" required/>
+                                            <label class="form-label" for="wysokoscWyciaguEdytuj">Wysokość bezwzglęną wyciągu</label>
 
                                         </div>
                                     </div>
@@ -113,11 +110,9 @@ TO DO:
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input type="text" name="nazwaWyciaguDodaj" class="form-control" />
-                                                        <label class="form-label" for="nazwaWyciagDodaj">Nazwa nowego Wyciagu</label>
-
-                                                        <input type="text" name="harmonogramWyciagDodaj" class="form-control" />
-                                                        <label class="form-label" for="harmonogramWyciagDodaj">Wybierz Harmonogram</label>
+                                                        
+                                                        <input type="text" name="nazwaWyciagDodaj" class="form-control" required />
+                                                        <label class="form-label" for="nazwaWyciagDodaj">Nazwa nowego Wyciągu</label>
 
                                                         <select name="stokWyciagDodaj" class="form-control">
                                                             @foreach (var stok in Model.stoki)
@@ -127,11 +122,11 @@ TO DO:
                                                         </select>
                                                         <label class="form-label" for="stokWyciagDodak">Przypisz do Stoku</label>
 
-                                                        <input type="number" name="dlugoscWyciagDodaj" class="form-control" />
-                                                        <label class="form-label" for="dlugoscWyciagDodaj">Podaj długość stoku</label>
+                                                        <input type="number" name="dlugoscWyciagDodaj" class="form-control" min="0" required />
+                                                        <label class="form-label" for="dlugoscWyciagDodaj">Podaj długość wyciągu</label>
 
-                                                        <input type="number" name="wysokoscWyciagDodaj" class="form-control" />
-                                                        <label class="form-label" for="wysokoscWyciaguDodaj">Podaj wysokość bezwzglęną stoku</label>
+                                                        <input type="number" name="wysokoscWyciagDodaj" class="form-control" min="0" required />
+                                                        <label class="form-label" for="wysokoscWyciaguDodaj">Podaj wysokość bezwzglęną wyciągu</label>
 
                                                     </div>
                                                 </div>
@@ -175,7 +170,7 @@ TO DO:
 
                                                 <div class="d-flex justify-content-center m-2">
 
-                                                    <input type="submit" value="Usuń" class="btn btn-primary btn-block mb-4" asp-page-handler="UsunWyciąg" />
+                                                    <input type="submit" value="Usuń" class="btn btn-primary btn-block mb-4" asp-page-handler="UsunWyciag" />
                                                 </div>
 
                                             </form>

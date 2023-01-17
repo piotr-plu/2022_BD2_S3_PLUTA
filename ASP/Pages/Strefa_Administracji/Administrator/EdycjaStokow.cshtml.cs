@@ -43,21 +43,6 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                     }
                 }
             }
-
-            string query3 = "SELECT s.ID as id, s.Nazwa as nazwa FROM Stoki as s";
-            using (SqlCommand command = new SqlCommand(query3, conn))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Stoki_wyc stok = new Stoki_wyc();
-                        stok.id = reader["id"].ToString();
-                        stok.nazwa = reader["nazwa"].ToString();
-                        stoki.Add(stok);
-                    }
-                }
-            }
         }
 
 
@@ -67,12 +52,12 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
             conn.Open();
             NoweWyciagi stok = new NoweWyciagi();
             stok.nazwa = Request.Form["nazwaWyciagDodaj"];
-            stok.harmonogram = Request.Form["harmonogramWyciagDodaj"];
             stok.stok = Request.Form["stokWyciagDodaj"];
             stok.dlugosc = Request.Form["dlugoscWyciagDodaj"];
             stok.wysokosc = Request.Form["wysokoscWyciagDodaj"];
 
-            string query = "";
+            string query = @"INSERT INTO Wyciagi (Nazwa, ID_Stok, Dlugosc, Wys_bezwzgl ) 
+                            VALUES ('"+stok.nazwa+"', '"+stok.stok+"', '"+stok.dlugosc+"', '"+stok.wysokosc+"')";
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 command.ExecuteNonQuery();
@@ -87,7 +72,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
             NoweStoki stok = new NoweStoki();
 
             stok.nazwa = Request.Form["nazwaWyciagUsun"];
-            string query = "";
+            string query = "DELETE FROM Wyciagi WHERE ID = "+stok.nazwa+"";
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 command.ExecuteNonQuery();
@@ -102,7 +87,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
     }
     public class NoweWyciagi
     {
-        public string nazwa, harmonogram, stok, dlugosc, wysokosc;
+        public string nazwa, stok, dlugosc, wysokosc;
     }
     public class Stoki_wyc
     {

@@ -17,6 +17,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         public List<NowyHarmonogram> infoHarmonogram = new List<NowyHarmonogram>();
         public List<NowyHarmonogram> NowyHarmonogram = new List<NowyHarmonogram>();
         public List<Harmonogram> harmonogram = new List<Harmonogram>();
+        public bool wyswietl = false;
 
         public List<HarmDaty> errorDate = new List<HarmDaty>();
         public bool error = false;
@@ -50,13 +51,29 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
             idHarm.id = Request.Form["podgladHarmonogram"];
 
-            string query = @"SELECT Stan as stan, Data_rozp as dataRozp, Data_zak as dataZak " +
+            string query2 = @"SELECT Stan as stan, Data_rozp as dataRozp, Data_zak as dataZak " +
                             "FROM Harmonogram WHERE ID_Wyciagi = " + idHarm.id + " ORDER BY Data_rozp, Data_zak";
 
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
 
-            using (SqlCommand command = new SqlCommand(query, conn))
+
+            string query1 = "SELECT w.ID as id, w.Nazwa as nazwa FROM Wyciagi as w";
+            using (SqlCommand command = new SqlCommand(query1, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        WyciagiHarm wyciag = new WyciagiHarm();
+                        wyciag.id = reader["id"].ToString();
+                        wyciag.nazwa = reader["nazwa"].ToString();
+                        wyciagi.Add(wyciag);
+                    }
+                }
+            }
+
+            using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -70,7 +87,13 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                     }
                 }
             }
+            wyswietl = true;
+            
+        }
 
+        public void OnPostPrzeladuj()
+        {
+            wyswietl = false;
             Response.Redirect("Harmonogram");
         }
 
@@ -331,5 +354,9 @@ public class EdytujHarmonogram
 public class Harmonogram
 {
     public string stan, dataRozp, dataZak;
+}
+public class Wyswietl 
+{
+    public bool wyswietl;
 }
 
