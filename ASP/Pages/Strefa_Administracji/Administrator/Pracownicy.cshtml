@@ -85,19 +85,22 @@
                                 <div class="d-flex flex-row align-items-center mb-4">
                                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                     <div class="form-outline flex-fill mb-0">
-                                        <select name="wybierzPracownik" class="form-control">
-                                            <!--foreach wstawić-->
-                                            
-                                                <option value="test">Twoja Stara</option>
-                                            
-                                        </select>
-                                        <label class="form-label" for="wybierzPracownik">Pracownik</label>
+
+                                        <input type="search" class="form-control" placeholder="ID: Imię i nazwizko" list="pracownicy-list" id="pracownik" name="pracownik">
+                                            <datalist name="pracownik" id="pracownicy-list">
+                                                @foreach (var a in Model.p)
+                                                {
+                                                    <option value="@a.id: @a.imie @a.nazw"></option>
+                                                }
+                                            </datalist>
+
+                                        <label class="form-label" for="pracownik">ID: Imie i nazwisko</label>
                                     </div>
                                 </div>
 
                                 <div class="d-flex justify-content-center m-2">
 
-                                    <input type="submit" value="Usuń" class="btn btn-primary btn-block mb-4" asp-page-handler="UsunPracownik" />
+                                    <input type="submit" value="Usuń" class="btn btn-primary btn-block mb-4" asp-page-handler="Usuwanie" />
                                 </div>
 
                             </form>
