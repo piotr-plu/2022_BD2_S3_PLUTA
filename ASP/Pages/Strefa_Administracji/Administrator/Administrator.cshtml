@@ -10,23 +10,27 @@
     var imie = HttpContext.Session.GetString("_prac_imie");
     var nazwisko = HttpContext.Session.GetString("_prac_nazwisko");
 }
-<div class="text-center">
-    <section>
-        <h2>Witaj @imie @nazwisko</h2>
-        <b> Możliwe akcje:</b><br />
-        <p>
-            &#x2022; Rejestrcja nowego pracownika<br />
-            &#x2022; Usunięcie zarejestrowanego pracownika<br />
-            &#x2022; Dodanie nowego wyciągu<br /> 
-            &#x2022; Edycja wyciągu<br /> 
-            &#x2022; Usunięcie wyciągu<br /> 
-            &#x2022; Dodanie nowego Stoku<br /> 
-            &#x2022; Grupowanie Stoku<br /> 
-            &#x2022; Usunięcie istniejącego Stoku<br /> 
-            &#x2022; Stworzenie nowego harmonogramu<br />
-            &#x2022; Podgląd aktualnego harmonogramu<br />
-            &#x2022; Edycja harmonogramu<br /><br />
-            <i>Więcej informacji znajdziesz w <a href="~/images/narciarz.png" target="_blank">instrukcji</a></i>
-        </p>
-    </section>
-</div>
+<body>
+    <div class="fluid-container m-5 text-center">
+        <div class="row m-5">
+            <div class="card text-black shadow" style="border-radius: 25px;">
+                <h2 class="text-center m-4">Witaj, @imie @nazwisko</h2>
+                <b> Możliwe akcje:</b>
+                <p>
+                    &#x2022; Rejestrcja nowego pracownika<br />
+                    &#x2022; Usunięcie zarejestrowanego pracownika<br />
+                    &#x2022; Dodanie nowego wyciągu<br />
+                    &#x2022; Edycja wyciągu<br />
+                    &#x2022; Usunięcie wyciągu<br />
+                    &#x2022; Dodanie nowego Stoku<br />
+                    &#x2022; Grupowanie Stoku<br />
+                    &#x2022; Usunięcie istniejącego Stoku<br />
+                    &#x2022; Stworzenie nowego harmonogramu<br />
+                    &#x2022; Podgląd aktualnego harmonogramu<br />
+                    &#x2022; Edycja harmonogramu<br /><br />
+                    <i>Więcej informacji znajdziesz w <a href="~/images/narciarz.png" target="_blank">instrukcji</a></i>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>

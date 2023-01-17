@@ -45,6 +45,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
             {
                 command.ExecuteNonQuery();
             }
+            Response.Redirect("Pracownicy");
         }
 
         public void OnPostUsuwanie() 
@@ -59,6 +60,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
             {
                 command.ExecuteNonQuery();
             }
+            Response.Redirect("Pracownicy");
         }
     }
 }

@@ -11,9 +11,13 @@
     var nazwisko = HttpContext.Session.GetString("_klient_nazwisko");
 }
 
-<div class="text-center">
-    <section>
-        <h2>Witaj @imie @nazwisko ! </h2>
+<body>
+    <div class="fluid-container m-5 text-center">
+        <div class="row m-5">
+            <div class="card text-black shadow" style="border-radius: 25px;">
+                <h2 class="text-center m-4">Witaj, @imie @nazwisko</h2>
 
-    </section>
-</div>
+            </div>
+        </div>
+    </div>
+</body>
