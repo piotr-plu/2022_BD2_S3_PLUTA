@@ -16,7 +16,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         public List<HarmDaty> harmDaty = new List<HarmDaty>();
         public List<NowyHarmonogram> infoHarmonogram = new List<NowyHarmonogram>();
         public List<NowyHarmonogram> NowyHarmonogram = new List<NowyHarmonogram>();
-        public List<Harmonogram> harmonogram = new List<Harmonogram>();
+        public List<Harmonogram> harmonogramy = new List<Harmonogram>();
         public bool wyswietl = false;
 
         public List<HarmDaty> errorDate = new List<HarmDaty>();
@@ -79,11 +79,11 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                 {
                     while (reader.Read())
                     {
-                        Harmonogram harm = new Harmonogram();
-                        harm.stan = reader["stan"].ToString();
-                        harm.dataRozp = reader["dataRozp"].ToString();
-                        harm.dataZak = reader["dataZak"].ToString();
-                        harmonogram.Add(harm);
+                        Harmonogram harmonogram = new Harmonogram();
+                        harmonogram.stan = reader["stan"].ToString();
+                        harmonogram.dataRozp = reader["dataRozp"].ToString();
+                        harmonogram.dataZak = reader["dataZak"].ToString();
+                        harmonogramy.Add(harmonogram);
                     }
                 }
             }
@@ -132,8 +132,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
             foreach (var data in harmDaty)
             {
-                if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture))
-                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) >= (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
+                // Nowy harmonogram pokrywa siê z instniej¹cy harmonogramem w ca³oœci
+                if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) < (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture))
+                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) > (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
                 {
                     HarmDaty errors = new HarmDaty();
 
@@ -144,8 +145,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                     error = true;
                 }
 
-                else if (((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
-                        && ((DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataZak, dateFormat, null)))
+                // Nowy harmonogram pokrywa siê pocz¹tkiem na koniec istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataRozp, dateFormat, null)) < (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)) < (DateTime.ParseExact(data.dataZak, dateFormat, null)))
                         && !error)
                 {
                     HarmDaty errors = new HarmDaty();
@@ -158,8 +160,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
                 }
 
-                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
-                        && ((DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
+                // Nowy harmonogram pokrywa siê koñcem na pocz¹tek istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) < (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)) < (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
                         && !error)
                 {
                     HarmDaty errors = new HarmDaty();
@@ -170,6 +173,20 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
                     error = true;
 
+                }
+
+                // Nowy harmonogram pokrywa siê  koñcem na pocz¹tek oraz pocz¹tkiem na koniec istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) < (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)) < (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
+                        && !error)
+                {
+                    HarmDaty errors = new HarmDaty();
+
+                    errors.dataRozp = harmonogram.dataRozp;
+                    errors.dataZak = data.dataZak;
+                    errorDate.Add(errors);
+
+                    error = true;
                 }
             }
 
@@ -237,23 +254,23 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
         public void OnPostEdytujWyciagHarm()
         {
-            EdytujHarmonogram harm = new EdytujHarmonogram();
+            EdytujHarmonogram harmonogram = new EdytujHarmonogram();
 
-            harm.idHarm = Request.Form["wybierzHarm"];
-            harm.idWyciag = Request.Form["nazwaWyciagHarm"];
-            harm.stan = Request.Form["stanEdytujHarm"];
-            harm.dataRozp = Request.Form["dataRozpEdytujHarm"];
-            harm.dataZak = Request.Form["dataZakEdytujHarm"];
+            harmonogram.idHarm = Request.Form["wybierzHarm"];
+            harmonogram.idWyciag = Request.Form["nazwaWyciagHarm"];
+            harmonogram.stan = Request.Form["stanEdytujHarm"];
+            harmonogram.dataRozp = Request.Form["dataRozpEdytujHarm"];
+            harmonogram.dataZak = Request.Form["dataZakEdytujHarm"];
 
-            string query1 = @"UPDATE Harmonogram SET Stan = " + harm.stan + ", Data_rozp = '"+harm.dataRozp+"', Data_zak = '"+harm.dataZak+"'" +
-                            "WHERE ID = "+harm.idHarm+" AND ID_Wyciagi = "+harm.idWyciag+"";
+            string query1 = @"UPDATE Harmonogram SET Stan = " + harmonogram.stan + ", Data_rozp = '"+harmonogram.dataRozp+"', Data_zak = '"+harmonogram.dataZak+"'" +
+                            "WHERE ID = "+harmonogram.idHarm+" AND ID_Wyciagi = "+harmonogram.idWyciag+"";
 
-            string query2 = "SELECT h.Data_rozp as dataRozp, h.Data_zak as dataZak FROM Harmonogram as h WHERE h.ID_Wyciagi = " + harm.idWyciag + "";
+            string query2 = "SELECT h.Data_rozp as dataRozp, h.Data_zak as dataZak FROM Harmonogram as h WHERE h.ID_Wyciagi = " + harmonogram.idWyciag + "";
 
 
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            using (SqlCommand command = new SqlCommand(query1, conn))
+            using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -273,51 +290,76 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 
             foreach (var data in harmDaty)
             {
-                if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture))
-                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) >= (DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)))
+
+                 // Nie zmieniamy dat
+                if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) == (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture))
+                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) == (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
+                {
+                    error = false; break;
+                }
+
+                // Nowy harmonogram pokrywa siê z instniej¹cy harmonogramem
+                else if ((DateTime.ParseExact(data.dataRozp, dateFormat, null)) < (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture))
+                    && (DateTime.ParseExact(data.dataZak, dateFormat, null)) > (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
                 {
                     HarmDaty errors = new HarmDaty();
 
-                    errors.dataRozp = harm.dataRozp;
-                    errors.dataZak = harm.dataZak;
+                    errors.dataRozp = harmonogram.dataRozp;
+                    errors.dataZak = harmonogram.dataZak;
                     errorDate.Add(errors);
 
                     error = true;
                 }
 
-                else if (((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture)))
-                        && ((DateTime.Parse(harm.dataZak, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataZak, dateFormat, null)))
+                // Nowy harmonogram pokrywa siê pocz¹tkiem na koniec istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataRozp, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataZak, dateFormat, null)))
                         && !error)
                 {
                     HarmDaty errors = new HarmDaty();
 
                     errors.dataRozp = data.dataRozp;
-                    errors.dataZak = harm.dataZak;
+                    errors.dataZak = harmonogram.dataZak;
                     errorDate.Add(errors);
 
                     error = true;
 
                 }
 
-                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) <= (DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)))
-                        && ((DateTime.Parse(harm.dataRozp, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
+                // Nowy harmonogram pokrywa siê koñcem na pocz¹tek istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
                         && !error)
                 {
                     HarmDaty errors = new HarmDaty();
 
-                    errors.dataRozp = harm.dataRozp;
+                    errors.dataRozp = harmonogram.dataRozp;
                     errors.dataZak = data.dataZak;
                     errorDate.Add(errors);
 
                     error = true;
 
                 }
+
+                // Nowy harmonogram pokrywa siê  koñcem na pocz¹tek oraz pocz¹tkiem na koniec istniej¹cego harmonogramu
+                else if (((DateTime.ParseExact(data.dataZak, dateFormat, null)) <= (DateTime.Parse(harmonogram.dataZak, CultureInfo.InvariantCulture)))
+                        && ((DateTime.Parse(harmonogram.dataRozp, CultureInfo.InvariantCulture)) <= (DateTime.ParseExact(data.dataRozp, dateFormat, null)))
+                        && !error)
+                {
+                    HarmDaty errors = new HarmDaty();
+
+                    errors.dataRozp = harmonogram.dataRozp;
+                    errors.dataZak = data.dataZak;
+                    errorDate.Add(errors);
+
+                    error = true;
+                }
             }
 
 
             if (!error) 
             { 
-                    using (SqlCommand command = new SqlCommand(query2, conn))
+                    using (SqlCommand command = new SqlCommand(query1, conn))
                 {
                     command.ExecuteNonQuery();
                 }
