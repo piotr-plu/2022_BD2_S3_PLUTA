@@ -20,13 +20,17 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         public List<Edycja> ee = new List<Edycja>();
         public List<Licznik> l = new List<Licznik>();
         public List<Nazwa> n = new List<Nazwa>();
+        public List<Stok> s = new List<Stok>();
+        public List<Cennik> ck = new List<Cennik>();
+        public List<Edycja> ek = new List<Edycja>();
+        public List<Edycja> eek = new List<Edycja>();
         public void OnGet()
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-            string query2 = "SELECT ID as id, Nazwa as nazw FROM Stoki";
-            using (SqlCommand command = new SqlCommand(query, conn))
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -39,6 +43,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     }
                 }
             }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
         }
         //---EDYCJA CENNIKA KARNET
         public void OnPostWyciag()
@@ -46,8 +63,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-            string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-            using (SqlCommand command = new SqlCommand(query, conn))
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -57,6 +75,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                         w1.id = reader["id"].ToString();
                         w1.nazwa = reader["nazw"].ToString();
                         w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
                     }
                 }
             }
@@ -103,8 +134,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-            string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-            using (SqlCommand command = new SqlCommand(query, conn))
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -114,6 +146,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                         w1.id = reader["id"].ToString();
                         w1.nazwa = reader["nazw"].ToString();
                         w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
                     }
                 }
             }
@@ -147,6 +192,35 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
+            //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
             Licznik l1 = new Licznik();
             Edycja e2 = new Edycja();
             Cennik c3 = new Cennik();
@@ -159,42 +233,12 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             {
                 n2.error = "Wprowadzona cena musi spe³niaæ warunek: cena > 0";
                 n.Add(n2);
-                //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-                string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            Wyciag w1 = new Wyciag();
-                            w1.id = reader["id"].ToString();
-                            w1.nazwa = reader["nazw"].ToString();
-                            w.Add(w1);
-                        }
-                    }
-                }
+                
             }
             else
             {
                 e2.rozp = Request.Form["rozp"].ToString();
                 e2.zak = Request.Form["zak"].ToString();
-                //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-                string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            Wyciag w1 = new Wyciag();
-                            w1.id = reader["id"].ToString();
-                            w1.nazwa = reader["nazw"].ToString();
-                            w.Add(w1);
-                        }
-                    }
-                }
-                //-----------------------------------------------------
                 var date1 = DateTime.Parse(e2.rozp);
                 e2.rozp = date1.Year.ToString() + "-" + date1.Month.ToString() + "-" + date1.Day.ToString();
                 string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_bilety as cb, Wyciagi as w " +
@@ -258,8 +302,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-            string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-            using (SqlCommand command = new SqlCommand(query, conn))
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -269,6 +314,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                         w1.id = reader["id"].ToString();
                         w1.nazwa = reader["nazw"].ToString();
                         w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
                     }
                 }
             }
@@ -299,8 +357,9 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
             //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
-            string query = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
-            using (SqlCommand command = new SqlCommand(query, conn))
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -310,6 +369,19 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                         w1.id = reader["id"].ToString();
                         w1.nazwa = reader["nazw"].ToString();
                         w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
                     }
                 }
             }
@@ -413,7 +485,412 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                 }
             }
         }
-        //---------------------------EDYCJA CENNIKA BILET-----------------------\\
+        //---------------------------EDYCJA CENNIKA KARNET-----------------------\\
+        public void OnPostStok()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
+            Stok s2 = new Stok();
+            s2.id = Request.Form["stok"].ToString();
+            s2.godz = Request.Form["godz"].ToString();
+            string query1 = "SELECT c.ID as id,c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Stoki as s, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = s.ID AND ck.Czas = '"+s2.godz+"' AND s.ID ='"+s2.id+ "' AND ((c.Data_rozp < (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date))) OR c.Data_zak IS NULL)";
+            using (SqlCommand command = new SqlCommand(query1, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Cennik c1 = new Cennik();
+                        c1.id = reader["id"].ToString();
+                        c1.rozp = reader["rozp"].ToString();
+                        string[] subs = c1.rozp.Split(" ");
+                        c1.rozp = subs[0];
+                        c1.zak = reader["zak"].ToString();
+                        subs = c1.zak.Split(" ");
+                        c1.zak = subs[0];
+                        ck.Add(c1);
+                    }
+                }
+            }
+        }
+        public void OnPostCennik_k()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
+            Cennik c2 = new Cennik();
+            c2.id = Request.Form["cennik_k"].ToString();
+            string query3 = "SELECT s.Nazwa as nazwa, ck.Cena as cena,ck.Czas as czas, c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Stoki as s, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND s.ID = ck.ID_Stok AND c.ID ='" + c2.id + "'";
+            using (SqlCommand command = new SqlCommand(query3, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Edycja e1 = new Edycja();
+                        e1.nazwa = reader["nazwa"].ToString();
+                        e1.cena = reader["cena"].ToString();
+                        e1.rozp = reader["rozp"].ToString();
+                        e1.zak = reader["zak"].ToString();
+                        e1.gr = reader["czas"].ToString();
+                        string[] tab = e1.rozp.Split(" ");
+                        e1.rozp = tab[0];
+                        tab = e1.zak.Split(" ");
+                        e1.zak = tab[0];
+                        ek.Add(e1);
+                    }
+                }
+            }
+        }
+
+        public void OnPostEdytuj_k()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
+            Licznik l1 = new Licznik();
+            Edycja e2 = new Edycja();
+            Cennik c3 = new Cennik();
+            Nazwa n2 = new Nazwa();
+            //-Zebranie danych z formsa-
+            e2.nazwa = Request.Form["nazwa"].ToString();
+            e2.cena = Request.Form["cena"].ToString();
+            float icena = float.Parse(e2.cena);
+            if (icena <= 0)
+            {
+                n2.error = "Wprowadzona cena musi spe³niaæ warunek: cena > 0";
+                n.Add(n2);
+
+            }
+            else
+            {
+                e2.rozp = Request.Form["rozp"].ToString();
+                e2.zak = Request.Form["zak"].ToString();
+                e2.gr = Request.Form["czas"].ToString();
+                var date1 = DateTime.Parse(e2.rozp);
+                e2.rozp = date1.Year.ToString() + "-" + date1.Month.ToString() + "-" + date1.Day.ToString();
+                string query3 = "SELECT c.ID as id FROM Cennik as c, Cena_karnety as ck, Stoki as s " +
+                    "WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = s.ID "+
+                    "AND s.Nazwa = '"+e2.nazwa+"' AND ck.Czas = '"+e2.gr+"' AND c.Data_rozp ='"+e2.rozp+"'";
+                using (SqlCommand command = new SqlCommand(query3, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            c3.id_c = reader["id"].ToString();
+                        }
+                    }
+                }
+                string query4 = "SELECT COUNT(ck.ID) as liczba FROM Cena_karnety as ck, Stoki as s WHERE s.ID = ck.ID_Stok AND s.Nazwa = '" + e2.nazwa + "' AND ck.Cena = '" + icena + "' AND ck.Czas = '"+e2.gr+"'";
+                using (SqlCommand command = new SqlCommand(query4, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            l1.liczba = reader["liczba"].ToString();
+                        }
+                    }
+                }
+                int l = int.Parse(l1.liczba);
+                if (l == 0)
+                {
+                    string query5 = "INSERT INTO Cena_karnety (ID_Stok, Cena, Czas) VALUES ((SELECT ID FROM Stoki WHERE Nazwa = '" + e2.nazwa + "'), '" + icena + "', '"+e2.gr+"')";
+                    using (SqlCommand command = new SqlCommand(query5, conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+                string query6 = "SELECT ck.ID as id FROM Cena_karnety as ck, Stoki as s WHERE s.Nazwa = '" + e2.nazwa + "' AND ck.Cena = '" + icena + "' AND s.ID = ck.ID_Stok AND ck.Czas = '"+e2.gr+"'";
+                using (SqlCommand command = new SqlCommand(query6, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            c3.id = reader["id"].ToString();
+                        }
+                    }
+                }
+                string query7 = "UPDATE CENNIK set ID_Cena_karnet = '" + c3.id + "' WHERE ID = '" + c3.id_c + "'";
+                using (SqlCommand command = new SqlCommand(query7, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                Response.Redirect("ZmianaCennika");
+            }
+        }
+        public void OnPostCennik_n_b()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            Edycja ee1 = new Edycja();
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
+            Stok s2 = new Stok();
+            s2.id = Request.Form["stok"].ToString();
+            ee1.gr = Request.Form["godz"].ToString();
+            string query8 = "SELECT Nazwa as nazwa, CAST(GETDATE() as Date) as Date FROM Stoki WHERE ID = '" + s2.id + "'";
+            using (SqlCommand command = new SqlCommand(query8, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ee1.nazwa = reader["nazwa"].ToString();
+                        ee1.rozp = reader["Date"].ToString();
+                        var date = DateTime.Parse(ee1.rozp);
+                        ee1.rozp = date.Day.ToString() + "." + date.Month.ToString() + "." + date.Year.ToString();
+                        eek.Add(ee1);
+                    }
+                }
+            }
+        }
+
+        public void OnPostDodaj_k()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+            //Ponowe za³adowanie wyci¹gów aby mo¿liwe by³o ich ponowne wybranie
+            string queryw = "SELECT ID as id, Nazwa as nazw FROM Wyciagi";
+            string querys = "SELECT ID as id, Nazwa as nazw FROM Stoki";
+            using (SqlCommand command = new SqlCommand(queryw, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Wyciag w1 = new Wyciag();
+                        w1.id = reader["id"].ToString();
+                        w1.nazwa = reader["nazw"].ToString();
+                        w.Add(w1);
+                    }
+                }
+            }
+            using (SqlCommand command = new SqlCommand(querys, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Stok s1 = new Stok();
+                        s1.id = reader["id"].ToString();
+                        s1.nazwa = reader["nazw"].ToString();
+                        s.Add(s1);
+                    }
+                }
+            }
+            //-----------------------------------------------------
+            Licznik l1 = new Licznik();
+            Edycja e4 = new Edycja();
+            Cennik c3 = new Cennik();
+            Nazwa n2 = new Nazwa();
+            e4.nazwa = Request.Form["nazwa"].ToString();
+            e4.rozp = Request.Form["rozp"].ToString();
+            e4.cena = Request.Form["cena"].ToString();
+            e4.gr = Request.Form["czas"].ToString();
+            float icena = float.Parse(e4.cena);
+            if (icena <= 0)
+            {
+                n2.error = "Wprowadzona cena musi spe³niaæ warunek: cena > 0";
+                n.Add(n2);
+            }
+            else
+            {
+                string query9 = "SELECT c.ID as id, c.Data_rozp as rozp FROM Cennik as c, Stoki as s, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND s.ID = ck.ID_Stok AND c.Data_zak IS NULL AND s.Nazwa = '" + e4.nazwa + "' AND ck.Czas = '" + e4.gr + "'";
+                using (SqlCommand command = new SqlCommand(query9, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            c3.id = reader["id"].ToString();
+                            c3.rozp = reader["rozp"].ToString();
+                        }
+                    }
+                }
+                string query_time = "SELECT CAST(GETDATE() as Date) as Date";
+                using (SqlCommand command = new SqlCommand(query_time, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            l1.dzis = reader["Date"].ToString();
+                        }
+                    }
+                }
+                //Mechanizm sprawdzania dat, czy nowa data cennika po dzisiejszej dacie oraz po dacie ostatniego cennika
+                var date1 = DateTime.Parse(c3.rozp);//Data ostatniego cennika z bazy
+                var date2 = DateTime.Parse(e4.rozp);//Data z formsa
+                var date3 = DateTime.Parse(l1.dzis);//Data dzisiejsza
+                var diff = date2 - date1;
+                var diff1 = date2 - date3;
+                int idiff = diff.Days;
+                int idiff1 = diff1.Days;
+                if (idiff <= 0 || idiff1 <= 0)
+                {
+                    n2.error = "Podana data jest nieprawid³owa, nie mo¿na podaæ daty poprzedzaj¹cej dzisiejsz¹, lub daty najnowszego istniej¹cego cennika.";
+                    n.Add(n2);
+                }
+                else
+                {
+                    e4.zak = date2.Year.ToString() + "-" + date2.Month.ToString() + "-" + date2.Day.ToString();
+                    string query10 = "UPDATE Cennik SET Data_zak = '" + e4.zak + "' WHERE ID = '" + c3.id + "'";
+                    using (SqlCommand command = new SqlCommand(query10, conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    string querya = "SELECT COUNT(ck.ID) as liczba FROM Cena_karnety as ck, Stoki as s WHERE s.ID = ck.ID_Stok AND s.Nazwa = '" + e4.nazwa + "' AND ck.Cena= '" + e4.cena + "' AND ck.Czas = '" + e4.gr + "'";
+                    using (SqlCommand command = new SqlCommand(querya, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                l1.liczba = reader["liczba"].ToString();
+                            }
+                        }
+                    }
+                    int l = int.Parse(l1.liczba);
+                    if (l == 0)
+                    {
+                        string query5 = "INSERT INTO Cena_karnaty (ID_Stok, Cena, Czas) VALUES ((SELECT ID FROM Wyciagi WHERE Nazwa = '" + e4.nazwa + "'), '" + e4.cena + "', '" + e4.gr + "')";
+                        using (SqlCommand command = new SqlCommand(query5, conn))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    string query11 = "SELECT ck.ID as id FROM Cena_karnety as ck, Stoki as s WHERE s.ID = ck.ID_Stok AND ck.Cena = '" + e4.cena + "' AND w.Nazwa = '" + e4.nazwa + "', '" + e4.gr + "'";
+                    using (SqlCommand command = new SqlCommand(query11, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                e4.id = reader["id"].ToString();
+                            }
+                        }
+                    }
+                    string query12 = "INSERT INTO Cennik (ID_Cena_karnet, Data_rozp) VALUES ('" + e4.id + "', '" + e4.zak + "')";
+                    using (SqlCommand command = new SqlCommand(query12, conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    Response.Redirect("ZmianaCennika");
+                }
+            }
+        }
+
 
         public class Wyciag
         {
@@ -435,6 +912,10 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         public class Nazwa
         {
             public string nazwa, error;
+        }
+        public class Stok
+        {
+            public string id, nazwa, godz;
         }
     }
 }
