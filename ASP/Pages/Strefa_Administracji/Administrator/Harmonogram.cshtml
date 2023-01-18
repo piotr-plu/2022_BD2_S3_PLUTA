@@ -1,5 +1,8 @@
 ﻿@page
 @model Narciarze_v_2.Pages.Strefa_Administracji.Administrator.HarmonogramModel
+@using System;
+@using System.Globalization;
+
 @{
     ViewData["Title"] = "Edycja Harmonogramu";
     Layout = "_Layout_Admin";
@@ -24,22 +27,22 @@ To DO:
                                 <p class="text-center h3 fw-bold ">Podgląd Harmonogram</p>
 
                                 <form method="post" class="m-3">
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <select name="podgladHarmonogram" class="form-control">
-                                                    @foreach (var wyciag in Model.wyciagi)
-                                                    {
-                                                        <option value="@wyciag.id">@wyciag.nazwa</option>
-                                                    }
-                                                </select>
-                                                <label class="form-label" for="nazwaWyciagHarm">Nazwa Wyciągu</label>
-                                            </div>
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <select name="podgladHarmonogram" class="form-control">
+                                                @foreach (var wyciag in Model.wyciagi)
+                                                {
+                                                    <option value="@wyciag.id">@wyciag.nazwa</option>
+                                                }
+                                            </select>
+                                            <label class="form-label" for="nazwaWyciagHarm">Nazwa Wyciągu</label>
                                         </div>
-                                        <div class="d-flex justify-content-center m-2">
-                                            <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="ZobaczHarm" />
-                                        </div>
-                                
+                                    </div>
+                                    <div class="d-flex justify-content-center m-2">
+                                        <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="ZobaczHarm" />
+                                    </div>
+
                                     @if (Model.wyswietl == true)
                                     {
                                         <div class="table-responsive text-center m-4">
@@ -52,7 +55,7 @@ To DO:
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach (var harm in Model.harmonogram)
+                                                    @foreach (var harm in Model.harmonogramy)
                                                     {
                                                         <tr>
                                                             @if (harm.stan == "True")
@@ -76,9 +79,9 @@ To DO:
                                         <div class="d-flex justify-content-center m-2">
                                             <input type="submit" value="Zamknij" class="btn btn-primary btn-block mb-4" asp-page-handler="Przeladuj" />
                                         </div>
-                                    }       
-                                        </form>
-                                    
+                                    }
+                                </form>
+
 
                             </div>
                         </div>
@@ -118,10 +121,10 @@ To DO:
                                             </select>
 
                                             <label class="form-label mt-2" for="dataRozpHarmDodaj">Data rozpoczęcia obowiązywania harmonogramu:</label>
-                                            <input type="date" name="dataRozpHarmDodaj" class="form-control" value="" />
+                                            <input type="date" name="dataRozpHarmDodaj" class="form-control" required />
 
                                             <label class="form-label mt-2" for="dataZakHarmDodaj">Data zakończenia obowiązywania harmonogramu:</label>
-                                            <input type="date" name="dataZakHarmDodaj" class="form-control " />
+                                            <input type="date" name="dataZakHarmDodaj" class="form-control " required />
 
                                         </div>
                                     </div>
@@ -136,7 +139,6 @@ To DO:
                                 @if (Model.error == true)
                                 {
                                     <div class="alert alert-danger" role="alert"> This is a danger alert—check it out!</div>
-                                    int dummy = 0;
                                 }
 
                             </div>
@@ -175,26 +177,27 @@ To DO:
                                         <input type="submit" value="Wybierz" class="btn btn-primary btn-block mb-4" asp-page-handler="Wyciag" />
                                     </div>
 
-                                    <select name="wybierzHarm" class="form-control">
-                                        @foreach (var info in Model.infoHarmonogram)
-                                        {
-                                            @if (info.stan == "True")
-                                            {
-                                                <option value="@info.id">Czynny w @info.dataRozp - @info.dataZak</option>
-                                            }
-                                            else if (info.stan == "False")
-                                            {
-                                                <option value="@info.id">Nieczynny w dniach @info.dataRozp - @info.dataZak</option>
-                                            }
-
-
-                                        }
-                                    </select>
-                                    <label class="form-label" for="wybierzHarm">Harmonogram</label>
-
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
+                                            <select name="wybierzHarm" class="form-control">
+                                                @foreach (var info in Model.infoHarmonogram)
+                                                {
+                                                    @if (info.stan == "True")
+                                                    {
+                                                        <option value="@info.id">Czynny w @DateTime.Parse(info.dataRozp) - @DateTime.Parse(info.dataZak)</option>
+                                                    }
+                                                    else if (info.stan == "False")
+                                                    {
+                                                        <option value="@info.id">Nieczynny w dniach @DateTime.Parse(info.dataRozp) - @DateTime.Parse(info.dataZak)</option>
+                                                    }
+
+
+                                                }
+                                            </select>
+                                            <label class="form-label" for="wybierzHarm">Harmonogram</label>
+
+
 
                                             <select name="stanEdytujHarm" class="form-control">
 
