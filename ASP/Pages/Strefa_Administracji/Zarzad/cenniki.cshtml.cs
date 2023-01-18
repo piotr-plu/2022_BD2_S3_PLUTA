@@ -6,11 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System.Text;
-using static Narciarze_v_2.Pages.Strefa_Klienta.TrasyModel;
-//TO DO LIST -> do zapytaæ zamiast przekazywaæ datê na sta³e napisaæ funkcjê/metodê etc. do odczytywania daty i u¿yæ jej w zapytaniach generuj¹cych tabele
-namespace Narciarze_v_2.Pages.Strefa_Klienta
+
+namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
 {
-    public class CennikModel : PageModel
+    public class cennikiModel : PageModel
     {
         public List<Cennik_k> ceny_k = new List<Cennik_k>();
         public List<Cennik_b> ceny_b = new List<Cennik_b>();
@@ -18,7 +17,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID AND c.Data_rozp < '2023-01-03' AND (c.Data_zak > GETDATE() OR c.Data_zak IS NULL) ORDER BY s.Nazwa DESC, ck.Cena ASC";
+            string query = "SELECT s.nazwa as 'Nazwa', ck.Cena as 'Cena', ck.czas 'Wymiar godzinowy' FROM Stoki as s, Cennik as c, Cena_karnety as ck WHERE s.ID = ck.ID_Stok AND c.ID_Cena_karnet = ck.ID AND c.Data_rozp < GETDATE() AND (c.Data_zak > GETDATE() OR c.Data_zak IS NULL) ORDER BY s.Nazwa DESC, ck.Cena ASC";
             string query_2 = "SELECT w.nazwa as 'Nazwa', cb.Cena_przejazd as 'Cena' FROM Wyciagi as w, Cena_bilety as cb, Cennik as c WHERE c.ID_Cena_bilet = cb.ID AND cb.ID_Wyciag = w.ID AND c.Data_rozp < GETDATE() AND (c.Data_zak > GETDATE() OR c.Data_zak IS NULL)  ORDER BY w.nazwa ASC";
             using (SqlCommand command = new SqlCommand(query, conn))
             {
@@ -38,7 +37,8 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
             {
                 using (SqlDataReader reader_2 = command_2.ExecuteReader())
                 {
-                    while (reader_2.Read()) {
+                    while (reader_2.Read())
+                    {
                         Cennik_b t2 = new Cennik_b();
                         t2.Nazwa = reader_2["Nazwa"].ToString();
                         t2.Cena_p = reader_2["Cena"].ToString();
@@ -70,5 +70,3 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         }
     }
 }
-       
-    
