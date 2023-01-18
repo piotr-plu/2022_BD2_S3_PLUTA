@@ -6,9 +6,11 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
 {
     public class EdycjaStokowModel : PageModel
     {
-        public List<Stoki_wyc> stoki = new List<Stoki_wyc>();
-        public List<Wyciagi_edycja> wyciagi = new List<Wyciagi_edycja>();
-        public List<NoweWyciagi> noweWyciagi = new List<NoweWyciagi>();
+        public List<StokiWyc> stoki = new List<StokiWyc>();
+        public List<Wyciag> edycjaWyciag = new List<Wyciag>();
+        public List<Wyciag> wyciagi = new List<Wyciag>();
+        public List<Wyciag> nowyWyciag = new List<Wyciag>();
+
         public void OnGet() 
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
@@ -21,7 +23,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                 {
                     while (reader.Read())
                     {
-                        Wyciagi_edycja wyciag = new Wyciagi_edycja();
+                        Wyciag wyciag = new Wyciag();
                         wyciag.id = reader["id"].ToString();
                         wyciag.nazwa = reader["nazwa"].ToString();
                         wyciagi.Add(wyciag);
@@ -36,7 +38,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
                 {
                     while (reader.Read())
                     {
-                        Stoki_wyc stok = new Stoki_wyc();
+                        StokiWyc stok = new StokiWyc();
                         stok.id = reader["id"].ToString();
                         stok.nazwa = reader["nazwa"].ToString();
                         stoki.Add(stok);
@@ -46,11 +48,32 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         }
 
 
+        public void OnPostEdytujWyciag()
+        {
+            Wyciag wyciag = new Wyciag();
+
+            wyciag.id = Request.Form["nazwaWyciagDodaj"];
+            wyciag.nazwa = Request.Form["nazwaWyciaguEdytuj"];
+            wyciag.dlugosc = Request.Form["dlugoscWyciagEdytuj"];
+            wyciag.wysokosc = Request.Form["wysokoscWyciagEdytuj"];
+
+            SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
+            conn.Open();
+
+            string query = "UPDATE Wyciagi SET  Nazwa = '"+wyciag.nazwa+"', Dlugosc = '"+wyciag.dlugosc+"', Wys_bezwzgl = '"+wyciag.wysokosc+"' WHERE ID = "+wyciag.id+"";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                command.ExecuteNonQuery();
+            }
+            Response.Redirect("EdycjaStokow");
+        }
+
         public void OnPostDodajWyciag()
         {
             SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Narty_V4;Integrated Security=True");
             conn.Open();
-            NoweWyciagi stok = new NoweWyciagi();
+            Wyciag stok = new Wyciag();
             stok.nazwa = Request.Form["nazwaWyciagDodaj"];
             stok.stok = Request.Form["stokWyciagDodaj"];
             stok.dlugosc = Request.Form["dlugoscWyciagDodaj"];
@@ -81,15 +104,12 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Administrator
         }
 
     }
-    public class Wyciagi_edycja
+
+    public class Wyciag
     {
-        public string id, nazwa;
+        public string id, nazwa, stok, dlugosc, wysokosc;
     }
-    public class NoweWyciagi
-    {
-        public string nazwa, stok, dlugosc, wysokosc;
-    }
-    public class Stoki_wyc
+    public class StokiWyc
     {
         public string id, nazwa;
     }
