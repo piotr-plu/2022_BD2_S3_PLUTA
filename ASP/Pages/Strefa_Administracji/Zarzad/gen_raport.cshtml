@@ -1,5 +1,5 @@
 ﻿@page
-@model Narciarze_v_2.Pages.Strefa_Administracji.Zarzad.cennikiModel
+@model Narciarze_v_2.Pages.Strefa_Administracji.Zarzad.raporty_zarzad_Model
 @{
     if (HttpContext.Session.GetInt32("_prac_uid") != 2)
     {
@@ -17,24 +17,24 @@
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="card text-black shadow" style="border-radius: 25px;">
                             <div class="m-3">
-                                <p class="text-center h3 fw-bold ">Cennik Karnety</p>
+                                <p class="text-center h3 fw-bold ">Raport sprzedaży karnetów</p>
 
                                 <div class="table-responsive text-center m-4">
                                     <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                                         <thead class="table-dark">
                                             <tr>
-                                                <th>Stok</th>
-                                                <th>Ilośc Godzin</th>
-                                                <th>Cena karnetu</th>
+                                                <th>Miesiąc</th>
+                                                <th>Rok</th>
+                                                <th>Suma sprzedaży</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (var cena in Model.ceny_k)
+                                            @foreach (var cena in Model.rap_k)
                                             {
                                                 <tr>
-                                                    <td>@cena.Nazwa</td>
-                                                    <td>@cena.Wymiar_godz</td>
-                                                    <td>@cena.Cena zł</td>
+                                                    <td>@cena.mies</td>
+                                                    <td>@cena.rok</td>
+                                                    <td>@cena.suma</td>
                                                 </tr>
                                             }
                                         </tbody>
@@ -53,22 +53,24 @@
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="card text-black shadow" style="border-radius: 25px;">
                             <div class="m-3">
-                                <p class="text-center h3 fw-bold ">Cennik Bilety</p>
+                                <p class="text-center h3 fw-bold ">Raport sprzedaży biletów</p>
 
                                 <div class="table-responsive text-center  m-4">
                                     <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm">
                                         <thead class="table-dark">
                                             <tr>
-                                                <th>Wyciąg</th>
-                                                <th>Cena za wjazd</th>
+                                                <th>Miesiąc</th>
+                                                <th>Rok</th>
+                                                <th>Suma sprzedaży</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (var cena in Model.ceny_b)
+                                            @foreach (var cena in Model.rap_b)
                                             {
                                                 <tr>
-                                                    <td>@cena.Nazwa</td>
-                                                    <td>@cena.Cena_p zł</td>
+                                                    <td>@cena.mies</td>
+                                                    <td>@cena.rok</td>
+                                                    <td>@cena.suma</td>
                                                 </tr>
                                             }
                                         </tbody>
