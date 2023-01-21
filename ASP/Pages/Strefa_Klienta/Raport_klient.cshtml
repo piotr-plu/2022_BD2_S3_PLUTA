@@ -8,9 +8,8 @@
         Response.Redirect("../Index");
     }
 }
-<div>
 
-    <div class="fluid-container m-5">
+<div class="fluid-container m-5" id="Grid">
         <div class="row m-5">
             <div class="card text-black shadow" style="border-radius: 25px;">
                 <h2 class="text-center mt-4">Karnety</h2>
@@ -87,5 +86,83 @@
             </div>
         </div>
     </div>
+    <!-- tu wykresy-->
+    <div class="container m-5">
+        <div class="row m-5">
+            <div class="card text-black shadow" style="border-radius: 25px;">
+                <h2 class="text-center mt-4">Ile z nami przejechałeś metrów dzięki biletom</h2>
+                <div class="table-responsive text-center m-4">
 
-</div>
+                    <div style="height:200px;overflow-y:scroll">
+                        <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm" cellspacing="0" width="100%">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="th-sm">Data</th>
+                                    <th class="th-sm">Razem przejechane metry</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                @foreach (var var in Model.raport_bilety)
+                {
+                    <tr>
+                        <td>@var.data</td>
+                        <td>@var.suma</td>
+                    </tr>
+                }
+                </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container m-5">
+        <div class="row m-5">
+            <div class="card text-black shadow" style="border-radius: 25px;">
+                <h2 class="text-center mt-4">Ile z nami przejechałeś godzin dzięki karnetom</h2>
+                <div class="table-responsive text-center m-4">
+
+                    <div style="height:200px;overflow-y:scroll">
+                        <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm" cellspacing="0" width="100%">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="th-sm">Data</th>
+                                    <th class="th-sm">Razem przejechane godziny</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                @foreach (var var in Model.raport_karnety)
+                                {
+                                    <tr>
+                                        <td>@var.data</td>
+                                        <td>@var.suma</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<form method="post">
+    <input type="hidden" name="GridHtml" />
+
+    <div class="d-flex justify-content-center m-2">
+        <input type="submit" id="btnSubmit" value="Eksportuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Export" />
+    </div>
+</form>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {
+            $("input[name='GridHtml']").val($("#Grid").html());
+        });
+    });
+</script>

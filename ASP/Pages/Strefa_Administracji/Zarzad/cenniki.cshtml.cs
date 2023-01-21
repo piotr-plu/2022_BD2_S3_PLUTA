@@ -49,7 +49,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         }
         public FileResult OnPostExport(string GridHtml)
         {
-            using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(GridHtml)))
+            using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(GridHtml)))
             {
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 PdfWriter writer = new PdfWriter(byteArrayOutputStream);

@@ -47,19 +47,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                 }
             }
         }
-        public FileResult OnPostExport(string GridHtml)
-        {
-            using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(GridHtml)))
-            {
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                PdfWriter writer = new PdfWriter(byteArrayOutputStream);
-                PdfDocument pdfDocument = new PdfDocument(writer);
-                pdfDocument.SetDefaultPageSize(PageSize.A4);
-                HtmlConverter.ConvertToPdf(stream, pdfDocument);
-                pdfDocument.Close();
-                return File(byteArrayOutputStream.ToArray(), "application/pdf", "Grid.pdf");
-            }
-        }
+        
         public class Cennik_k
         {
             public string Nazwa, Cena, Wymiar_godz;

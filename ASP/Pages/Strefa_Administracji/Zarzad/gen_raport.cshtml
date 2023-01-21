@@ -9,7 +9,7 @@
     Layout = "_Layout_Zarzad";
 }
 <body>
-    <div class="fluid-container m-5">
+    <div class="fluid-container m-5" id="Grid">
         <div class="row">
 
             <div class="col-md-6">
@@ -26,6 +26,7 @@
                                                 <th>Miesiąc</th>
                                                 <th>Rok</th>
                                                 <th>Suma sprzedaży</th>
+                                                <th>Liczba</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -35,6 +36,7 @@
                                                     <td>@cena.mies</td>
                                                     <td>@cena.rok</td>
                                                     <td>@cena.suma</td>
+                                                    <td>@cena.il</td>
                                                 </tr>
                                             }
                                         </tbody>
@@ -62,6 +64,7 @@
                                                 <th>Miesiąc</th>
                                                 <th>Rok</th>
                                                 <th>Suma sprzedaży</th>
+                                                <th>Liczba</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -71,6 +74,7 @@
                                                     <td>@cena.mies</td>
                                                     <td>@cena.rok</td>
                                                     <td>@cena.suma</td>
+                                                    <td>@cena.il</td>
                                                 </tr>
                                             }
                                         </tbody>
@@ -85,5 +89,20 @@
 
         </div>
     </div>
-</body>
+    </body>
+    <form method="post">
+            <input type="hidden" name="GridHtml" />
+
+            <div class="d-flex justify-content-center m-2">
+                <input type="submit" id="btnSubmit" value="Eksportuj" class="btn btn-primary btn-block mb-4" asp-page-handler="Export" />
+            </div>
+        </form>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btnSubmit").click(function () {
+                    $("input[name='GridHtml']").val($("#Grid").html());
+                });
+            });
+        </script>
 
