@@ -20,6 +20,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
         public List<Edycja> ee = new List<Edycja>();
         public List<Licznik> l = new List<Licznik>();
         public List<Nazwa> n = new List<Nazwa>();
+        public List<Nazwa> nk = new List<Nazwa>();
         public List<Stok> s = new List<Stok>();
         public List<Cennik> ck = new List<Cennik>();
         public List<Edycja> ek = new List<Edycja>();
@@ -108,7 +109,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     }
                 }
             }
-            string query2 = "SELECT c.ID as id, c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Cena_bilety as cb, Wyciagi as w WHERE c.ID_Cena_bilet = cb.ID AND w.ID = cb.ID_Wyciag AND ((c.Data_rozp < (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date))) OR c.Data_zak IS NULL) AND w.ID = '" + w2.id + "'";
+            string query2 = "SELECT c.ID as id, c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Cena_bilety as cb, Wyciagi as w WHERE c.ID_Cena_bilet = cb.ID AND w.ID = cb.ID_Wyciag AND ((c.Data_rozp < (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date))) OR (c.Data_rozp > (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date))) OR c.Data_zak IS NULL) AND w.ID = '" + w2.id + "'";
             using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -432,7 +433,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                 var diff1 = date2 - date3;
                 int idiff = diff.Days;
                 int idiff1 = diff1.Days;
-                if (idiff <= 0 || idiff1 <= 0)
+                if (idiff <= 0 || idiff1 < 0)
                 {
                     n2.error = "Podana data jest nieprawid³owa, nie mo¿na podaæ daty poprzedzaj¹cej dzisiejsz¹, lub daty najnowszego istniej¹cego cennika.";
                     n.Add(n2);
@@ -520,8 +521,20 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
             }
             Stok s2 = new Stok();
             s2.id = Request.Form["stok"].ToString();
-            s2.godz = Request.Form["godz"].ToString();
-            string query1 = "SELECT c.ID as id,c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Stoki as s, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = s.ID AND ck.Czas = '"+s2.godz+"' AND s.ID ='"+s2.id+ "' AND ((c.Data_rozp < (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date))) OR c.Data_zak IS NULL)";
+            s2.godz = Request.Form["godz"].ToString(); string query0 = "SELECT Nazwa as nazwa from Stoki where ID = '" + s2.id + "'";
+            using (SqlCommand command = new SqlCommand(query0, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Nazwa n1 = new Nazwa();
+                        n1.nazwa = reader["nazwa"].ToString();
+                        nk.Add(n1);
+                    }
+                }
+            }
+            string query1 = "SELECT c.ID as id,c.Data_rozp as rozp, c.Data_zak as zak FROM Cennik as c, Stoki as s, Cena_karnety as ck WHERE c.ID_Cena_karnet = ck.ID AND ck.ID_Stok = s.ID AND ck.Czas = '"+s2.godz+"' AND s.ID ='"+s2.id+ "' AND (c.Data_rozp < (SELECT CAST(GETDATE() as Date)) AND c.Data_zak > (SELECT CAST(GETDATE() as Date)) OR c.Data_rozp > (SELECT CAST(GETDATE() as Date)) OR c.Data_zak > (SELECT CAST(GETDATE() as Date)) OR c.Data_rozp IS NULL)";
             using (SqlCommand command = new SqlCommand(query1, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -837,7 +850,7 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                 var diff1 = date2 - date3;
                 int idiff = diff.Days;
                 int idiff1 = diff1.Days;
-                if (idiff <= 0 || idiff1 <= 0)
+                if (idiff <= 0 || idiff1 < 0)
                 {
                     n2.error = "Podana data jest nieprawid³owa, nie mo¿na podaæ daty poprzedzaj¹cej dzisiejsz¹, lub daty najnowszego istniej¹cego cennika.";
                     n.Add(n2);
@@ -864,13 +877,13 @@ namespace Narciarze_v_2.Pages.Strefa_Administracji.Zarzad
                     int l = int.Parse(l1.liczba);
                     if (l == 0)
                     {
-                        string query5 = "INSERT INTO Cena_karnaty (ID_Stok, Cena, Czas) VALUES ((SELECT ID FROM Wyciagi WHERE Nazwa = '" + e4.nazwa + "'), '" + e4.cena + "', '" + e4.gr + "')";
+                        string query5 = "INSERT INTO Cena_karnety (ID_Stok, Cena, Czas) VALUES ((SELECT ID FROM Stoki WHERE Nazwa = '" + e4.nazwa + "'), '" + e4.cena + "', '" + e4.gr + "')";
                         using (SqlCommand command = new SqlCommand(query5, conn))
                         {
                             command.ExecuteNonQuery();
                         }
                     }
-                    string query11 = "SELECT ck.ID as id FROM Cena_karnety as ck, Stoki as s WHERE s.ID = ck.ID_Stok AND ck.Cena = '" + e4.cena + "' AND w.Nazwa = '" + e4.nazwa + "', '" + e4.gr + "'";
+                    string query11 = "SELECT ck.ID as id FROM Cena_karnety as ck, Stoki as s WHERE s.ID = ck.ID_Stok AND ck.Cena = '" + e4.cena + "' AND s.Nazwa = '" + e4.nazwa + "'AND ck.Czas = '" + e4.gr + "'";
                     using (SqlCommand command = new SqlCommand(query11, conn))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())

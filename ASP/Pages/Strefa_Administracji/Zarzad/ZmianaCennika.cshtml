@@ -121,6 +121,10 @@
                         <input type="submit" value="Nowy" class="btn btn-primary btn-block mb-4" asp-page-handler="Cennik_n_b" />
                     </div>
                      <select name="cennik_k" class="form-control">
+                        @foreach (var a in Model.nk)
+                        {
+                            <label class="form-label" for="cennik">Wybrany stok: @a.nazwa</label>
+                        }
                         @foreach (var a in Model.ck)
                         {
                             <option value="@a.id">@a.rozp - @a.zak</option>
