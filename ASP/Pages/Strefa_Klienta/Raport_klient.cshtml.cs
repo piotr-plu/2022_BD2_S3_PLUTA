@@ -69,6 +69,10 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                         pobrane.nazwaStoku = reader["n_stoku"].ToString();
                         pobrane.pozCzas = reader["poz_czas"].ToString();
                         pobrane.dAktywacji = reader["d_aktywacji"].ToString();
+                        if (pobrane.dAktywacji == "")
+                        {
+                            pobrane.dAktywacji = "Brak";
+                        }
                         pobrane.czasBilet = reader["czas_bilet"].ToString();
                         pobrane.cena = reader["cena"].ToString();
 
