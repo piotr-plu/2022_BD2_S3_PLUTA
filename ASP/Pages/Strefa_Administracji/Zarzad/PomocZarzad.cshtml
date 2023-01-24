@@ -12,7 +12,7 @@
 <head>
     <title>Instrukcja HTML z użyciem Bootstrap</title>
 </head>
-<body>
+<body class="text-justify">
     <div class="fluid-container m-5">
         <h1 class="text-center fw-bold m-5">Instrukcja Zarząd</h1>
         <div class="row">
@@ -27,7 +27,6 @@
                                     <li><a href="#section2">Logowanie</a></li>
                                     <li><a href="#section3">Zakładka: Edytuj Cennik</a></li>
                                     <li><a href="#section4">Zakładka: Generuj Raport</a></li>
-                                    <li><a href="#section5">Wyloguj</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -39,18 +38,357 @@
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="card text-black shadow" style="border-radius: 25px;">
                             <div class="m-3">
-                                <h2 id="section1">Rodzaje klas Bootstrap</h2>
-                                <p>Bootstrap posiada różne rodzaje klas, takie jak klasy do formatowania tekstu, klasy do tworzenia tabel, klasy do tworzenia formularzy, itd.</p>
-                                <h2 id="section2">Użycie klas Bootstrap do formatowania tekstu</h2>
-                                <p>Aby użyć klas Bootstrap do formatowania tekstu, należy dodać odpowiednie klasy do elementów HTML, takich jak nagłówki, paragrafy, itd.</p>
-                                <h2 id="section3">Użycie klas Bootstrap do tworzenia tabel</h2>
-                                <p>Aby użyć klas Bootstrap do tworzenia tabel, należy dodać odpowiednie klasy do elementów HTML, takich jak tabela, wiersze i komórki.</p>
+                                <h1 class="text-center m-3">
+                                    <a id="section1" name="_Toc122345568">Rola Zarządu w systemie</a>
+                                </h1>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 1: Ekran powitalny panelu zarządu.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Rolą zarządu w systemie jest opieka nad stanem bieżącej sprzedaży. Osoba
+                                    posiadająca uprawnienia zarządu ma dostęp do następujących funkcjonalności:
+                                </p>
+                                <ul>
+                                   <li>Edycja istniejącego cennika karnetów/biletów</li> 
+                                   <li>Dodanie nowego cennika obowiązującego od określonej daty</li> 
+                                   <li>Generowanie raportu z aktualnymi cennikami</li> 
+                                   <li>Generowanie raportu z informacjami na temat sprzedaży.</li>
+                                </ul>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 2: Pasek nawigacyjny panelu zarządu.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section2" "name="_Toc122345569">Logowanie</a>
+                                </h1>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 3: Wskazanie opcji "Logowanie" na pasku
+                                                        nawigacji.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Aby zalogować się na konto zarządu należy w podstawowym menu wybrać
+                                    zakładkę „Logowanie”. (rys.3)
+                                </p>
+                                <p>
+                                    Następnie w panelu pod logowaniem zwyczajnego użytkownika znajduje się
+                                    hiperłącze, które odwołuje się do strony poświęconej logowaniu pracownika.
+                                    (rys.4)
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 4: Hiperłącze do panelu logowania dla
+                                                        pracowników.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    W z wyświetlonego panelu, za pomocą odpowiednich danych można zalogować się
+                                    do każdego pracownika. Aby dostać się do demonstracyjnego konta zarządu
+                                    należy wprowadzić następujące dane:
+                                    <br />
+                                    - <strong>Adres Email:</strong>    <a href="mailto:zarzad@stok.pl"><em>zarzad@stok.pl</em></a>
+                                    <em>
+                                        <br />
+                                    </em>
+                                    - <strong>Hasło: </strong><em>123</em>
+                                </p>
+                                <p>
+                                    Następnie po użyciu przycisku zaloguj, w przypadku wprowadzenia poprawnych
+                                    danych powinno na ekranie pokazać ekran powitalny. (rys.1). W przeciwnym
+                                    razie strona zostanie odświeżona i umożliwi wpisanie danych jeszcze raz.
+                                    Aby wylogować się z konta zarządu należy w pasku nawigacji wybrać opcję
+                                    „Wyloguj”
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 5: Pasek nawigacji strefy zarządu.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <em></em>
+                                <h1 class="text-center m-3">
+                                    <a id="section3" name="_Toc122345570">Zakładka: </a>
+                                    Edytuj Cennik
+                                </h1>
+                                <p>
+                                    Zakładka edytuj cennik daje zalogowanemu użytkownikowi następujące
+                                    możliwości:
+                                </p>
+                                <p>
+                                    -Edycja istniejącego cennika biletów
+                                    <br />
+                                    -Edycja istniejącego cennika karnetów
+                                    <br />
+                                    -Stworzenie nowego cennika biletów
+                                    <br />
+                                    -Stworzenie nowego cennika karnetów
+                                </p>
+                                <h2>
+                                    Edycja istniejącego cennika biletów / karnetów:
+                                </h2>
+                                <p>
+                                    Ze względu na dużą analogię obydwu operacji opis tych funkcjonalności
+                                    zostanie zaprezentowany na wspólnym przykładzie.
+                                </p>
+                                <h3>
+                                    Krok 1:
+                                </h3>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 6: Sposób wybrania elementu do edycji.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Wybór wyciągu lub stoku z listy rozwijanej, w przypadku tego drugiego
+                                    należy również wybrać czas karnetu, który nas interesuje. Wybór należy
+                                    zatwierdzić przyciskiem „Wyszukaj” (rys.5).
+                                </p>
+                                <h3>
+                                    Krok 2:
+                                </h3>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 7: Sposób wybrania cennika do edycji.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Po wybraniu elementu, na drugiej liście rozwijanej pojawią się cenniki
+                                    które można edytować, wyświetlać się będą daty rozpoczęcia obowiązywania
+                                    cennika oraz daty zakończenia obowiązywania tego cennika. W przypadku braku
+                                    daty zakończenia, oznacza to, że cennik nie ma jej zdefiniowanej, gdyż taka
+                                    opcja występuje i jest powszechna. Po wybraniu cennika należy zatwierdzić
+                                    wybór przyciskiem wybierz(rys.6).
+                                </p>
+                                <br clear="all" />
+                                <h3>
+                                    Krok 3:
+                                </h3>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 8: Komunikat błędu cennika.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Po wybraniu cennika w prawym dolnym rogu formularza zostaną wygenerowane
+                                    pola dotyczące wybranego cennika. Edytowana może być jedynie cena,
+                                    wybranego cennika. Cena musi być większa od zera w przeciwnym wypadku na
+                                    stronie zostanie zgłoszony błąd (rys.7).
+                                </p>
+                                <p>
+                                    Aby zatwierdzić zmiany należy użyć przycisku „Edytuj” (rys.8).
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 9: Sposób zatwierdzenia zmian edytowanego
+                                                        cennika
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    W przypadku udanej edycji cennika, strona zostanie odświeżona, a w
+                                    formularzu nie zostanie wyświetlony komunikat i będzie można wykonywać inne
+                                    czynności.
+                                </p>
+                                <br clear="all" />
+                                <h2>
+                                    Dodanie nowego cennika biletów / karnetów.
+                                </h2>
+                                <p>
+                                    Ze względu na dużą analogię obydwu operacji opis tych funkcjonalności
+                                    zostanie zaprezentowany na wspólnym przykładzie.
+                                </p>
+                                <h3>
+                                    Krok 1:
+                                </h3>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>
+                                                        Rysunek 10: Sposób wybrania elementu dla którego będzie
+                                                        tworzony nowy cennik.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Wybór wyciągu lub stoku z listy rozwijanej, w przypadku tego drugiego
+                                    należy również wybrać czas karnetu, który nas interesuje. Wybór należy
+                                    zatwierdzić przyciskiem „Nowy” (rys.9).
+                                </p>
+                                <h3>
+                                    Krok 2:
+                                </h3>
+                                <p>
+                                    Po wybraniu elementu któremu należy dodać nowy cennik w prawym dolnym rogu
+                                    formularza zostaje wygenerowany formularz z miejscami gdzie należy wpisać
+                                    wszystkie wymagane dane(rys.10).
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>
+                                                        Rysunek 11: Formularz dodawania nowego cennika.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 12: Komunikat błędnej daty.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Automatycznie zostają uzupełnione pola z Nazwą, Czasem trwania, Datą
+                                    rozpoczęcia. Pole „Data rozpoczęcia” przyjmie pierwotnie wartość
+                                    dzisiejszej daty, data ta jednak nie może poprzedzać daty dzisiejszej oraz
+                                    daty rozpoczęcia najnowszego cennika. W przeciwnym wypadku zostanie
+                                    wygenerowany komunikat błędu(rys.11).
+                                </p>
+                                <p>
+                                    Podobnie sytuacja wygląda w przypadku pola cena, musi być ona większa od
+                                    zera, w przeciwnym wypadku zostanie wygenerowany komunikat(rys.7).
+                                </p>
+                                <p>
+                                    Cennik jest tworzony bez daty zakończenia, takie rozwiązanie pozwala
+                                    zachować elastyczność w zarządzaniu cennikami, oraz jest to rozwiązanie
+                                    które uodparnia system na brak aktualnego cennika. W przypadku tworzenia
+                                    nowego cennika, data zakończenia cennika najnowszego ustawiana jest jako
+                                    data rozpoczęcia nowo tworzonego cennika.
+                                </p>
+                                <p>
+                                    W przypadku udanego dodania nowego cennika, strona zostanie odświeżona, a w
+                                    formularzu nie zostanie wyświetlony komunikat i będzie można wykonywać inne
+                                    czynności.
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section4" name="_Toc122345571">Zakładka: </a>
+                                    Generuj Raport
+                                </h1>
+                                <p>
+                                    W zakładce harmonogram znajdują się dwa hiperłącza(rys.12).
+                                </p>
+                                <p align="center">
+                                    Rysunek 13: Zawartość zakładki Generuj Raport
+                                </p>
+                                <h2>
+                                    Aktualne cenniki do wydruku:
+                                </h2>
+                                <p>
+                                    Odwołanie się do tego Hiperłącza wyświetla stronę z aktualnymi cennikami,
+                                    podobnymi do tych które pokazane są na bazowej stronie, kluczową
+                                    funkcjonalnością jest możliwość wyeksportowania wszystkich danych do pliku
+                                    PDF za pomocą przycisku „Eksportuj”.
+                                </p>
+                                <h2>
+                                    Przychód w miesiącach i liczba sprzedanych biletów i karnetów:
+                                </h2>
+                                <p>
+                                    Odwołanie się do tego Hiperłącza wyświetla stronę z informacjami na temat
+                                    sprzedaży biletów oraz karnetów, z zakresu aktualnego roku z podziałem na
+                                    miesiące. Dane można wyeksportować do pliku PDF za pomocą przycisku
+                                    „Eksportuj”.
+                                </p>
+
                             </div>
 
                         </div>
                     </div>
-                 </div>
-             </div>
-       </div>
-     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
