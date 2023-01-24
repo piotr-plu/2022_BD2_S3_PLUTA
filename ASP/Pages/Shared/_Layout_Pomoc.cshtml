@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Stok Narciarski Gliwice</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Narciarze_v_2.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color: #F8F8F8;">
+    <header>
+
+        <p class="h1 text-center m-4"><img class="mainImage" src="~/images/narciarz.png" width="100px" height="100px" />STOK NARCIARSKI GLIWICE</p>
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow rounded-pill mx-3" style="background-color: #E7625F;">
+            <div class="container">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarCentered"
+                        aria-controls="navbarCentered"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center"
+                     id="navbarCentered">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="~/Index">Strona Główna</a> <!--Nie działa przekierowanie-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer border text-center text-muted shadow rounded-pill mx-3" style="background-color: #E7625F;">
+        <div class="m5">
+            &copy;Stok Narciarski GLIWICE - Wszelkie prawa zastrzeżone
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

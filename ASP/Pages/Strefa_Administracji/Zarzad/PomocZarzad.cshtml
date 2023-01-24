@@ -1,0 +1,56 @@
+﻿@page
+@model Narciarze_v_2.Pages.Strefa_Administracji.Zarzad.PomocZarzadModel
+@{
+    if (HttpContext.Session.GetInt32("_prac_uid") != 2)
+    {
+        Response.Redirect("Zarzad");
+    }
+    ViewData["Title"] = "Pomoc Zarzad";
+    Layout = "_Layout_Pomoc";
+}
+
+<head>
+    <title>Instrukcja HTML z użyciem Bootstrap</title>
+</head>
+<body>
+    <div class="fluid-container m-5">
+        <h1 class="text-center fw-bold m-5">Instrukcja Zarząd</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Spis treści</p>
+                                <ul>
+                                    <li><a href="#section1">Rola Zarządu w systemie</a></li>
+                                    <li><a href="#section2">Logowanie</a></li>
+                                    <li><a href="#section3">Zakładka: Edytuj Cennik</a></li>
+                                    <li><a href="#section4">Zakładka: Generuj Raport</a></li>
+                                    <li><a href="#section5">Wyloguj</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <h2 id="section1">Rodzaje klas Bootstrap</h2>
+                                <p>Bootstrap posiada różne rodzaje klas, takie jak klasy do formatowania tekstu, klasy do tworzenia tabel, klasy do tworzenia formularzy, itd.</p>
+                                <h2 id="section2">Użycie klas Bootstrap do formatowania tekstu</h2>
+                                <p>Aby użyć klas Bootstrap do formatowania tekstu, należy dodać odpowiednie klasy do elementów HTML, takich jak nagłówki, paragrafy, itd.</p>
+                                <h2 id="section3">Użycie klas Bootstrap do tworzenia tabel</h2>
+                                <p>Aby użyć klas Bootstrap do tworzenia tabel, należy dodać odpowiednie klasy do elementów HTML, takich jak tabela, wiersze i komórki.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                 </div>
+             </div>
+       </div>
+     </div>
+</body>
