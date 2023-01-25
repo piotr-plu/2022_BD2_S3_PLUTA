@@ -1,0 +1,375 @@
+﻿@page
+@model Narciarze_v_2.Pages.Strefa_Klienta.PomocKlientModel
+@{
+    if (HttpContext.Session.GetString("_klient_id") == null)
+    {
+        Response.Redirect("../Index");
+    }
+    ViewData["Title"] = "Pomoc Klient";
+    Layout = "_Layout_Pomoc";
+}
+
+
+<body class="text-justify">
+    <div class="fluid-container m-5">
+        <h1 class="text-center fw-bold m-5">Instrukcja Klient</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Spis treści</p>
+                                <ul>
+                                    <li><a href="#section1">Rola Klienta w systemie</a></li>
+                                    <li><a href="#section2">Logowanie</a></li>
+                                    <li><a href="#section3">Zakładka: Raporty</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+
+
+                                <h1 class="text-center m-3">
+                                    <a name="_Toc125499175">Rola Klienta w systemie</a>
+                                </h1>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 1: Ekran powitalny panelu Klienta.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Klient jest jedną z wielu osób, której sprzedawane są bilety (liczba
+                                    wejściówek na wyciągi) i karnety (godziny możliwe do spędzenia na stoku).
+                                    W/w usługi są mu sprzedawane przez Kasjera. W swoim Panelu może on:
+                                </p>
+                                <ul>
+                                    <li>
+                                        przejrzeć zakupione karnety,
+                                    </li>
+                                    <li>
+                                        przejrzeć zakupione Bilety,
+                                    </li>
+                                </ul>
+                                <p>
+                                    · obejrzeć statystyki przejechanych metrów na wyciągach dzięki zakupionym
+                                    biletom,
+                                </p>
+                                <p>
+                                    · obejrzeć statystyki spędzonych godzin na stokach dzięki karnetom
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 2: Pasek nawigacyjny panelu Klienta.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a name="_Toc125499176">Logowanie</a>
+                                </h1>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 3: Wskazanie opcji "Logowanie" na pasku
+                                                        nawigacji.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Aby zalogować się na konto zarządu należy w podstawowym menu wybrać
+                                    zakładkę „Logowanie”. (rys.3)
+                                </p>
+                                <p>
+                                    Następnie w panelu pod logowaniem zwyczajnego użytkownika znajduje się
+                                    hiperłącze, które odwołuje się do strony poświęconej logowaniu pracownika.
+                                    (rys.4)
+                                </p>
+                                <p>
+                                    W z wyświetlonego panelu, za pomocą odpowiednich danych można zalogować się
+                                    do każdego Klienta. Aby dostać się do jednego z nich można wprowadzić
+                                    następujące dane:
+                                </p>
+                                <p>
+                                    <br />
+                                    - <strong>Adres Email:</strong>    <a href="mailto:kowalski@a.pl"><em>kowalski@a.pl</em></a>
+                                    <em>
+                                        <br />
+                                    </em>
+                                    - <strong>Hasło: </strong><em>123</em>
+                                </p>
+                                <p>
+                                    Następnie po użyciu przycisku zaloguj, w przypadku wprowadzenia poprawnych
+                                    danych powinno na ekranie pokazać ekran powitalny. (rys.1). W przeciwnym
+                                    razie strona zostanie odświeżona i umożliwi wpisanie danych jeszcze raz.
+                                    Aby wylogować się z konta Klienta należy w pasku nawigacji wybrać opcję
+                                    „Wyloguj”
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 4: Pasek nawigacji strefy Klienta.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <em></em>
+                                <h1 class="text-center m-3">
+                                    <a name="_Toc125499177">Zakładka: Raporty</a>
+                                </h1>
+                                <p>
+                                    Zakładka Raporty daje zalogowanemu użytkownikowi następujące możliwości:
+                                </p>
+                                <ul>
+                                    <li>
+                                        przejrzeć zakupione karnety,
+                                    </li>
+                                    <li>
+                                        przejrzeć zakupione bilety,
+                                    </li>
+                                </ul>
+                                <p>
+                                    · obejrzeć statystyki przejechanych metrów na wyciągach dzięki zakupionym
+                                    biletom,
+                                </p>
+                                <p>
+                                    · obejrzeć statystyki spędzonych godzin na stokach dzięki karnetom
+                                </p>
+                                <h2>
+                                    <a name="_Toc125499178">
+                                        Informacje o Karnetach, Biletach i ich statystykach:
+                                    </a>
+                                </h2>
+                                <p>
+                                    Ze względu na dużą analogię obydwu operacji opis tych funkcjonalności
+                                    zostanie zaprezentowany na wspólnym przykładzie.
+                                </p>
+                                <h3>
+                                    <a name="_Toc125499179">Karnety</a>
+                                </h3>
+                                <p>
+                                    W tej tabeli Klient jest w stanie przejrzeć stan i rodzaje zakupionych
+                                    karnetów (rys.5). Kolumna:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>ID Karnetu – </strong>
+                                        numer identyfikacyjny karnetu w systemie,<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Status </strong>
+                                        – czy karnet jest aktywny – False oznacza brak aktywacji, True oznacza
+                                        karnet aktywny<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Pozostały czas </strong>
+                                        – czas pozostały do wykorzystania w ramach karnetu,<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Nazwa stoku </strong>
+                                        – nazwa stoku, na którym karnet jest ważny,<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Data Aktywacji </strong>
+                                        – czas, w którym karnet został aktywowany<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Ilość godzin </strong>
+                                        – liczba godzin, na ile karnet jest ważny od chwili aktywacji,        <strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Cena </strong>
+                                        – całkowita cena karnetu.<strong></strong>
+                                    </li>
+                                </ul>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 4: Tabela karnetów
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <h3>
+                                    <a name="_Toc125499180">Bilety</a>
+                                </h3>
+                                <p>
+                                    W tej tabeli Klient jest w stanie przejrzeć stan i rodzaje zakupionych
+                                    karnetów (rys.5). Kolumna:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>ID Biletu – </strong>
+                                        numer identyfikacyjny biletu w systemie,<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Ilość zjazdów </strong>
+                                        – liczba zjazdów z wyciągu, które można wykorzystać w ramach biletu,        <strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Nazwa wyciągu </strong>
+                                        – nazwa wyciągu, na którym bilet jest ważny,<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Cena za przejazd </strong>
+                                        – cena jednego zjazdu z wyciągu,<strong></strong>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <strong></strong>
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 6: Tabela biletów
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong></strong>
+                                <h3>
+                                    <a name="_Toc125499181">Ile z nami przejechałeś metrów dzięki biletom</a>
+                                </h3>
+                                <p>
+                                    Ta tabela pokazuje całkowite statystki Klienta przejechanych metrów na
+                                    wszystkich wyciągach od początku posiadania konta w systemie. Wiersz w tej
+                                    tabeli powstaje w chwili zakupu biletu dla danego klienta.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Data – </strong>
+                                        Data zakupu biletu<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Razem przejechane metry </strong>
+                                        – suma przejechanych metrów na wyciągach w ramach danego biletu i sumy
+                                        przejechanych metrów na wyciągach w ramach wszystkich poprzednich
+                                        biletów<strong></strong>
+                                    </li>
+                                </ul>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 7: Tabela przejechanych łącznie metrów na
+                                                        wyciągach dzięki biletom
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="all" />
+                                <h3>
+                                    <a name="_Toc125499182">Ile z nami przejechałeś metrów dzięki karnetom</a>
+                                </h3>
+                                <p>
+                                    Ta tabela pokazuje całkowite statystki Klienta spędzonych godzin na stokach
+                                    od początku posiadania konta w systemie. Wiersz w tej tabeli powstaje w
+                                    chwili zakupu karnetu dla danego klienta.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Data – </strong>
+                                        Data zakupu karnetu<strong></strong>
+                                    </li>
+                                    <li>
+                                        <strong>Razem przejechane godziny </strong>
+                                        – suma spędzonych godzin na stokach w ramach danego karnetu i sumy
+                                        spędzonych godzin na stokach w ramach wszystkich poprzednich karnetów        <strong></strong>
+                                    </li>
+                                </ul>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 8: Tabela spędzonych godzin na stokach dzięki
+                                                        karnetom
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h2>
+                                    <a name="_Toc125499183">Eksportowanie statystyk do pliku</a>
+                                </h2>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 9: Przycisk umożliwiający pobranie raportów z
+                                                        systemu na urządzenie.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    W/w tabele są możliwe do pobrania w formie jednego pliku PDF, aby
+                                    wygenerować ten plik wystarczy kliknąć przycisk „Eksportuj” na spodzie
+                                    strony.
+                                </p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
