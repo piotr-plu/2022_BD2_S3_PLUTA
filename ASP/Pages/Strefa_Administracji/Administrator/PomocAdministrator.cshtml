@@ -1,0 +1,660 @@
+﻿@page
+@model Narciarze_v_2.Pages.Strefa_Administracji.Administrator.PomocAdministratorModel
+@{
+    ViewData["Title"] = "Edycja Harmonogramu";
+    Layout = "_Layout_Pomoc";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 3)
+    {
+        Response.Redirect("Administrator");
+    }
+}
+<body class="text-justify">
+    <div class="fluid-container m-5">
+        <h1 class="text-center fw-bold m-5">Instrukcja Administrator</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Spis treści</p>
+                                <ul>
+                                    <li><a href="#section1">Rola Administratora w systemie</a></li>
+                                    <li><a href="#section2">Logowanie</a></li>
+                                    <li><a href="#section3">Zakładka: Edycja Wyciągów</a></li>
+                                    <li><a href="#section4">Zakładka: Zarządzanie Stokami</a></li>
+                                    <li><a href="#section5">Zakładka: Edycja Harmonogramu</a></li>
+                                    <li><a href="#section6">Zakładka: Pracownicy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+
+                                <h1 class="text-center m-3">
+                                    <a id="section1" name="_Toc125579064">Rola Administratora w systemie</a>
+                                </h1>
+                                <p>
+                                    Rolą administratora w systemie jest opieka nad wyciągami oraz pracownikami
+                                    mającymi dostęp do systemu.
+                                </p>
+                                <p>
+                                    Osoba posiadająca uprawnienia administratora ma dostęp do następujących
+                                    funkcjonalności:
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Edycja istniejących wyciągów: zmiana nazwy, długości oraz wysokości bezwzględnej wyciągu,
+                                    </li>
+                                    <li>
+                                        Tworzenie nowych wyciągów,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejących wyciągów,
+                                    </li>
+                                    <li>
+                                        Grupowanie istniejących wyciągów w stoki (grupy wyciągów),
+                                    </li>
+                                    <li>
+                                        Tworzenie nowych stoków,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejących stoków,
+                                    </li>
+                                    <li>
+                                        Podgląd ustalonego wcześniej harmonogramu dla każdego z wyciągów,
+                                    </li>
+                                    <li>
+                                        Tworzenie nowych harmonogramów dla każdego z wyciągów,
+                                    </li>
+                                    <li>
+                                        Edytowanie istniejących harmonogramów,
+                                    </li>
+                                    <li>
+                                        Tworzenie nowego pracownika w systemie,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejącego pracownika w systemie.
+                                    </li>
+                                </ul>
+                                <p align="center">
+                                    Rysunek 1: Ekran powitalny panelu administratora
+                                </p>
+                                <p align="center">
+                                    Rysunek 2: Pasek nawigacji panelu administratora.
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section2" name="_Toc125579065">Logowanie</a>
+                                </h1>
+                                <p>
+                                    Aby zalogować się na konto zarządu należy w podstawowym menu wybrać
+                                    zakładkę „Logowanie”. (rys.3)
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 3: Wskazanie opcji "Logowanie" na pasku
+                                                        nawigacji.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="ALL" />
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p align="center">
+                                                        Rysunek 4: Hiperłącze do panelu logowania dla
+                                                        pracownika
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="ALL" />
+                                <p>
+                                    Następnie w panelu pod logowaniem zwyczajnego użytkownika znajduje się
+                                    hiperłącze, które odwołuje się do strony poświęconej logowaniu pracownika.
+                                    (rys.4)
+                                </p>
+                                <p>
+                                    W z wyświetlonego panelu, za pomocą odpowiednich danych można zalogować się
+                                    do każdego pracownika. Aby dostać się do demonstracyjnego konta
+                                    administratora należy wprowadzić następujące dane:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Adres Email:</strong>
+                                        admin@stok.pl
+                                    </li>
+                                    <li>
+                                        <strong>Hasło:</strong>
+                                        123
+                                    </li>
+                                </ul>
+                                <p>
+                                    Następnie po użyciu przycisku zaloguj, w przypadku wprowadzenia poprawnych
+                                    danych powinno na ekranie pokazać ekran powitalny. (rys.1). W przeciwnym
+                                    razie strona zostanie odświeżona i umożliwi wpisanie danych jeszcze raz.
+                                </p>
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>
+                                                        Rysunek 5: Wycinek paska nawigacji administratora z
+                                                        zaznaczeniem opcji "Wyloguj"
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br clear="ALL" />
+                                <p>
+                                    Aby wylogować się z konta zarządu należy w pasku nawigacji wybrać opcję
+                                    „Wyloguj”
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section3" name="_Toc125579066">Zakładka: Edycja Wyciągów</a>
+                                </h1>
+                                <p>
+                                    Zakładka <em>Edycja Wyciągów </em>daje zalogowanemu użytkownikowi
+                                    następujące możliwości:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Edytowanie istniejących wyciągów,
+                                    </li>
+                                    <li>
+                                        Dodawanie nowych wyciągów,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejących wyciągów.
+                                    </li>
+                                </ul>
+                                <h2>
+                                    <a name="_Toc125579067">Edytuj Wyciąg</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 6: Okno edycji wyciągu.
+                                </p>
+                                <p>
+                                    W celu edytowania istniejącego wyciągu należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy interesujący nas wyciąg po jego nazwie z rozwijanej listy w
+                                    polu „Nazwa Wyciągu”. W rozwijanej liście znajdują się wszystkie dodane do
+                                    systemu wyciągi. Z listy możemy jedynie dokonać wyboru pojedynczego
+                                    wyciągu.
+                                </p>
+                                <p>
+                                    2. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                    <li>
+                                        „Nowa nazwa Wyciągu” - w tym polu wpisujemy nową nazwę dla wybranego
+                                        wyciągu.
+                                    </li>
+                                    <li>
+                                        „Długość wyciągu” – to pole informuje nas o długości trasy zjazdowej od
+                                        jej początku do końca. Pole przyjmujące jedynie dodanie wartości liczbowe
+                                        większe od zera.
+                                    </li>
+                                    <li>
+                                        „Wysokość bezwzględna wyciągu” – pole informujące o wysokości
+                                        bezwzględnej początku trasy wyciągu. Pole przyjmujące jedynie dodanie
+                                        wartości liczbowe większe od zera.
+                                    </li>
+                                    <li>
+                                        Każde z powyższych pól jest obowiązkowe do uzupełnienia. W przypadku gdy
+                                        nie chcemy zmienić wartości danego pola dla wybranego wyciągu należy
+                                        uzupełnić pole poprzednią wartością.
+                                    </li>
+                                </ul>
+                                <p>
+                                    3. Po uzupełnieniu wszystkich pól klikamy przycisk „Zapisz zmiany” w celu
+                                    zatwierdzenia wprowadzonych zmian dla danego wyciągu. Po tej czynności
+                                    wyciąg zostanie edytowana a strona, na której się znajdujemy odświeży się i
+                                    przywróci do stanu początkowego.
+                                </p>
+                                <h2>
+                                    <a name="_Toc125579068">Dodaj Wyciąg</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 7: Okno dodawania wyciągu.
+                                </p>
+                                <p>
+                                    W celu dodania nowego wyciągu należy postępować z zgodnie przedstawionym
+                                    schematem:
+                                </p>
+
+                                <p>
+                                    1. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                    <li>
+                                        „Nazwa nowego Wyciągu” - w tym polu nadajemy nazwę dla nowo tworzonego
+                                        wyciągu, nazwa nie może powtarzać się z nazwą istniejącego wyciągu.
+                                    </li>
+                                    <li>
+                                        „Przypisz do Stoku” - z rozwijanej listy wszystkich dostępnych stoków,
+                                        wybieramy stok, do którego ma należeć wyciąg
+                                    </li>
+                                    <li>
+                                        „Długość wyciągu” – to pole informuje nas o długości trasy zjazdowej od
+                                        jej początki do końca. Pole przyjmujące jedynie dodanie wartości liczbowe
+                                        większe od zera.
+                                    </li>
+                                    <li>
+                                        „Wysokość bezwzględna wyciągu” – pole informujące o wysokości
+                                        bezwzględnej początku trasy wyciągu. Pole przyjmujące jedynie dodanie
+                                        wartości liczbowe większe od zera.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Każde z powyższych pól jest obowiązkowe do uzupełnienia.
+                                </p>
+                                <p>
+                                    2. Po uzupełnieniu wszystkich pól klikamy przycisk „Dodaj” w celu dodania
+                                    nowego wyciągu.
+                                    <br />
+                                    Po tej czynności wyciąg zostanie dodany a strona, na której się znajdujemy
+                                    odświeży się i przywróci do stanu początkowego.
+                                </p>
+                                <br clear="all" />
+                                <h2>
+                                    <a name="_Toc125579069">Usuń Wyciąg</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 8: Okno usuwania wyciągu
+                                </p>
+                                <p>
+                                    W celu usunięcia istniejącego wyciągu należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy interesujący nas wyciąg po jego nazwie z rozwijanej listy w
+                                    polu „Nazwa Wyciągu”. W rozwijanej liście znajdują się wszystkie dodane do
+                                    systemu wyciągi. Z listy możemy jedynie dokonać wyboru pojedynczego
+                                    wyciągu.
+                                </p>
+                                <p>
+                                    2. Po wybraniu wyciągu klikamy przycisk „Usuń” w celu usunięcia wybranego
+                                    wyciągu. Po tej czynności wyciąg zostanie usunięty a strona, na której się
+                                    znajdujemy odświeży się i przywróci do stanu początkowego.    <strong>UWAGA! </strong>Czynność usunięcia wyciągu nie jest odwracalna.
+                                    Jeżeli usuniemy wyciąg niepożądanie, należy stworzyć nowy o tej samej
+                                    nazwie i wykonać jego całą konfigurację od nowa.
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section4" name="_Toc125579070">Zakładka: Zarządzanie Stokami</a>
+                                </h1>
+                                <p>
+                                    Zakładka <em>Zarządzanie Stokami </em>daje zalogowanemu użytkownikowi
+                                    następujące możliwości:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Grupowanie istniejących wyciągów,
+                                    </li>
+                                    <li>
+                                        Dodawanie nowych stoków,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejących stoków.
+                                    </li>
+                                </ul>
+                                <h2>
+                                    <a name="_Toc125579071">Grupuj Wyciągi</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 9: Okno grupowania wyciągów.
+                                </p>
+                                <p>
+                                    Czynność grupowania wyciągów polega na przypisywaniu ich do poszczególnych
+                                    stoków (grup wyciągów).
+                                </p>
+                                <p>
+                                    W celu dodania wybranego wciągu do stoku należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy z przewijanej list w polu „Nazwa Wyciągu” interesujące nas
+                                    wyciągi po ich nazwie. Pole umożliwia wybranie paru wyciągów w tym samy
+                                    czasie. Aby to zrobić należy przytrzymać wciśnięty przycisk <em>Ctrl</em> i
+                                    wybrać interesujące nas wyciągi, każdy z wybranych wyciągów zostanie
+                                    podświetlony na niebiesko.
+                                </p>
+                                <p>
+                                    2. Następnie z rozwijanej listy wszystkich dostępnych stoków, wybieramy
+                                    stok, do którego mają należeć wybrane wyciągi. Po kliknięciu w to okno
+                                    niebieskie zaznaczenie wybranych wyciągów w poprzednim oknie zmieni się na
+                                    kolor szary.
+                                </p>
+                                <p>
+                                    3. Po wybraniu wyciągów oraz stoku, do którego mają należeć klikamy
+                                    przycisk „Grupuj” w celu przypisania wyciągów do danego stoku. Po tej
+                                    czynności wyciągi zostanie pogrupowane a strona, na której się znajdujemy
+                                    odświeży się i przywróci do stanu początkowego.
+                                </p>
+                                <br clear="all" />
+                                <h2>
+                                    <a name="_Toc125579072">Dodaj Stok</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 10: Okno dodawania stoku.
+                                </p>
+                                <p>
+                                    W celu dodania nowego stoku należy postępować z zgodnie przedstawionym
+                                    schematem:
+                                </p>
+                                <p>
+                                    1. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                    <li>
+                                        „Nazwa nowego Stoku” - w tym polu nadajemy nazwę dla nowo tworzonego
+                                        stoku, nazwa nie może powtarzać się z nazwą istniejącego stoku.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Każde z powyższych pól jest obowiązkowe do uzupełnienia.
+                                </p>
+                                <p>
+                                    2. Po uzupełnieniu wszystkich pól klikamy przycisk „Dodaj” w celu dodania
+                                    nowego stoku.
+                                    <br />
+                                    Po tej czynności stok zostanie dodany a strona, na której się znajdujemy
+                                    odświeży się i przywróci do stanu początkowego.
+                                </p>
+                                <h2>
+                                    <a name="_Toc125579073">Usuń Stok</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 11: Okno usuwania stoku.
+                                </p>
+                                <p>
+                                    W celu usunięcia istniejącego stoku należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy interesujący nas stok po jego nazwie z rozwijanej listy w polu
+                                    „Nazwa Stoku”. W rozwijanej liście znajdują się wszystkie dodane do systemu
+                                    stoki. Z listy możemy jedynie dokonać wyboru pojedynczego stoku.
+                                </p>
+                                <p>
+                                    2. Po wybraniu wyciągu klikamy przycisk „Usuń” w celu usunięcia wybranego
+                                    stoku. Po tej czynności stok zostanie usunięty a strona, na której się
+                                    znajdujemy odświeży się i przywróci do stanu początkowego.    <strong>UWAGA! </strong>Czynność usunięcia stoku nie jest odwracalna.
+                                    Usunięcie stoku z przypisanymi wyciągami nie jest możliwe, akcja taka
+                                    zostanie zablokowana i usuwanie nie powiedzie się. Aby temu zapobiec przed
+                                    usunięciem stoku musimy przenieść za pomocą opcji „Grupuj wyciągi”
+                                    wszystkie przypisane do niego wyciągi do innej grupy wyciągów.
+                                    <br clear="all" />
+                                </p>
+                                <h1 class="text-center m-3">
+                                    <a id="section5" name="_Toc125579074">Zakładka: Edycja Harmonogramu</a>
+                                </h1>
+                                <p>
+                                    Zakładka <em>Edycja Harmonogramu </em>daje zalogowanemu użytkownikowi
+                                    następujące możliwości:
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Podgląd istniejących harmonogramu dla danego wyciągu,
+                                    </li>
+                                    <li>
+                                        Dodawanie nowych harmonogramów,
+                                    </li>
+                                    <li>
+                                        Edytowanie istniejących harmonogramów.
+                                    </li>
+                                </ul>
+                                <h2>
+                                    <a name="_Toc125579075">Podgląd Harmonogramu</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 12: Okno podglądu harmonogramu.
+                                </p>
+                                <p align="center">
+                                    Rysunek 13: Okno z wyświetlonym harmonogramem dla wyciągu A1
+                                </p>
+                                <p>
+                                    W celu usunięcia podglądu harmonogramu należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy interesujący nas wyciąg po jego nazwie z rozwijanej listy w
+                                    polu „Nazwa Wyciągu”. W rozwijanej liście znajdują się wszystkie dodane do
+                                    systemu wyciągi. Z listy możemy jedynie dokonać wyboru pojedynczego
+                                    wyciągu.
+                                </p>
+                                <p>
+                                    2. Klikamy przycisk „Wybierz”.
+                                </p>
+                                <p>
+                                    3. Strona odświeży się i pokaże nam wszystkie ustalone harmonogramu wraz z
+                                    stanem wyciągu i ustalonym zakresem dat. (Rys. 12)
+                                </p>
+                                <p>
+                                    4. Aby zamknąć podgląd harmonogramu wybieramy przycisk „Zamknij” po jego
+                                    naciśnięciu strona odświeży się i wróci do stanu początkowego.
+                                </p>
+                                <br clear="all" />
+                                <h2>
+                                    <a name="_Toc125579076">Dodaj Harmonogram</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 14: Okno dodawania harmonogramu.
+                                </p>
+                                <p>
+                                    W celu dodania nowego harmonogramu należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                <li>
+                                    „Dodaj harmonogram dla Wyciągu” - w tym polu wybieramy z rozwijanej listy
+                                    wszystkich wyciągów, wyciąg, dla którego chcemy utworzyć harmonogram.
+                                </li>
+                                <li>
+                                    „Stan Wyciągu w danym terminie” – pole rozwijanej listy z opcjami
+                                    „Czynny” oraz „Nieczynny”, ustala ono stan wybranego wyciągu dla ustalonego
+                                    zakresu dat.
+                                </li>
+                                <li>
+                                    „Data rozpoczęcia obowiązywania harmonogramu” – data początku
+                                    harmonogramu,
+                                </li>
+                                <li>
+                                    „Data zakończenia obowiązywania harmonogramu” – data końca harmonogramu.
+                                </li>
+                                </ul>
+                                <p>
+                                    Każde z powyższych pól jest obowiązkowe do uzupełnienia.
+                                </p>
+                                <p>
+                                    2. Po uzupełnieniu wszystkich pól klikamy przycisk „Zapisz zmiany” w celu
+                                    dodania nowego harmonogramu. Po tej czynności harmonogram zostanie dodany a
+                                    strona, na której się znajdujemy odświeży się i przywróci do stanu
+                                    początkowego.
+                                </p>
+                                <p>
+                                    <strong>UWAGA!</strong>
+                                    Zakres dat nowego harmonogramu dla wybranego wyciągu nie może się pokrywać
+                                    z już istniejącym harmonogramem. W takim przypadku system nie doda nowego
+                                    harmonogramu.
+                                </p>
+                                <br clear="all" />
+                                <h2>
+                                    <a name="_Toc125579077">Edytuj Harmonogram</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 15: Okno edycji harmonogramu.
+                                </p>
+                                <p>
+                                    W celu edycji istniejącego harmonogramu należy postępować z zgodnie
+                                    przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wybieramy interesujący nas wyciąg, dla którego chcemy edytować
+                                    harmonogram po jego nazwie z rozwijanej listy w polu „Nazwa Wyciągu”. W
+                                    rozwijanej liście znajdują się wszystkie dodane do systemu wyciągi. Z listy
+                                    możemy jedynie dokonać wyboru pojedynczego wyciągu.
+                                </p>
+                                <p>
+                                    2. Klikamy przycisk „Wybierz”. Po wybraniu przycisku strona odświeży się i
+                                    ustawi nam widok na jej górę. Nic nie klikający musimy wrócić do okna
+                                    edycji harmonogramu na dole strony.
+                                </p>
+                                <p>
+                                    3. Z pola „Harmonogram” wybieramy intersujący nas harmonogram do edycji. W
+                                    polu pokazują nam się dostępne harmonogramy dla danego wyciągu wraz z
+                                    zakresem dat i stanem wyciągu.
+                                </p>
+                                <p>
+                                    4. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                <li>
+                                    „Stan Wyciągu” – pole rozwijanej listy z opcjami „Czynny” oraz
+                                    „Nieczynny”, ustala ono stan wybranego wyciągu dla ustalonego zakresu dat.
+                                </li>
+                                <li>
+                                    „Data rozpoczęcia obowiązywania harmonogramu” – data początku
+                                    harmonogramu,
+                                </li>
+                                <li>
+                                    „Data zakończenia obowiązywania harmonogramu” – data końca harmonogramu.
+                                </li>
+                                </ul>
+                                <p>
+                                    Każde z powyższych pól jest obowiązkowe do uzupełnienia. W przypadku gdy
+                                    nie chcemy zmienić wartości danego pola dla wybranego harmonogramu należy
+                                    uzupełnić pole poprzednią wartością.
+                                </p>
+                                <p>
+                                    5. Po uzupełnieniu wszystkich pól klikamy przycisk „Zapisz zmiany” w celu
+                                    edycji istniejącego harmonogramu. Po tej czynności harmonogram zostanie
+                                    edytowany a strona, na której się znajdujemy odświeży się i przywróci do
+                                    stanu początkowego.
+                                </p>
+                                <p>
+                                    <strong>UWAGA!</strong>
+                                    Zakres wprowadzonych dat dla edytowanego harmonogramu nie może się pokrywać
+                                    z już istniejącym zakresem dat w harmonogramie. W takim przypadku system
+                                    nie edytuje istniejącego harmonogramu.
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section6" name="_Toc125579078">Zakładka: Pracownicy</a>
+                                </h1>
+                                <p>
+                                    Zakładka <em>Pracownicy </em>daje zalogowanemu użytkownikowi następujące
+                                    możliwości:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Dodawanie nowych pracowników,
+                                    </li>
+                                    <li>
+                                        Usuwanie istniejących pracowników.
+                                    </li>
+                                </ul>
+                                <h2>
+                                    <a name="_Toc125579079">Dodaj Pracownika</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 16: Okno dodawania pracownika.
+                                </p>
+                                <p>
+                                    W celu dodania nowego pracownika należy postępować z zgodnie przedstawionym
+                                    schematem:
+                                </p>
+                                <p>
+                                    1. Uzupełniamy następujące pola:
+                                </p>
+                                <ul>
+                                    <li>
+                                        „Imię” – imię nowego pracownika.
+                                    </li>
+                                    <li>
+                                        „Nazwisko” – nazwisko nowego pracownika.
+                                    </li>
+                                    <li>
+                                        „Rola” – pole z rozwijaną listą, z której wybieramy jedną z trzech
+                                        dostępnych ról: Admin, Zarząd, Kasa.
+                                    </li>
+                                    <li>
+                                        „Email” – email danego pracownika, jest to również jego login.
+                                    </li>
+                                    <li>
+                                        „Hasło” – ustawiamy hasło dla nowego pracownika.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Każde z powyższych pól jest obowiązkowe do uzupełnienia.
+                                </p>
+                                <p>
+                                    2. Po uzupełnieniu wszystkich pól klikamy przycisk „Dodaj” w celu dodania
+                                    nowego pracownika. Po tej czynności pracownika zostanie dodany a strona, na
+                                    której się znajdujemy odświeży się i przywróci do stanu początkowego.
+                                    <br clear="all" />
+                                </p>
+                                <h2>
+                                    <a name="_Toc125579080">Usuń Pracownika</a>
+                                </h2>
+                                <p align="center">
+                                    Rysunek 17: Okno usuwania pracownika
+                                </p>
+                                <p>
+                                    W celu usunięcia istniejącego pracownika z systemu należy postępować z
+                                    zgodnie przedstawionym schematem:
+                                </p>
+                                <p>
+                                    1. Wpisujemy imię i nazwisko pracownika, którego chcemy usunąć z systemu.
+                                    Po zaczęciu wpisywania w polu pojawi się rozwijana lista z podpowiedziami
+                                    imion i nazwisk obecnych pracowników, możemy z niej wybrać interesującą nas
+                                    osobę, aby nie wprowadzać całego imienia i nazwiska ręcznie.
+                                </p>
+                                <p>
+                                    2. Po wybraniu pracownika klikamy przycisk „Usuń” w celu usunięcia
+                                    wybranego pracownika. Po tej czynności pracownik zostanie usunięty a
+                                    strona, na której się znajdujemy odświeży się i przywróci do stanu
+                                    początkowego.
+                                </p>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
