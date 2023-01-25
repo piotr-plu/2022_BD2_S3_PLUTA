@@ -1,0 +1,291 @@
+﻿@page
+@model Narciarze_v_2.Pages.Strefa_Administracji.Kasa.PomocKasaModel
+@{
+    ViewData["Title"] = "Cennik";
+    Layout = "_Layout_Pomoc";
+    if (HttpContext.Session.GetInt32("_prac_uid") != 1)
+    {
+        Response.Redirect("Kasa");
+    }
+}
+
+<body class="text-justify">
+    <div class="fluid-container m-5">
+        <h1 class="text-center fw-bold m-5">Instrukcja Kasa</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+                                <p class="text-center h3 fw-bold ">Spis treści</p>
+                                <ul>
+                                    <li><a href="#section1">Rola Kasjera w systemie</a></li>
+                                    <li><a href="#section2">Logowanie</a></li>
+                                    <li><a href="#section3">Zakładka: Sprzedaż</a></li>
+                                    <li><a href="#section4">Zakładka: Blokowanie Karentu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="card text-black shadow" style="border-radius: 25px;">
+                            <div class="m-3">
+
+                                <h1 class="text-center m-3">
+                                    <a id="section1" name="_Toc125566287">Rola Kasjera w systemie</a>
+                                </h1>
+                                <p>
+                                    Kasjer jest pracownikiem, którego zadaniem jest sprzedaż biletów i karnetów
+                                    zarejestrowanym klientom. W swoim panelu może on:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Rejestrować nowych klientów,
+                                    </li>
+                                    <li>
+                                        Sprzedawać bilety,
+                                    </li>
+                                    <li>
+                                        Sprzedawać karnety,
+                                    </li>
+                                    <li>
+                                        <br clear="ALL" />
+                                        Zarządzać blokadą karnetów klientów
+                                    </li>
+                                </ul>
+                                <p>
+                                    Rysunek 1: Ekran powitalny panelu Kasjera.
+                                </p>
+                                <p>
+                                    Rysunek 2: Pasek nawigacyjny panelu Kasjera.
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section2"  name="_Toc125566288">Logowanie</a>
+                                </h1>
+                                <p>
+                                    Aby zalogować się na konto zarządu należy w podstawowym menu wybrać
+                                    zakładkę „Logowanie”. (rys.3)
+                                </p>
+                                <p>
+                                    Rysunek 3: Wskazanie opcji "Logowanie" na pasku nawigacji.
+                                </p>
+                                <p>
+                                    <br clear="ALL" />
+                                    Następnie w panelu pod logowaniem zwyczajnego użytkownika znajduje się
+                                    hiperłącze, które odwołuje się do strony poświęconej logowaniu pracownika.
+                                    (rys.4)
+                                </p>
+                                <p>
+                                    Rysunek 4: Formularz logowania użytkownika i wskazanie hiperłącza
+                                    "Logowanie pracownika".
+                                </p>
+                                <p>
+                                    Z wyświetlonego panelu, za pomocą odpowiednich danych można zalogować się
+                                    do każdego Kasjera. Aby dostać się do jednego z nich można wprowadzić
+                                    następujące dane:
+                                </p>
+                                <p>
+                                    <br />
+                                    - <strong>Adres Email:</strong>    <a href="mailto:kasa@a.pl"><em>kasa@a.pl</em></a>
+                                    <em>
+                                        <br />
+                                    </em>
+                                    - <strong>Hasło: </strong><em>123</em>
+                                </p>
+                                <p>
+                                    <br clear="ALL" />
+                                    Następnie po użyciu przycisku zaloguj, w przypadku wprowadzenia poprawnych
+                                    danych powinno na ekranie pokazać ekran powitalny. (rys.1). W przeciwnym
+                                    razie strona zostanie odświeżona i umożliwi wpisanie danych jeszcze raz.
+                                    Aby wylogować się z konta Klienta należy w pasku nawigacji wybrać opcję
+                                    „Wyloguj”. (rys.5)
+                                </p>
+                                <p>
+                                    Rysunek 5: Pasek nawigacji strefy Klienta i wskazanie opcji "Wyloguj" .
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a id="section3"  name="_Toc125566289">Zakładka: Sprzedaż</a>
+                                </h1>
+                                <p>
+                                    Zakładka Sprzedaż daje zalogowanemu użytkownikowi następujące możliwości:
+                                </p>
+                                <p>
+                                    - Sprzedaż biletu zarejestrowanemu klientowi,
+                                    <br />
+                                    - Sprzedaż karnetu zarejestrowanemu klientowi,
+                                    <br />
+                                    - Rejestracja nowego klienta.
+                                </p>
+                                <h2>
+                                    <a name="_Toc125566290">
+                                        Sprzedaż biletu/karnetu zarejestrowanemu klientowi:
+                                    </a>
+                                </h2>
+                                <p>
+                                    Ze względu na dużą analogię obydwu operacji opis tych funkcjonalności
+                                    zostanie zaprezentowany na wspólnym przykładzie.
+                                </p>
+                                <h3>
+                                    <a name="_Toc125566291">Krok 1:</a>
+                                </h3>
+                                <p>
+                                    Wyszukanie klienta za pomocą pola wyposażonego w automatyczne uzupełnianie.
+                                </p>
+                                <h3>
+                                    <a name="_Toc125566292">Krok 2:</a>
+                                </h3>
+                                <p>
+                                    <br clear="ALL" />
+                                    W przypadku biletu wybieramy wyciąg na który klient pragnie zakupić bilet
+                                    oraz podajemy na ile zjazdów klient pragnie wykupić bilet. (rys. 6)
+                                </p>
+                                <p>
+                                    Rysunek 6: Przykładowe uzupełnienie formularza sprzedaży biletów.
+                                </p>
+                                <p>
+                                    <br clear="ALL" />
+                                    W przypadku karnetu wybieramy stok na który klient pragnie wykupić karnet,
+                                    czas trwania oraz czy aktywować go przy zakupie. (rys. 7)
+                                </p>
+                                <p>
+                                    Rysunek 7: Przykładowe uzupełnienie formularza sprzedaży karetów.
+                                </p>
+                                <h3>
+                                    <a name="_Toc125566293">Krok 3:</a>
+                                </h3>
+                                <p>
+                                    Zatwierdzenie formularza poprzez naciśnięcie przycisku "Sprzedaj".
+                                </p>
+                                <h2>
+                                    <a name="_Toc125566294">Rejestracja nowego klienta</a>
+                                </h2>
+                                <h3>
+                                    <a name="_Toc125566295">Krok 1:</a>
+                                </h3>
+                                <p>
+                                    Uzupełnienie formularza rejestrującego poprzez podanie danych klienta
+                                    takich jak:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Imię,
+                                    </li>
+                                    <li>
+                                        Nazwisko,
+                                    </li>
+                                    <li>
+                                        Adres E-mail,
+                                    </li>
+                                    <li>
+                                        <br clear="ALL" />
+                                        Hasło.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Rysunek 8: Przykładowe uzupełnienie formularza rejestracji klienta.
+                                </p>
+                                <h3>
+                                    <a name="_Toc125566296">Krok 2:</a>
+                                </h3>
+                                <p>
+                                    Zatwierdź przesłanie formularza rejestrującego za pomocą przycisku
+                                    "Zarejestruj".
+                                </p>
+                                <br clear="all" />
+                                <h1 class="text-center m-3">
+                                    <a  id="section4" name="_Toc125566297">Zakładka: Blokowanie Karnetu</a>
+                                </h1>
+                                <p>
+                                    Zakładka blokowanie karnetu daje kasjerowi możliwość odblokowania lub
+                                    zablokowania karnetu wybranego klienta.
+                                </p>
+                                <h2>
+                                    <a name="_Toc125566298">Blokowanie Karnetu:</a>
+                                </h2>
+                                <h3>
+                                    <a name="_Toc125566299">Krok 1:</a>
+                                </h3>
+                                <p>
+                                    <br clear="ALL" />
+                                    Wyszukanie klienta za pomocą pola wyposażonego w automatyczne uzupełnianie.
+                                    Wybór należy zatwierdzić przyciskiem "Wyszukaj". (rys. 9)
+                                </p>
+                                <p>
+                                    Rysunek 9: Sposób wybrania klienta i zatwierdzenia wyboru przyciskiem
+                                    "Wyszukaj".
+                                </p>
+                                <h3>
+                                    <a name="_Toc125566300">Krok 2:</a>
+                                </h3>
+                                <p>
+                                    Po kliknięciu przycisku "Wyszukaj" jeśli dany klient posiadał na swoim
+                                    koncie jakikolwiek karnet zostanie on wyświetlony jak na przykładzie: (rys.
+                                    10)
+                                </p>
+                                <p>
+                                    Rysunek 10: Przykładowy rezultat wyszukania klienta.
+                                </p>
+                                <p>
+                                    Naszym oczom ukazują się pola:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>ID Karnetu</strong>
+                                        – numer identyfikacyjny karnetu w systemie,
+                                    </li>
+                                    <li>
+                                        <strong>Imię </strong>
+                                        – imię klienta do którego przypisany jest karnet,
+                                    </li>
+                                    <li>
+                                        <strong>Nazwisko –</strong>
+                                        nazwisko klienta do którego przypisany jest karnet,
+                                    </li>
+                                    <li>
+                                        <strong>Stok</strong>
+                                        – nazwa stoku do którego przypisany jest karnet,
+                                    </li>
+                                    <li>
+                                        <strong>Czas</strong>
+                                        – pozostały czas do wykorzystania w ramach karnetu,
+                                    </li>
+                                    <li>
+                                        <strong>Status </strong>
+                                        – czy karnet jest aktywny
+                                    </li>
+                                    <li>
+                                        <strong>Zablokuj – </strong>
+                                        guzik umożliwiający zablokowanie karnetu
+                                    </li>
+                                    <li>
+                                        <strong>Odblokuj – g</strong>
+                                        uzik umożliwiający odblokowanie karnetu
+                                    </li>
+                                </ul>
+                                <h3>
+                                    <a name="_Toc125566301">Krok 3:</a>
+                                </h3>
+                                <p>
+                                    W celu odblokowania nieaktywnego karnetu należy przycisnąć przycisk
+                                    odblokuj.
+                                </p>
+                                <p>
+                                    W celu zablokowania aktywnego karnetu należy przycisnąć przycisk zablokuj.
+                                </p>
+
+
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
