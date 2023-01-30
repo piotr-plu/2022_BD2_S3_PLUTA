@@ -8,6 +8,8 @@
         Response.Redirect("../Index");
     }
 }
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <div class="fluid-container m-5" id="Grid">
         <div class="row m-5">
@@ -90,65 +92,106 @@
         <div class="row m-5">
             <div class="card text-black shadow" style="border-radius: 25px;">
                 <h2 class="text-center mt-4">Ile z nami przejechałeś metrów dzięki biletom</h2>
-                <div class="table-responsive text-center m-4">
+                <div class="d-flex justify-content-center m-2">
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                    <script>
+                        const json = "@foreach (var var in Model.raport_bilety)
+                        {
+                            @var.json;
+                        }"
+                        var data2 = JSON.parse(json.replace(/&quot;/g,'"'));
 
-                    <div style="height:200px;overflow-y:scroll">
-                        <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm" cellspacing="0" width="100%">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th class="th-sm">Data</th>
-                                    <th class="th-sm">Razem przejechane metry</th>
+                        var labels = data2.map(function (d) {
+                            return new Date(d.data_sprzedazy);
+                        });
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                @foreach (var var in Model.raport_bilety)
-                {
-                    <tr>
-                        <td>@var.data</td>
-                        <td>@var.suma</td>
-                    </tr>
-                }
-                </tbody>
-                        </table>
-                    </div>
+                        var values = data2.map(function (d) {
+                            return d.suma_kumulowana;
+                        });
 
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: 'Metry',
+                                    data: values,
+                                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    xAxes: [{
+                                        type: 'time',
+                                        time: {
+                                            unit: 'day'
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- wykres 2-->
     <div class="container m-5">
         <div class="row m-5">
             <div class="card text-black shadow" style="border-radius: 25px;">
-                <h2 class="text-center mt-4">Ile z nami przejechałeś godzin dzięki karnetom</h2>
-                <div class="table-responsive text-center m-4">
+                <h2 class="text-center mt-4">Ile z nami spędziłeś godzin dzięki karnetom</h2>
+                <div class="d-flex justify-content-center m-2">
+                    <canvas id="myChart1" style="width:100%;max-width:700px"></canvas>
+                    <script>
+                        const json1 = "@foreach (var var in Model.raport_karnety)
+                        {
+                            @var.json;
+                        }"
+                        var data3 = JSON.parse(json1.replace(/&quot;/g, '"'));
 
-                    <div style="height:200px;overflow-y:scroll">
-                        <table class="table table-bordered table-hover table-aktive table-striped table-light align-middle table-sm" cellspacing="0" width="100%">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th class="th-sm">Data</th>
-                                    <th class="th-sm">Razem przejechane godziny</th>
+                        var labels = data3.map(function (d) {
+                            return new Date(d.data_sprzedazy);
+                        });
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                @foreach (var var in Model.raport_karnety)
-                                {
-                                    <tr>
-                                        <td>@var.data</td>
-                                        <td>@var.suma</td>
-                                    </tr>
+                        var values = data3.map(function (d) {
+                            return d.suma_kumulowana;
+                        });
+
+                        var ctx = document.getElementById('myChart1').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: 'Godziny',
+                                    data: values,
+                                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    xAxes: [{
+                                        type: 'time',
+                                        time: {
+                                            unit: 'day'
+                                        }
+                                    }]
                                 }
-                            </tbody>
-                        </table>
-                    </div>
-
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
     </div>
+
+
     </div>
 <form method="post">
     <input type="hidden" name="GridHtml" />

@@ -21,8 +21,8 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
 
         public List<Karnety> karnety = new List<Karnety>();
         public List<Bilety> bilety = new List<Bilety>();
-        public List<Raport> raport_bilety = new List<Raport>();
-        public List<Raport> raport_karnety = new List<Raport>();
+        public List<Json> raport_bilety = new List<Json>();
+        public List<Json> raport_karnety = new List<Json>();
 
         public void OnGet()
         {
@@ -48,14 +48,14 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                             WHERE b.ID_Klient= "+ HttpContext.Session.GetInt32("_klient_id").ToString() + " ORDER BY il_zjazdow DESC";
 
             string query_raport_karnety = @"with data as (
-              select k.Data_sprzedazy as data_sprzedazy,
+              select cast(k.Data_sprzedazy as date) as data_sprzedazy,
             sum(k.Czas_trwania) as laczny_czas
-            from Karnety as k where k.ID_Klient="+ HttpContext.Session.GetInt32("_klient_id").ToString() + " GROUP BY Data_sprzedazy) select data_sprzedazy, sum(laczny_czas) over (order by data_sprzedazy asc rows between unbounded preceding and current row) as suma_kumulowana from data;";
+            from Karnety as k where k.ID_Klient="+ HttpContext.Session.GetInt32("_klient_id").ToString() + " GROUP BY Data_sprzedazy) select(select data_sprzedazy, sum(laczny_czas) over (order by data_sprzedazy asc rows between unbounded preceding and current row) as suma_kumulowana from data for json auto)as jsonek;";
             string query_raport_bilety = @"with data as (
-              select  b.Data_sprzedazy as data_sprzedazy, sum(b.Ilosc_zjazdow*w.Dlugosc) as suma
+              select  cast(b.Data_sprzedazy as date) as data_sprzedazy, sum(b.Ilosc_zjazdow*w.Dlugosc) as suma
             FROM Bilety as b, Wyciagi as w
             where b.ID_Wyciag = w.ID AND b.ID_Klient="+ HttpContext.Session.GetInt32("_klient_id").ToString() + 
-            " GROUP BY data_sprzedazy) select data_sprzedazy, sum(suma) over (order by data_sprzedazy asc rows between unbounded preceding and current row) as suma_kumulowana from data;";
+            " GROUP BY data_sprzedazy) select(select data_sprzedazy, sum(suma) over (order by data_sprzedazy asc rows between unbounded preceding and current row) as suma_kumulowana from data for json auto)as jsonek;";
             // Wykonanie Zapytania SQL o Karnety 
             using (SqlCommand command = new SqlCommand(query1, conn))
             {
@@ -108,10 +108,8 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                 {
                     while (reader.Read())
                     {
-                        Raport pobrane = new Raport();
-                        pobrane.data = reader["Data_sprzedazy"].ToString();
-                        pobrane.suma = reader["suma_kumulowana"].ToString();
-
+                        Json pobrane = new Json();
+                        pobrane.json = reader["jsonek"].ToString();
                         raport_bilety.Add(pobrane);
 
                     }
@@ -125,9 +123,8 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                 {
                     while (reader.Read())
                     {
-                        Raport pobrane = new Raport();
-                        pobrane.data = reader["Data_sprzedazy"].ToString();
-                        pobrane.suma = reader["suma_kumulowana"].ToString();
+                        Json pobrane = new Json();
+                        pobrane.json = reader["jsonek"].ToString();
 
                         raport_karnety.Add(pobrane);
 
@@ -154,9 +151,9 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         {
             public string id, imie, nazw;
         }
-        public class Raport
+        public class Json
         {
-            public string data, suma;
+            public string json;
         }
         public class Karnety
         {
