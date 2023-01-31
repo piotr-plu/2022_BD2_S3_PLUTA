@@ -28,8 +28,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
         {
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
-            //-> TO DO do ka¿dego z zasad zapytania query1-query4 zamiast na sztywno przypisywaæ id klienta pobraæ z sesji, w przypadku chêci odczytania dat zakupu (mniej wiêcej)
-            //Mo¿na urzyæ zakresu dat z cennika do z³apania odopowiednich dat
+
             
 
 
@@ -51,6 +50,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
               select cast(k.Data_sprzedazy as date) as data_sprzedazy,
             sum(k.Czas_trwania) as laczny_czas
             from Karnety as k where k.ID_Klient="+ HttpContext.Session.GetInt32("_klient_id").ToString() + " GROUP BY Data_sprzedazy) select(select data_sprzedazy, sum(laczny_czas) over (order by data_sprzedazy asc rows between unbounded preceding and current row) as suma_kumulowana from data for json auto)as jsonek;";
+            
             string query_raport_bilety = @"with data as (
               select  cast(b.Data_sprzedazy as date) as data_sprzedazy, sum(b.Ilosc_zjazdow*w.Dlugosc) as suma
             FROM Bilety as b, Wyciagi as w
@@ -144,7 +144,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
                 pdfDocument.SetDefaultPageSize(PageSize.A4);
                 HtmlConverter.ConvertToPdf(stream, pdfDocument);
                 pdfDocument.Close();
-                return File(byteArrayOutputStream.ToArray(), "application/pdf", "Grid.pdf");
+                return File(byteArrayOutputStream.ToArray(), "application/pdf", "Raport_Klient.pdf");
             }
         }
         public class Stok
