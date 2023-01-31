@@ -118,7 +118,7 @@ namespace Narciarze_v_2.Pages.Strefa_Klienta
             }
 
             using (SqlCommand command = new SqlCommand(query_raport_karnety, conn))
-            {
+            {https://localhost:44301/
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
